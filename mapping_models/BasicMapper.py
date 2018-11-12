@@ -5,10 +5,10 @@ class BasicMapper(object):
     self.hparams = hparams
 
   def build(self, is_train):
-    raise NotImplementedError
+    raise NotImplementedError()
 
   def map(self, inputs, targets):
-    raise NotImplementedError
+    raise NotImplementedError()
 
   def prepare_inputs(self, **kwargs):
     raise NotImplementedError()

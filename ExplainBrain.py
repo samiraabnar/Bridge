@@ -3,6 +3,10 @@
 
 from evaluation.metrics import  mean_explain_variance
 from util.misc import get_folds
+from voxel_preprocessing.preprocess_voxels import detrend
+from language_preprocessing.tokenize import naive_word_level_tokenizer
+from language_preprocessing.tokenize import SpacyTokenizer
+
 import tensorflow as tf
 import numpy as np
 
@@ -15,7 +19,7 @@ class ExplainBrain(object):
     self.folds = None
     self.subject_id = 1
 
-  def load_brain_experiment(self):
+  def load_brain_experiment(self, voxel_preprocessings=[]):
     """Load stimili and brain measurements.
 
     :return:
@@ -27,7 +31,15 @@ class ExplainBrain(object):
     all_events = self.brain_data_reader.read_all_events(subject_ids=[self.subject_id])
     blocks, time_steps, brain_activations, stimuli = self.decompose_scan_events(all_events[self.subject_id])
 
+    tokenizer = SpacyTokenizer()
+    whole_block_text = {}
+    for block in blocks:
+      for stim in stimuli[block]:
+        print("stim:", tokenizer.tokenize(stim))
+
     self.blocks = blocks
+
+
     return time_steps, brain_activations, stimuli
 
   def decompose_scan_events(self, scan_events):
@@ -93,6 +105,10 @@ class ExplainBrain(object):
     """
     return {'mean_EV': mean_explain_variance}
 
+
+  def voxel_preprocess(self):
+    return [(detrend,{'t_r':2.0})]
+
   def eval_mapper(self, encoded_stimuli, brain_activations):
     """Evaluate the mapper based on the defined metrics.
 
@@ -125,7 +141,11 @@ class ExplainBrain(object):
 
     return self.folds[fold_index]
 
+  def preprocess_brain_activations(self, brain_activations, voxel_preprocessings):
+    for voxel_preprocessing_fn, args in voxel_preprocessings:
+      brain_activations = voxel_preprocessing_fn(brain_activations, **args)
 
+    return brain_activations
 
   def train_mapper(self, delay=0, eval=True, save=True, fold_index=-1):
 
@@ -142,7 +162,7 @@ class ExplainBrain(object):
 
     # Get the test and training sets
     train_blocks, test_blocks = self.get_folds(fold_index)
-    # Pepare the data for the mapping model (test and train sets)
+    # Pepare the data for the mapping model (testc and train sets)
     print("train blocks:", train_blocks)
     print("test blocks:", test_blocks)
 
@@ -153,6 +173,8 @@ class ExplainBrain(object):
                                                                                 sorted_inputs=encoded_stimuli,
                                                                                 sorted_timesteps=time_steps,
                                                                                 delay=delay)
+    train_brain_activations = self.preprocess_brain_activations(train_brain_activations, voxel_preprocessings=self.voxel_preprocess())
+
     tf.logging.info('Prepare test pairs ...')
     if len(test_blocks) > 0:
       test_encoded_stimuli, test_brain_activations = self.mapper.prepare_inputs(blocks=test_blocks,
@@ -160,6 +182,7 @@ class ExplainBrain(object):
                                                                                 sorted_inputs=encoded_stimuli,
                                                                                 sorted_timesteps=time_steps,
                                                                                 delay=delay)
+      test_brain_activations = self.preprocess_brain_activations(test_brain_activations, voxel_preprocessings=self.voxel_preprocess())
     else:
         print('No test blocks!')
 
@@ -167,6 +190,7 @@ class ExplainBrain(object):
     tf.logging.info('Start training ...')
     self.mapper.train(inputs=train_encoded_stimuli,targets=train_brain_activations)
     tf.logging.info('Training done!')
+
     # Evaluate the mapper
     if eval:
       tf.logging.info('Evaluating ...')

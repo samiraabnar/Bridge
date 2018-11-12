@@ -5,7 +5,6 @@
 # model = spacy.load('en_core_web_sm')
 # Would probably have to refactor a lot if I want to change the tokenization
 
-<<<<<<< HEAD
 import re
 import spacy
 
@@ -42,16 +41,18 @@ def stimuli_tokenizer(stimuli_sequence, stimuli_steps, tokenize_fn):
   return tokens, steps
 
 
-# I am using spacy tokenization here, because this is what seems to be used by Elmo
-def spacy_tokenize(text):
-    nlp = spacy.load('en_core_web_sm')
-    doc = nlp(text)
-    sentences = []
-    for sent in doc.sents:
-        sentences.append([tok.text for tok in sent])
-    return sentences
+class SpacyTokenizer(object):
+    def __init__(self):
+      self.nlp = spacy.load('en_core_web_sm')
 
-=======
+    def tokenize(self, text):
+      doc = self.nlp(text)
+      sentences = []
+      for sent in doc.sents:
+          sentences.append([tok.text for tok in sent])
+      return sentences
+
+
 def tokenize_all(scan_events, model):
     tokenized_events = []
     print("Tokenizing")
@@ -83,4 +84,3 @@ def tokenize_sentences(sentences, model):
 
 def tokenize_text(text, model):
     return [tok.text for tok in model(text)]
->>>>>>> upstream/master
