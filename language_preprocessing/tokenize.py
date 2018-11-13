@@ -43,12 +43,18 @@ def stimuli_tokenizer(stimuli_sequence, stimuli_steps, tokenize_fn):
 
 class SpacyTokenizer(object):
     def __init__(self):
-      self.nlp = spacy.load('en_core_web_sm')
+      self.nlp = spacy.load('en_core_web_lg')
 
-    def tokenize(self, text):
+    def tokenize(self, text, sentence_mode=False):
+      if isinstance(text, list):
+        text = ' '.join(text)
+
       doc = self.nlp(text)
       sentences = []
       for sent in doc.sents:
+        if not sentence_mode:
+          sentences.extend([tok.text for tok in sent])
+        else:
           sentences.append([tok.text for tok in sent])
       return sentences
 
@@ -58,6 +64,7 @@ def tokenize_all(scan_events, model):
     print("Tokenizing")
     for event in scan_events:
         print(event.subject_id, event.block, event.timestamp)
+
         # Tokenize
         sentences = tokenize_sentences(event.sentences, model)
         current_sentence = tokenize_text(event.current_sentence, model)

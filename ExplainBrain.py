@@ -4,11 +4,13 @@
 from evaluation.metrics import  mean_explain_variance
 from util.misc import get_folds
 from voxel_preprocessing.preprocess_voxels import detrend
-from language_preprocessing.tokenize import naive_word_level_tokenizer
+from voxel_preprocessing.preprocess_voxels import minus_average_resting_states
 from language_preprocessing.tokenize import SpacyTokenizer
 
 import tensorflow as tf
 import numpy as np
+from tqdm import tqdm
+
 
 class ExplainBrain(object):
   def __init__(self, brain_data_reader, stimuli_encoder, mapper):
@@ -19,7 +21,9 @@ class ExplainBrain(object):
     self.folds = None
     self.subject_id = 1
 
-  def load_brain_experiment(self, voxel_preprocessings=[]):
+    self.data_dir = "../bridge_data/processed/harrypotter/"+str(self.subject_id)+"_"
+
+  def load_brain_experiment(self, voxel_preprocessings=[], save=False, load=True):
     """Load stimili and brain measurements.
 
     :return:
@@ -27,22 +31,37 @@ class ExplainBrain(object):
     brain_activations: {block_number: {time_step: vector of brain activation}
     stimuli: {block_number: {time_step: stimuli representation}
     """
-
-    all_events = self.brain_data_reader.read_all_events(subject_ids=[self.subject_id])
-    blocks, time_steps, brain_activations, stimuli = self.decompose_scan_events(all_events[self.subject_id])
-
-    tokenizer = SpacyTokenizer()
-    whole_block_text = {}
-    for block in blocks:
-      for stim in stimuli[block]:
-        print("stim:", tokenizer.tokenize(stim))
+    if load:
+      brain_activations = np.load(self.data_dir+"brain_activations.npy").item()
+      stimuli_in_context = np.load(self.data_dir + "stimuli_in_context.npy").item()
+      time_steps = np.load(self.data_dir + "time_steps.npy").item()
+      blocks = brain_activations.keys()
+    else:
+      all_events = self.brain_data_reader.read_all_events(subject_ids=[self.subject_id])
+      blocks, time_steps, brain_activations, stimuli_in_context = self.decompose_scan_events(all_events[self.subject_id])
 
     self.blocks = blocks
 
+    start_steps = {}
+    end_steps = {}
+    for block in self.blocks:
+      start_steps[block] = 0
+      while stimuli_in_context[block][start_steps[block]][1] == None:
+        start_steps[block] += 1
+      end_steps[block] = start_steps[block]
+      while stimuli_in_context[block][end_steps[block]][1] != None and end_steps[block] < len(stimuli_in_context[block]):
+        end_steps[block] += 1
+    print(start_steps)
+    print(end_steps)
 
-    return time_steps, brain_activations, stimuli
+    if save:
+      np.save(self.data_dir+"brain_activations", brain_activations)
+      np.save(self.data_dir + "stimuli_in_context", stimuli_in_context)
+      np.save(self.data_dir + "time_steps", time_steps)
 
-  def decompose_scan_events(self, scan_events):
+    return time_steps, brain_activations, stimuli_in_context, start_steps, end_steps
+
+  def decompose_scan_events(self, scan_events, context_mode='sentence'):
     """
     :param scan_events:
     :return:
@@ -50,38 +69,37 @@ class ExplainBrain(object):
       brain_activations: {block_number: {time_step: vector of brain activation}
       stimuli: {block_number: {time_step: stimuli representation}
     """
-    time_steps = {}
-    brain_activations = {}
-    stimuli = {}
+
+    tokenizer = SpacyTokenizer()
+
+
+    timesteps = {} # dict(block_id: list)
+    brain_activations = {} # dict(block_id: list)
+    stimuli_in_context = {} # dict(block_id: list)
 
     for block in scan_events:
-      block = block
-      block_events = scan_events[block]
-      if block not in brain_activations:
-        brain_activations[block] = {}
-        stimuli[block] = []
-        time_steps[block] = []
-        for event in block_events:
-          time_steps[block].append(event.timestamp)
-          stimuli[block].append(event.stimulus)
-          brain_activations[block][event.timestamp] = event.scan
+      stimuli_in_context[block.block_id] = []
+      brain_activations[block.block_id] = []
+      timesteps[block.block_id] = []
 
-    blocks = list(brain_activations.keys())
+      for event in tqdm(block.scan_events):
+        # Get the stimuli in context (what are we going to feed to the computational model!)
+        context, stimuli_index = block.get_stimuli_in_context(
+          scan_event=event,
+          tokenizer=tokenizer,
+          context_mode='sentence',
+          past_window=0)
 
-    sorted_timesteps = {}
-    sorted_stimuli = {}
-    for block in blocks:
-      sorted_indexes = np.argsort(time_steps[block])
-      sorted_timesteps[block] = np.asarray(time_steps[block])[sorted_indexes]
-      sorted_stimuli[block] = np.asarray(stimuli[block])[sorted_indexes]
+        stimuli_in_context[block.block_id].append((context, stimuli_index))
+        brain_activations[block.block_id].append(event.scan)
+        timesteps[block.block_id].append(event.timestamp)
 
-    return blocks, sorted_timesteps, brain_activations, sorted_stimuli
+    return list(stimuli_in_context.keys()), timesteps, brain_activations, stimuli_in_context
 
-
-  def encode_stimuli(self, stimuli, integration_fn=np.mean):
+  def encode_stimuli(self, stimuli_in_context, integration_fn=np.mean):
     """Applies the text encoder on the stimuli.
 
-    :param stimuli:
+    :param stimuli_in_context:
     :return:
     """
     with tf.Session() as sess:
@@ -89,13 +107,14 @@ class ExplainBrain(object):
       sess.run(tf.global_variables_initializer())
       sess.run(tf.tables_initializer())
       for block in self.blocks:
+        encoded_stimuli_of_each_block[block] = []
         print("Encoding stimuli of block:", block)
-        print(stimuli[block])
-        encoded_stimuli_of_each_block[block] = integration_fn(
-          sess.run(self.stimuli_encoder.get_embeddings(stimuli[block])),
-          axis=1)
+        contexts, indexes = zip(*stimuli_in_context[block])
+        encoded_stimuli = sess.run(self.stimuli_encoder.get_embeddings(contexts, [len(c) for c in contexts]))
+        for encoded, index in zip(encoded_stimuli,indexes):
+          encoded_stimuli = integration_fn(encoded[index], axis=-1)
+          encoded_stimuli_of_each_block[block].append(encoded_stimuli)
 
-    print(encoded_stimuli_of_each_block[1].shape)
     return encoded_stimuli_of_each_block
 
   def metrics(self):
@@ -106,7 +125,8 @@ class ExplainBrain(object):
     return {'mean_EV': mean_explain_variance}
 
 
-  def voxel_preprocess(self):
+  def voxel_preprocess(self, **kwargs):
+
     return [(detrend,{'t_r':2.0})]
 
   def eval_mapper(self, encoded_stimuli, brain_activations):
@@ -141,9 +161,11 @@ class ExplainBrain(object):
 
     return self.folds[fold_index]
 
-  def preprocess_brain_activations(self, brain_activations, voxel_preprocessings):
-    for voxel_preprocessing_fn, args in voxel_preprocessings:
-      brain_activations = voxel_preprocessing_fn(brain_activations, **args)
+  def preprocess_brain_activations(self, brain_activations, voxel_preprocessings, start_steps, end_steps):
+    for block in brain_activations.keys():
+      start_step = []
+      for voxel_preprocessing_fn, args in voxel_preprocessings:
+        brain_activations[block] = voxel_preprocessing_fn(brain_activations[block], **args)
 
     return brain_activations
 
@@ -152,13 +174,15 @@ class ExplainBrain(object):
     # Add  different option to encode the stimuli (sentence based, word based, whole block based, whole story based)
     # Load the brain data
     tf.logging.info('Loading brain data ...')
-    time_steps, brain_activations, stimuli = self.load_brain_experiment()
+    time_steps, brain_activations, stimuli, start_steps, end_steps = self.load_brain_experiment()
     tf.logging.info('Blocks: %s' %str(self.blocks))
     print('Example Stimuli %s' % str(stimuli[1][0]))
 
+    brain_activations = self.preprocess_brain_activations(brain_activations, voxel_preprocessings=self.voxel_preprocess())
+
     # Encode the stimuli and get the representations from the computational model.
     tf.logging.info('Encoding the stimuli ...')
-    encoded_stimuli = self.encode_stimuli(stimuli)
+    encoded_stimuli = self.encode_stimuli(stimuli, start_steps, end_steps )
 
     # Get the test and training sets
     train_blocks, test_blocks = self.get_folds(fold_index)
@@ -173,7 +197,6 @@ class ExplainBrain(object):
                                                                                 sorted_inputs=encoded_stimuli,
                                                                                 sorted_timesteps=time_steps,
                                                                                 delay=delay)
-    train_brain_activations = self.preprocess_brain_activations(train_brain_activations, voxel_preprocessings=self.voxel_preprocess())
 
     tf.logging.info('Prepare test pairs ...')
     if len(test_blocks) > 0:
@@ -182,7 +205,6 @@ class ExplainBrain(object):
                                                                                 sorted_inputs=encoded_stimuli,
                                                                                 sorted_timesteps=time_steps,
                                                                                 delay=delay)
-      test_brain_activations = self.preprocess_brain_activations(test_brain_activations, voxel_preprocessings=self.voxel_preprocess())
     else:
         print('No test blocks!')
 

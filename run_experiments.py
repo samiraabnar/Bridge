@@ -2,9 +2,9 @@
 
 """
 from ExplainBrain import ExplainBrain
-from read_dataset.readHarryPotterData import HarryPotterReader
+from read_dataset.harrypotter_data import HarryPotterReader
 from computational_model.text_encoder import TfHubElmoEncoder
-from mapping_models.SkMapper import SkMapper
+from mapping_models.sk_mapper import SkMapper
 import tensorflow as tf
 
 

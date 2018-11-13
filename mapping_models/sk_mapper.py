@@ -1,5 +1,5 @@
 from sklearn.linear_model import *
-from mapping_models.BasicMapper import BasicMapper
+from mapping_models.basic_mapper import BasicMapper
 import numpy as np
 
 class SkMapper(BasicMapper):

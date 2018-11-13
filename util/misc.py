@@ -43,3 +43,17 @@ def generate_pair_for_comparison(brainData, predictions, sequenceLength, config)
   elif (config == "complex"):
     randomComparison = predictions[randomStart:randomStart + sequenceLength]
   return brainScans, predictedScans, randomComparison
+
+
+def pad_lists(list_of_list, padding=''):
+  padded_lists = []
+  max_length = np.max(list(map(lambda x: len(x), list_of_list)))
+
+  for l in list_of_list:
+    padded_lists.append(l + (max_length - len(l))*[padding])
+
+  return padded_lists
+
+
+if __name__ == '__main__':
+    print(pad_lists([['a','b'],['c']], ''))

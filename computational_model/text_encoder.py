@@ -1,13 +1,13 @@
 import tensorflow as tf
 import tensorflow_hub as hub
-
+from util.misc import pad_lists
 
 class TextEncoder(object):
   def __init__(self, hparams):
     self.hparams = hparams
     self.embedding_dir = self.hparams.embedding_dir
 
-  def get_embeddings(self, text):
+  def get_embeddings(self, text, sequences_length):
     raise NotImplementedError()
 
   def get_embeddings_values(self, text_sequences, key='elmo'):
@@ -34,11 +34,12 @@ class TfHubElmoEncoder(TextEncoder):
     super(TfHubElmoEncoder, self).__init__(hparams)
     self.embedder = hub.Module('https://tfhub.dev/google/elmo/2', trainable=trainable)
 
-  def get_embeddings(self, text_sequences, key='elmo'):
+  def get_embeddings(self, text_sequences, sequences_length, key='elmo'):
+    padded_text_sequences = pad_lists(text_sequences)
     embeddings = self.embedder(
-      text_sequences,
-      signature="default",
-      as_dict=True)[key]
+      inputs={'tokens': padded_text_sequences,
+              'sequence_len': sequences_length }
+      ,signature='tokens', as_dict=True)[key]
 
     return embeddings
 
