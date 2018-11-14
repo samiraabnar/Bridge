@@ -20,4 +20,4 @@ def minus_average_resting_states(timeseries_datapoints, brain_states_with_no_sti
 
   return timeseries_datapoints
 
-
+def get_non_static_voxels(timeseries_datapoints, return_indexes=False):

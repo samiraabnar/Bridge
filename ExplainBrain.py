@@ -112,7 +112,10 @@ class ExplainBrain(object):
         contexts, indexes = zip(*stimuli_in_context[block])
         encoded_stimuli = sess.run(self.stimuli_encoder.get_embeddings(contexts, [len(c) for c in contexts]))
         for encoded, index in zip(encoded_stimuli,indexes):
-          encoded_stimuli = integration_fn(encoded[index], axis=-1)
+          # TODO(samira): maybe there is a better fix for this?
+          if index is None:
+            index = [0]
+          encoded_stimuli = integration_fn(encoded[index], axis=0)
           encoded_stimuli_of_each_block[block].append(encoded_stimuli)
 
     return encoded_stimuli_of_each_block
@@ -139,7 +142,6 @@ class ExplainBrain(object):
     mapper_output = self.mapper.map(inputs=encoded_stimuli,targets=brain_activations)
 
     predictions = mapper_output['predictions']
-    print(predictions.shape)
     for metric_name, metric_fn in self.metrics().items():
       metric_eval = metric_fn(predictions=predictions, targets=brain_activations)
       print(metric_name,":",metric_eval)
@@ -161,28 +163,35 @@ class ExplainBrain(object):
 
     return self.folds[fold_index]
 
-  def preprocess_brain_activations(self, brain_activations, voxel_preprocessings, start_steps, end_steps):
-    for block in brain_activations.keys():
-      start_step = []
+  def preprocess_brain_activations(self, brain_activations, voxel_preprocessings, start_steps, end_steps, resting_norm=False):
+    for block in self.blocks:
       for voxel_preprocessing_fn, args in voxel_preprocessings:
         brain_activations[block] = voxel_preprocessing_fn(brain_activations[block], **args)
+
+      if resting_norm:
+        initial_brain_activations = brain_activations[block][:start_steps[block]]
+        brain_activations[block] = minus_average_resting_states(brain_activations, initial_brain_activations)
 
     return brain_activations
 
   def train_mapper(self, delay=0, eval=True, save=True, fold_index=-1):
 
-    # Add  different option to encode the stimuli (sentence based, word based, whole block based, whole story based)
+    # Add  different options to encode the stimuli (sentence based, word based, whole block based, whole story based)
     # Load the brain data
     tf.logging.info('Loading brain data ...')
     time_steps, brain_activations, stimuli, start_steps, end_steps = self.load_brain_experiment()
+
     tf.logging.info('Blocks: %s' %str(self.blocks))
     print('Example Stimuli %s' % str(stimuli[1][0]))
 
-    brain_activations = self.preprocess_brain_activations(brain_activations, voxel_preprocessings=self.voxel_preprocess())
+    # Preprocess brain activations
+    brain_activations = self.preprocess_brain_activations(brain_activations,
+                                                          voxel_preprocessings=self.voxel_preprocess(),
+                                                          start_steps=start_steps, end_steps=end_steps)
 
     # Encode the stimuli and get the representations from the computational model.
     tf.logging.info('Encoding the stimuli ...')
-    encoded_stimuli = self.encode_stimuli(stimuli, start_steps, end_steps )
+    encoded_stimuli = self.encode_stimuli(stimuli)
 
     # Get the test and training sets
     train_blocks, test_blocks = self.get_folds(fold_index)
@@ -196,7 +205,9 @@ class ExplainBrain(object):
                                                                                 timed_targets=brain_activations,
                                                                                 sorted_inputs=encoded_stimuli,
                                                                                 sorted_timesteps=time_steps,
-                                                                                delay=delay)
+                                                                                delay=delay,
+                                                                                start_steps=start_steps,
+                                                                                end_steps=end_steps)
 
     tf.logging.info('Prepare test pairs ...')
     if len(test_blocks) > 0:
@@ -204,7 +215,9 @@ class ExplainBrain(object):
                                                                                 timed_targets=brain_activations,
                                                                                 sorted_inputs=encoded_stimuli,
                                                                                 sorted_timesteps=time_steps,
-                                                                                delay=delay)
+                                                                                delay=delay,
+                                                                                start_steps=start_steps,
+                                                                                end_steps=end_steps)
     else:
         print('No test blocks!')
 

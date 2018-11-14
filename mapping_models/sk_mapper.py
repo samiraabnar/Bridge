@@ -37,21 +37,24 @@ class SkMapper(BasicMapper):
     timed_targets = kwargs['timed_targets']
     timed_inputs =  kwargs['sorted_inputs']
     time_steps =  kwargs['sorted_timesteps']
-
     delay = kwargs['delay']
+    start_steps = kwargs['start_steps']
+    end_steps = kwargs['end_steps']
 
     inputs = []
     targets = []
     for block in blocks:
       # for all steps in the current block
-      for step in time_steps[block]:
-        if step+delay in time_steps[block]:
-          input_index = np.where(time_steps[block] == step+delay)[0]
-          if len(timed_inputs[block][input_index]) > 0:
-            inputs.append(timed_inputs[block][input_index][0])
-            targets.append(timed_targets[block][step])
+      for i in np.arange(len(time_steps[block])):
+        step = time_steps[block][i]
+        if step+delay in time_steps[block][start_steps[block]:end_steps[block]+1]:
+          input_indexs = np.where(time_steps[block] == step+delay)[0]
+          for index in input_indexs:
+            inputs.append(timed_inputs[block][index])
+            targets.append(timed_targets[block][i])
 
     print(np.asarray(targets).shape)
+    print(np.asarray(inputs).shape)
     return np.asarray(inputs), np.asarray(targets)
 
 
