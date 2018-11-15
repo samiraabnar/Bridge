@@ -12,10 +12,10 @@ FLAGS = tf.flags.FLAGS
 
 tf.flags.DEFINE_integer('subject_id', 1, 'subject id')
 tf.flags.DEFINE_integer('fold_id', 0, 'fold id')
-tf.flags.DEFINE_list('delays',[0] , 'fold id')
+tf.flags.DEFINE_list('delays',[-8,-6,-4,-2,0,2,4,6,8] , 'delay list')
 tf.flags.DEFINE_boolean('cross_delay', True, 'try different train and test delays')
 
-tf.flags.DEFINE_float('alpha', 0, 'alpha')
+tf.flags.DEFINE_float('alpha', 1.0, 'alpha')
 tf.flags.DEFINE_string('embedding_dir', None, 'path to the file containing the embeddings')
 
 hparams = FLAGS
@@ -36,8 +36,8 @@ if __name__ == '__main__':
 
   # Build the pipeline object
   print("4. initialize Explainer...")
-  explain_brain = ExplainBrain(brain_data_reader, stimuli_encoder, mapper, embedding_type='elmo')
+  explain_brain = ExplainBrain(brain_data_reader, stimuli_encoder, mapper, embedding_type='elmo', subject_id=hparams.subject_id)
 
   # Train and evaluate how well we can predict the brain activatiobs
   print("5. train and evaluate...")
-  explain_brain.train_mappers(delays=[-8,-6,-4,-2,0,2,4,6,8], cross_delay=True,eval=True, save=True, fold_index=0)
+  explain_brain.train_mappers(delays=hparams.delays, cross_delay=hparams.cross_delay,eval=True, save=True, fold_index=hparams.fold_id)

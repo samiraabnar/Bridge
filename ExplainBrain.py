@@ -5,6 +5,7 @@ from evaluation.metrics import  mean_explain_variance
 from util.misc import get_folds
 from voxel_preprocessing.preprocess_voxels import detrend
 from voxel_preprocessing.preprocess_voxels import minus_average_resting_states
+from voxel_preprocessing.preprocess_voxels import reduce_mean
 from voxel_preprocessing.select_voxels import VarianceFeatureSelection
 from language_preprocessing.tokenize import SpacyTokenizer
 
@@ -15,15 +16,16 @@ from tqdm import tqdm
 
 
 class ExplainBrain(object):
-  def __init__(self, brain_data_reader, stimuli_encoder, mapper):
+  def __init__(self, brain_data_reader, stimuli_encoder, mapper, embedding_type, subject_id=1):
     self.brain_data_reader = brain_data_reader
     self.stimuli_encoder = stimuli_encoder
     self.mapper = mapper
     self.blocks = None
     self.folds = None
-    self.subject_id = 1
+    self.subject_id = subject_id
     self.data_dir = "../bridge_data/processed/harrypotter/"+str(self.subject_id)+"_"
     self.voxel_selectors = [VarianceFeatureSelection()]
+    self.embedding_type=embedding_type
 
   def load_brain_experiment(self, voxel_preprocessings=[], save=False, load=True):
     """Load stimili and brain measurements.
@@ -112,7 +114,7 @@ class ExplainBrain(object):
         encoded_stimuli_of_each_block[block] = []
         print("Encoding stimuli of block:", block)
         contexts, indexes = zip(*stimuli_in_context[block])
-        encoded_stimuli = sess.run(self.stimuli_encoder.get_embeddings(contexts, [len(c) for c in contexts]))
+        encoded_stimuli = sess.run(self.stimuli_encoder.get_embeddings(contexts, [len(c) for c in contexts], key=self.embedding_type))
         for encoded, index in zip(encoded_stimuli,indexes):
           # TODO(samira): maybe there is a better fix for this?
           if index is None:
@@ -132,7 +134,7 @@ class ExplainBrain(object):
 
   def voxel_preprocess(self, **kwargs):
 
-    return [(detrend,{'t_r':2.0})]
+    return [(detrend,{'t_r':2.0}), (reduce_mean,{})]
 
   def eval_mapper(self, encoded_stimuli, brain_activations):
     """Evaluate the mapper based on the defined metrics.
