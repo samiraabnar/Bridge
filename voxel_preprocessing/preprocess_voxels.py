@@ -1,11 +1,14 @@
 import nilearn.signal
 import numpy as np
 
-def detrend(timeseries_datapoints, t_r, standardize=False):
+def detrend(timeseries_datapoints, t_r, standardize=True):
     return nilearn.signal.clean(timeseries_datapoints, sessions=None,
                          detrend=True, standardize=standardize,
                          confounds=None, low_pass=None,
                          high_pass=0.005, t_r=t_r, ensure_finite=False)
+
+def reduce_mean(datapoints):
+  return datapoints - np.mean(datapoints, axis=0)
 
 def minus_average_resting_states(timeseries_datapoints, brain_states_with_no_stimuli):
   """
@@ -15,9 +18,8 @@ def minus_average_resting_states(timeseries_datapoints, brain_states_with_no_sti
   """
 
   # For now we simply normalize by minusing the avg resting state.
-  average_brain_state_with_no_stimuli = np.mean(brain_states_with_no_stimuli, axis=-1)
+  average_brain_state_with_no_stimuli = np.mean(brain_states_with_no_stimuli, axis=0)
   timeseries_datapoints = timeseries_datapoints - average_brain_state_with_no_stimuli
 
   return timeseries_datapoints
 
-def get_non_static_voxels(timeseries_datapoints, return_indexes=False):

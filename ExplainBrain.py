@@ -5,10 +5,12 @@ from evaluation.metrics import  mean_explain_variance
 from util.misc import get_folds
 from voxel_preprocessing.preprocess_voxels import detrend
 from voxel_preprocessing.preprocess_voxels import minus_average_resting_states
+from voxel_preprocessing.select_voxels import VarianceFeatureSelection
 from language_preprocessing.tokenize import SpacyTokenizer
 
 import tensorflow as tf
 import numpy as np
+import itertools
 from tqdm import tqdm
 
 
@@ -20,8 +22,8 @@ class ExplainBrain(object):
     self.blocks = None
     self.folds = None
     self.subject_id = 1
-
     self.data_dir = "../bridge_data/processed/harrypotter/"+str(self.subject_id)+"_"
+    self.voxel_selectors = [VarianceFeatureSelection()]
 
   def load_brain_experiment(self, voxel_preprocessings=[], save=False, load=True):
     """Load stimili and brain measurements.
@@ -163,61 +165,50 @@ class ExplainBrain(object):
 
     return self.folds[fold_index]
 
+  def voxel_selection(self, brain_activations, fit=False):
+
+    selected_voxels = []
+    reduced_brain_activations = brain_activations
+    for selector in self.voxel_selectors:
+      reduced_brain_activations = selector.select_featurs(reduced_brain_activations, fit)
+      selected_voxels.append(selector.get_selected_indexes())
+
+    return reduced_brain_activations, selected_voxels
+
   def preprocess_brain_activations(self, brain_activations, voxel_preprocessings, start_steps, end_steps, resting_norm=False):
     for block in self.blocks:
       for voxel_preprocessing_fn, args in voxel_preprocessings:
         brain_activations[block] = voxel_preprocessing_fn(brain_activations[block], **args)
 
       if resting_norm:
-        initial_brain_activations = brain_activations[block][:start_steps[block]]
-        brain_activations[block] = minus_average_resting_states(brain_activations, initial_brain_activations)
-
+        brain_activations[block] = minus_average_resting_states(brain_activations[block], brain_activations[block][:start_steps[block]])
     return brain_activations
 
-  def train_mapper(self, delay=0, eval=True, save=True, fold_index=-1):
-
-    # Add  different options to encode the stimuli (sentence based, word based, whole block based, whole story based)
-    # Load the brain data
-    tf.logging.info('Loading brain data ...')
-    time_steps, brain_activations, stimuli, start_steps, end_steps = self.load_brain_experiment()
-
-    tf.logging.info('Blocks: %s' %str(self.blocks))
-    print('Example Stimuli %s' % str(stimuli[1][0]))
-
-    # Preprocess brain activations
-    brain_activations = self.preprocess_brain_activations(brain_activations,
-                                                          voxel_preprocessings=self.voxel_preprocess(),
-                                                          start_steps=start_steps, end_steps=end_steps)
-
-    # Encode the stimuli and get the representations from the computational model.
-    tf.logging.info('Encoding the stimuli ...')
-    encoded_stimuli = self.encode_stimuli(stimuli)
-
-    # Get the test and training sets
-    train_blocks, test_blocks = self.get_folds(fold_index)
-    # Pepare the data for the mapping model (testc and train sets)
-    print("train blocks:", train_blocks)
-    print("test blocks:", test_blocks)
+  def train_mapper(self, brain_activations, encoded_stimuli, train_blocks,
+                   test_blocks,time_steps, start_steps, end_steps, train_delay, test_delay):
 
     tf.logging.info('Prepare train pairs ...')
-
     train_encoded_stimuli, train_brain_activations = self.mapper.prepare_inputs(blocks=train_blocks,
                                                                                 timed_targets=brain_activations,
                                                                                 sorted_inputs=encoded_stimuli,
                                                                                 sorted_timesteps=time_steps,
-                                                                                delay=delay,
+                                                                                delay=train_delay,
                                                                                 start_steps=start_steps,
                                                                                 end_steps=end_steps)
 
+    train_brain_activations, _ = self.voxel_selection(train_brain_activations, fit=True)
+
+    print(train_brain_activations.shape)
     tf.logging.info('Prepare test pairs ...')
     if len(test_blocks) > 0:
       test_encoded_stimuli, test_brain_activations = self.mapper.prepare_inputs(blocks=test_blocks,
                                                                                 timed_targets=brain_activations,
                                                                                 sorted_inputs=encoded_stimuli,
                                                                                 sorted_timesteps=time_steps,
-                                                                                delay=delay,
+                                                                                delay=test_delay,
                                                                                 start_steps=start_steps,
-                                                                                end_steps=end_steps)
+                                                                               end_steps=end_steps)
+      test_brain_activations, _ = self.voxel_selection(test_brain_activations, fit=False)
     else:
         print('No test blocks!')
 
@@ -232,6 +223,46 @@ class ExplainBrain(object):
       self.eval_mapper(train_encoded_stimuli, train_brain_activations)
       if len(test_blocks) > 0:
         self.eval_mapper(test_encoded_stimuli, test_brain_activations)
+
+
+  def train_mappers(self, delays=[0], cross_delay=True,eval=True, save=True, fold_index=-1):
+
+    # Add  different options to encode the stimuli (sentence based, word based, whole block based, whole story based)
+    # Load the brain data
+    tf.logging.info('Loading brain data ...')
+    time_steps, brain_activations, stimuli, start_steps, end_steps = self.load_brain_experiment()
+
+    tf.logging.info('Blocks: %s' %str(self.blocks))
+    print('Example Stimuli %s' % str(stimuli[1][0]))
+
+    # Preprocess brain activations
+    brain_activations = self.preprocess_brain_activations(brain_activations,
+                                                          voxel_preprocessings=self.voxel_preprocess(),
+                                                          start_steps=start_steps, end_steps=end_steps,
+                                                          resting_norm=False)
+
+    # Encode the stimuli and get the representations from the computational model.
+    tf.logging.info('Encoding the stimuli ...')
+    encoded_stimuli = self.encode_stimuli(stimuli)
+
+    # Get the test and training sets
+    train_blocks, test_blocks = self.get_folds(fold_index)
+    # Pepare the data for the mapping model (testc and train sets)
+    print("train blocks:", train_blocks)
+    print("test blocks:", test_blocks)
+
+    if cross_delay:
+      delay_pairs = itertools.product(delays, repeat=2)
+    else:
+      delay_pairs = zip(delays,delays)
+
+    for train_delay, test_delay in delay_pairs:
+      print("Training with train time delay of %d and test time delay of %d" % (train_delay, test_delay))
+      self.train_mapper(brain_activations, encoded_stimuli,
+                        train_blocks,test_blocks,
+                        time_steps, start_steps, end_steps,
+                        train_delay, test_delay)
+
 
 
 

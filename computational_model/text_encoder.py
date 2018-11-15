@@ -56,7 +56,7 @@ class TfHubUniversalEncoder(TextEncoder):
     super(TfHubUniversalEncoder, self).__init__(hparams)
     self.embedder = hub.Module('https://tfhub.dev/google/universal-sentence-encoder/2', trainable=trainable)
 
-  def get_embeddings(self, text_sequences, key='elmo'):
+  def get_embeddings(self, text_sequences, key='sentence'):
     print("text:", text_sequences)
     embeddings = self.embedder(
       text_sequences,
