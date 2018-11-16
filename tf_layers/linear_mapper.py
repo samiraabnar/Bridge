@@ -69,11 +69,11 @@ class WeightedInputLinearLayer(Layer):
     if 'train_weights_flag' in kwargs:
       train_weights = kwargs['train_weights_flag']
 
-    with tf.variable_scope('LinearLayer_'+self.scope, reuse=reuse, initializer=tf.initializers.truncated_normal):
+    with tf.variable_scope('LinearLayer_'+self.scope, reuse=reuse, initializer=tf.initializers.truncated_normal, regularizer=tf.contrib.layers.l2_regularizer(scale=0.1)):
       self.W = tf.get_variable(name='w', shape=(self.input_dim, self.output_dim),
                                   dtype=tf.float32,
                                   trainable=is_train)
-      self.input_weights = tf.get_variable(name='input_weights', shape=(self.input_len),
+      self.input_weights = tf.get_variable(name='input_weights', shape=(self.input_len, 1),
                                            dtype=tf.float32,
                                            trainable=train_weights)
 
@@ -88,9 +88,7 @@ class WeightedInputLinearLayer(Layer):
                            initializer=tf.initializers.truncated_normal,
                            regularizer=tf.contrib.layers.l2_regularizer):
 
-      batch_size = tf.shape(inputs)[0]
-      input_weights_shape = self.input_weights.get_shape()
-      #broad_casted_input_weights = tf.broadcast_to(self.input_weights, shape=[batch_size, *input_weights_shape])
-      outputs = tf.matmul(tf.multiply(self.input_weights,inputs), self.W)
+      weighted_input = tf.reduce_mean(inputs * self.input_weights , axis=1)
+      outputs = self.activation(tf.matmul(weighted_input, self.W))
 
     return outputs
