@@ -13,19 +13,30 @@ import tensorflow as tf
 import numpy as np
 import itertools
 from tqdm import tqdm
-
+import os
+import pickle
 
 class ExplainBrain(object):
-  def __init__(self, brain_data_reader, stimuli_encoder, mapper, embedding_type, subject_id=1):
+  def __init__(self, hparams, brain_data_reader, stimuli_encoder, mapper_tuple, embedding_type, subject_id=1):
+    """
+
+    :param brain_data_reader:
+    :param stimuli_encoder:
+    :param mapper_tuple: (mapper constructor, args)
+    :param embedding_type:
+    :param subject_id:
+    """
     self.brain_data_reader = brain_data_reader
     self.stimuli_encoder = stimuli_encoder
-    self.mapper = mapper
+    self.mapper_tuple = mapper_tuple
     self.blocks = None
     self.folds = None
     self.subject_id = subject_id
     self.data_dir = "../bridge_data/processed/harrypotter/"+str(self.subject_id)+"_"
+    self.model_dir = os.path.join("../bridge_models/",str(self.subject_id)+"_"+str(embedding_type))
     self.voxel_selectors = [VarianceFeatureSelection()]
     self.embedding_type=embedding_type
+    self.hparams = hparams
 
   def load_brain_experiment(self, voxel_preprocessings=[], save=False, load=True):
     """Load stimili and brain measurements.
@@ -136,14 +147,27 @@ class ExplainBrain(object):
 
     return [(detrend,{'t_r':2.0}), (reduce_mean,{})]
 
-  def eval_mapper(self, encoded_stimuli, brain_activations):
+  def eval(self, mapper, brain_activations, encoded_stimuli,
+                         test_blocks, time_steps, start_steps, end_steps, test_delay):
+    test_encoded_stimuli, test_brain_activations = mapper.prepare_inputs(blocks=test_blocks,
+                                                                         timed_targets=brain_activations,
+                                                                         sorted_inputs=encoded_stimuli,
+                                                                         sorted_timesteps=time_steps,
+                                                                         delay=test_delay,
+                                                                         start_steps=start_steps,
+                                                                         end_steps=end_steps)
+    test_brain_activations, _ = self.voxel_selection(test_brain_activations, fit=False)
+
+    self.eval_mapper(mapper, test_encoded_stimuli, test_brain_activations)
+
+  def eval_mapper(self, mapper, encoded_stimuli, brain_activations):
     """Evaluate the mapper based on the defined metrics.
 
     :param encoded_stimuli:
     :param brain_activations:
     :return:
     """
-    mapper_output = self.mapper.map(inputs=encoded_stimuli,targets=brain_activations)
+    mapper_output = mapper.map(inputs=encoded_stimuli,targets=brain_activations)
 
     predictions = mapper_output['predictions']
     for metric_name, metric_fn in self.metrics().items():
@@ -187,10 +211,11 @@ class ExplainBrain(object):
     return brain_activations
 
   def train_mapper(self, brain_activations, encoded_stimuli, train_blocks,
-                   test_blocks,time_steps, start_steps, end_steps, train_delay, test_delay):
+                   test_blocks,time_steps, start_steps, end_steps, train_delay, test_delay, fold_id,save=True):
 
+    mapper = self.mapper_tuple[0](**self.mapper_tuple[1])
     tf.logging.info('Prepare train pairs ...')
-    train_encoded_stimuli, train_brain_activations = self.mapper.prepare_inputs(blocks=train_blocks,
+    train_encoded_stimuli, train_brain_activations = mapper.prepare_inputs(blocks=train_blocks,
                                                                                 timed_targets=brain_activations,
                                                                                 sorted_inputs=encoded_stimuli,
                                                                                 sorted_timesteps=time_steps,
@@ -202,30 +227,30 @@ class ExplainBrain(object):
 
     print(train_brain_activations.shape)
     tf.logging.info('Prepare test pairs ...')
-    if len(test_blocks) > 0:
-      test_encoded_stimuli, test_brain_activations = self.mapper.prepare_inputs(blocks=test_blocks,
-                                                                                timed_targets=brain_activations,
-                                                                                sorted_inputs=encoded_stimuli,
-                                                                                sorted_timesteps=time_steps,
-                                                                                delay=test_delay,
-                                                                                start_steps=start_steps,
-                                                                               end_steps=end_steps)
-      test_brain_activations, _ = self.voxel_selection(test_brain_activations, fit=False)
-    else:
-        print('No test blocks!')
 
     # Train the mapper
     tf.logging.info('Start training ...')
-    self.mapper.train(inputs=train_encoded_stimuli,targets=train_brain_activations)
+    mapper.train(inputs=train_encoded_stimuli,targets=train_brain_activations)
     tf.logging.info('Training done!')
 
     # Evaluate the mapper
     if eval:
       tf.logging.info('Evaluating ...')
-      self.eval_mapper(train_encoded_stimuli, train_brain_activations)
+      self.eval_mapper(mapper, train_encoded_stimuli, train_brain_activations)
       if len(test_blocks) > 0:
-        self.eval_mapper(test_encoded_stimuli, test_brain_activations)
+        self.eval(mapper, brain_activations, encoded_stimuli,
+                  test_blocks, time_steps, start_steps, end_steps, test_delay)
 
+    if save:
+      save_dir = self.model_dir + "_fold_"+str(fold_id)+"_delay_"+str(train_delay)
+
+      # Save the mode
+      pickle.dump(mapper, open(save_dir, "wb"))
+
+      # Save the params
+      pickle.dump(self.hparams, open(save_dir+"_params", "wb"))
+
+    return mapper
 
   def train_mappers(self, delays=[0], cross_delay=True,eval=True, save=True, fold_index=-1):
 
@@ -258,12 +283,17 @@ class ExplainBrain(object):
     else:
       delay_pairs = zip(delays,delays)
 
+    trained_mapper_dic = {}
     for train_delay, test_delay in delay_pairs:
       print("Training with train time delay of %d and test time delay of %d" % (train_delay, test_delay))
-      self.train_mapper(brain_activations, encoded_stimuli,
-                        train_blocks,test_blocks,
-                        time_steps, start_steps, end_steps,
-                        train_delay, test_delay)
+      if train_delay not in trained_mapper_dic:
+        trained_mapper_dic[train_delay] = self.train_mapper(brain_activations, encoded_stimuli,
+                                                            train_blocks,test_blocks,
+                                                            time_steps, start_steps, end_steps,
+                                                            train_delay, test_delay, fold_index)
+      else:
+        self.eval(trained_mapper_dic[train_delay], brain_activations, encoded_stimuli,
+                         test_blocks, time_steps, start_steps, end_steps, test_delay)
 
 
 

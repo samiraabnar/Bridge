@@ -32,11 +32,12 @@ if __name__ == '__main__':
   stimuli_encoder = TfHubElmoEncoder(hparams)
 
   print("3. initialize mapper ...")
-  mapper = SkMapper(hparams)
+  mapper = (SkMapper, {'hparams':hparams})
 
-  # Build the pipeline object
+  # Build the pip
+  # eline object
   print("4. initialize Explainer...")
-  explain_brain = ExplainBrain(brain_data_reader, stimuli_encoder, mapper, embedding_type='elmo', subject_id=hparams.subject_id)
+  explain_brain = ExplainBrain(hparams, brain_data_reader, stimuli_encoder, mapper, embedding_type='elmo', subject_id=hparams.subject_id)
 
   # Train and evaluate how well we can predict the brain activatiobs
   print("5. train and evaluate...")
