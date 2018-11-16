@@ -60,7 +60,7 @@ class TfMapper(BasicMapper):
 
     total_loss = mse_loss + reg_loss + pair_wise_mse_loss# pair_wise_mse_loss # + mse_loss + regression_loss
 
-    train_op = tf.train.GradientDescentOptimizer(learning_rate=0.001).minimize(total_loss)
+    train_op = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(total_loss)
 
     for i in np.arange(steps):
       self.sess.run(tf.global_variables_initializer())
@@ -80,8 +80,8 @@ if __name__ == '__main__':
     with tf.Session() as session:
       tf_mapper = TfMapper(hparams, session, input_dim=5, output_dim=1, input_len=4)
       tf_mapper.build(True)
-      inputs = np.random.rand(10,4,5)
-      targets = np.random.rand(10, 1)
+      inputs = np.random.rand(5,4,5)
+      targets = np.random.rand(5, 1)
 
       print(inputs.shape)
       print(targets.shape)
