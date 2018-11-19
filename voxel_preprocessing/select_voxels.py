@@ -27,7 +27,7 @@ class VarianceFeatureSelection(object):
 
 
 class TopkFeatureSelection(object):
-  def __init__(self, metric_fn=explained_variance, k=1000):
+  def __init__(self, metric_fn=explained_variance, k=500):
     self.metric_fn = metric_fn
     self.selected_indexes = None
     self.k = k

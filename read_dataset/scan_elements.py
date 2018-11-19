@@ -69,10 +69,11 @@ class Block(object):
         if len(stimuli_tokens_in_current_sent_indexes) > 0:
           current_sentence = self.sentences[i]
           for ind in np.arange(0,len(current_sentence)):
-            context_len_before = len(context)
-            context.extend(tokenizer.tokenize(self.sentences[i][ind]))
-            if ind in list(np.asarray(token_indexes)[stimuli_tokens_in_current_sent_indexes]):
-              stimuli_indexes.extend(np.arange(context_len_before, len(context)))
+            if not only_past or ind <= max(token_indexes):
+              context_len_before = len(context)
+              context.extend(tokenizer.tokenize(self.sentences[i][ind]))
+              if ind in list(np.asarray(token_indexes)[stimuli_tokens_in_current_sent_indexes]):
+                stimuli_indexes.extend(np.arange(context_len_before, len(context)))
         else:
           context.extend(tokenizer.tokenize(self.sentences[i]))
 
@@ -81,7 +82,83 @@ class Block(object):
     else:
       return [''], None
 
+  def get_block_context(self, scan_event, tokenizer, only_past=False, past_window=0, future_window=0):
+    """
 
+    :param scan_event:
+    :param tokenizer: object with a tokenize function that gets a string and returns a string.
+    :param past_window:
+    :param future_window:
+    :return:
+      context (list of tokens), indexes of stimuli in the context
+    """
+    if len(scan_event.stimulus_pointer) > 0:
+      if only_past:
+        future_window = 0
+
+      sentence_indexes, token_indexes = list(zip(*scan_event.stimulus_pointer))
+      current_sentence_index_start = scan_event.stimulus_pointer[0][0]
+      current_sentence_index_end = scan_event.stimulus_pointer[-1][0]
+      start_sentence_index = np.max([current_sentence_index_start - past_window, 0])
+      last_sentence_index = np.min([len(self.sentences), current_sentence_index_end + future_window])
+
+      stimuli_indexes = []
+      context = []
+      for i in np.arange(start_sentence_index, last_sentence_index+1):
+
+        # Compute the index of stimuli in the context
+        stimuli_tokens_in_current_sent_indexes = np.where(sentence_indexes == i)[0]
+        if len(stimuli_tokens_in_current_sent_indexes) > 0:
+          current_sentence = self.sentences[i]
+          for ind in np.arange(0,len(current_sentence)):
+            if not only_past or ind <= max(token_indexes):
+              context_len_before = len(context)
+              context.extend(tokenizer.tokenize(self.sentences[i][ind]))
+              if ind in list(np.asarray(token_indexes)[stimuli_tokens_in_current_sent_indexes]):
+                stimuli_indexes.extend(np.arange(context_len_before, len(context)))
+        else:
+          context.extend(tokenizer.tokenize(self.sentences[i]))
+
+
+      return context, stimuli_indexes
+    else:
+      return [''], None
+
+  def get_no_context(self, scan_event, tokenizer):
+    """
+
+    :param scan_event:
+    :param tokenizer: object with a tokenize function that gets a string and returns a string.
+    :param past_window:
+    :param future_window:
+    :return:
+      context (list of tokens), indexes of stimuli in the context
+    """
+    if len(scan_event.stimulus_pointer) > 0:
+      sentence_indexes, token_indexes = list(zip(*scan_event.stimulus_pointer))
+      current_sentence_index_start = scan_event.stimulus_pointer[0][0]
+      current_sentence_index_end = scan_event.stimulus_pointer[-1][0]
+      start_sentence_index = np.max([current_sentence_index_start - past_window, 0])
+      last_sentence_index = np.min([len(self.sentences), current_sentence_index_end + future_window])
+
+      stimuli_indexes = []
+      context = []
+      for i in np.arange(start_sentence_index, last_sentence_index+1):
+
+        # Compute the index of stimuli in the context
+        stimuli_tokens_in_current_sent_indexes = np.where(sentence_indexes == i)[0]
+        if len(stimuli_tokens_in_current_sent_indexes) > 0:
+          current_sentence = self.sentences[i]
+          for ind in np.arange(0,len(current_sentence)):
+              if ind in list(np.asarray(token_indexes)[stimuli_tokens_in_current_sent_indexes]):
+                context_len_before = len(context)
+                context.extend(tokenizer.tokenize(self.sentences[i][ind]))
+                stimuli_indexes.extend(np.arange(context_len_before, len(context)))
+
+
+      return context, stimuli_indexes
+    else:
+      return [''], None
 
   def get_stimuli_in_context(self,scan_event, tokenizer, context_mode, **kwargs):
     """
@@ -98,3 +175,6 @@ class Block(object):
                                   **kwargs)
     else:
       raise NotImplementedError()
+
+
+

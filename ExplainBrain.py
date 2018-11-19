@@ -187,7 +187,7 @@ class ExplainBrain(object):
     predictions, selected_voxels = self.post_train_voxel_selection(predictions)
     brain_activations, selected_voxels = self.post_train_voxel_selection(brain_activations)
 
-    print("number of voxels under evaluation:", len(selected_voxels), len(predictions))
+    print("number of voxels under evaluation:", len(selected_voxels), predictions.shape)
     for metric_name, metric_fn in self.metrics().items():
       metric_eval = metric_fn(predictions=predictions, targets=brain_activations)
       print(metric_name,":",metric_eval)
