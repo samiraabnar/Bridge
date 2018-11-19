@@ -45,7 +45,7 @@ class ExplainBrain(object):
     self.data_dir = "../bridge_data/processed/harrypotter/" + str(self.subject_id) + "_" + self.hparams.context_mode + "_window"+str(self.past_window)+"-"+str(self.future_window) + "_"
     self.model_dir = os.path.join("../bridge_models/", str(self.subject_id) + "_" + str(self.embedding_type)+"_"+self.hparams.context_mode+"_window"+str(self.past_window)+"-"+str(self.future_window))
 
-  def load_brain_experiment(self, voxel_preprocessings=[], save=False, load=True):
+  def load_brain_experiment(self):
     """Load stimili and brain measurements.
 
     :return:
@@ -53,7 +53,7 @@ class ExplainBrain(object):
     brain_activations: {block_number: {time_step: vector of brain activation}
     stimuli: {block_number: {time_step: stimuli representation}
     """
-    if load and Path(self.data_dir+"brain_activations.npy").exists():
+    if self.hparams.load_data and Path(self.data_dir+"brain_activations.npy").exists():
       brain_activations = np.load(self.data_dir+"brain_activations.npy").item()
       stimuli_in_context = np.load(self.data_dir + "stimuli_in_context.npy").item()
       time_steps = np.load(self.data_dir + "time_steps.npy").item()
@@ -76,7 +76,7 @@ class ExplainBrain(object):
     print(start_steps)
     print(end_steps)
 
-    if save:
+    if self.hparams.save_data:
       print("Saving the data ...")
       np.save(self.data_dir + "brain_activations", brain_activations)
       np.save(self.data_dir + "stimuli_in_context", stimuli_in_context)
@@ -184,10 +184,10 @@ class ExplainBrain(object):
     mapper_output = mapper.map(inputs=encoded_stimuli,targets=brain_activations)
     predictions = mapper_output['predictions']
 
-    predictions, _ = self.post_train_voxel_selection(predictions)
-    brain_activations, _ = self.post_train_voxel_selection(brain_activations)
+    predictions, selected_voxels = self.post_train_voxel_selection(predictions)
+    brain_activations, selected_voxels = self.post_train_voxel_selection(brain_activations)
 
-
+    print("number of voxels under evaluation:", len(selected_voxels))
     for metric_name, metric_fn in self.metrics().items():
       metric_eval = metric_fn(predictions=predictions, targets=brain_activations)
       print(metric_name,":",metric_eval)
@@ -264,7 +264,7 @@ class ExplainBrain(object):
                                                                                 end_steps=end_steps)
 
     train_brain_activations, selected_voxels = self.voxel_selection(train_brain_activations, fit=True)
-
+    print("number of selected voxels:", len(selected_voxels))
     print(train_brain_activations.shape)
     tf.logging.info('Prepare test pairs ...')
 
@@ -303,7 +303,7 @@ class ExplainBrain(object):
 
     return mapper
 
-  def train_mappers(self, delays=[0], cross_delay=True,eval=True, save=True, fold_index=-1):
+  def train_mappers(self, delays=[0], cross_delay=True,eval=True, fold_index=-1):
 
     # Add  different options to encode the stimuli (sentence based, word based, whole block based, whole story based)
     # Load the brain data
@@ -341,7 +341,7 @@ class ExplainBrain(object):
         trained_mapper_dic[train_delay] = self.train_mapper(brain_activations, encoded_stimuli,
                                                             train_blocks,test_blocks,
                                                             time_steps, start_steps, end_steps,
-                                                            train_delay, test_delay, fold_index, save=save)
+                                                            train_delay, test_delay, fold_index, save=self.hparams.save_models)
       else:
         self.eval(trained_mapper_dic[train_delay], brain_activations, encoded_stimuli,
                          test_blocks, time_steps, start_steps, end_steps, test_delay)

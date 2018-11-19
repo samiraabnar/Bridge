@@ -25,6 +25,10 @@ tf.flags.DEFINE_string('context_mode', 'sentence', 'type of context')
 tf.flags.DEFINE_integer('past_window', 0, 'window size to the past')
 tf.flags.DEFINE_integer('future_window', 0, 'window size to the future')
 
+tf.flags.DEFINE_boolean('save_data', True ,'save data flag')
+tf.flags.DEFINE_boolean('load_data', True ,'load data flag')
+
+tf.flags.DEFINE_boolean('save_models', True ,'save models flag')
 
 hparams = FLAGS
 if __name__ == '__main__':
@@ -49,4 +53,4 @@ if __name__ == '__main__':
 
   # Train and evaluate how well we can predict the brain activatiobs
   print("5. train and evaluate...")
-  explain_brain.train_mappers(delays=hparams.delays, cross_delay=hparams.cross_delay,eval=True, save=True, fold_index=hparams.fold_id)
+  explain_brain.train_mappers(delays=hparams.delays, cross_delay=hparams.cross_delay,eval=True, fold_index=hparams.fold_id)
