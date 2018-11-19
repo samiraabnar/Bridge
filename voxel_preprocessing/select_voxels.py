@@ -37,7 +37,12 @@ class TopkFeatureSelection(object):
     self.selected_indexes = np.argsort(metric_eval)[-self.k:]
 
   def select_featurs(self, data):
-    return data[self.selected_indexes]
+    """
+
+    :param data: [batch_size, embedding_size]
+    :return:
+    """
+    return np.asarray(data)[:,self.selected_indexes]
 
 
   def get_selected_indexes(self):

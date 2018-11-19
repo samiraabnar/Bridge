@@ -72,7 +72,8 @@ class ExplainBrain(object):
     print(end_steps)
 
     if save:
-      np.save(self.data_dir+"brain_activations", brain_activations)
+      print("Saving the data ...")
+      np.save(self.data_dir + "brain_activations", brain_activations)
       np.save(self.data_dir + "stimuli_in_context", stimuli_in_context)
       np.save(self.data_dir + "time_steps", time_steps)
 
@@ -146,6 +147,11 @@ class ExplainBrain(object):
 
 
   def voxel_preprocess(self, **kwargs):
+    """Returns the list of preprocessing functions with their input parameters.
+
+    :param kwargs:
+    :return:
+    """
 
     return [(detrend,{'t_r':2.0}), (reduce_mean,{})]
 
@@ -196,11 +202,11 @@ class ExplainBrain(object):
 
   def voxel_selection(self, brain_activations, fit=False):
 
-    selected_voxels = []
+    selected_voxels = np.arange(len(brain_activations[0]))
     reduced_brain_activations = brain_activations
     for selector in self.voxel_selectors:
       reduced_brain_activations = selector.select_featurs(reduced_brain_activations, fit)
-      selected_voxels.append(selector.get_selected_indexes())
+      selected_voxels = np.asarray(selected_voxels)[selector.get_selected_indexes()]
 
     return reduced_brain_activations, selected_voxels
 
@@ -218,11 +224,11 @@ class ExplainBrain(object):
       for selector in self.post_train_voxel_selectors:
         selector.fit(predictions, labels)
 
-    selected_voxels = []
+    selected_voxels = np.arange(len(brain_activations[0]))
     reduced_brain_activations = brain_activations
     for selector in self.post_train_voxel_selectors:
       reduced_brain_activations = selector.select_featurs(reduced_brain_activations)
-      selected_voxels.append(selector.get_selected_indexes())
+      selected_voxels = np.asarray(selected_voxels)[selector.get_selected_indexes()]
 
     return reduced_brain_activations, selected_voxels
 
@@ -236,7 +242,7 @@ class ExplainBrain(object):
     return brain_activations
 
   def train_mapper(self, brain_activations, encoded_stimuli, train_blocks,
-                   test_blocks,time_steps, start_steps, end_steps, train_delay, test_delay, fold_id,save=True):
+                   test_blocks,time_steps, start_steps, end_steps, train_delay, test_delay, fold_id, save=True):
 
     mapper = self.mapper_tuple[0](**self.mapper_tuple[1])
     tf.logging.info('Prepare train pairs ...')
@@ -248,7 +254,7 @@ class ExplainBrain(object):
                                                                                 start_steps=start_steps,
                                                                                 end_steps=end_steps)
 
-    train_brain_activations, _ = self.voxel_selection(train_brain_activations, fit=True)
+    train_brain_activations, selected_voxels = self.voxel_selection(train_brain_activations, fit=True)
 
     print(train_brain_activations.shape)
     tf.logging.info('Prepare test pairs ...')
@@ -261,7 +267,7 @@ class ExplainBrain(object):
     # Select voxels based on performance on training set ...
     mapper_output = mapper.map(inputs=train_encoded_stimuli, targets=train_brain_activations)
     predictions = mapper_output['predictions']
-    self.post_train_voxel_selection(brain_activations, predictions=predictions, labels=train_brain_activations, fit=True)
+    _, post_selected_voxels = self.post_train_voxel_selection(brain_activations, predictions=predictions, labels=train_brain_activations, fit=True)
 
 
     # Evaluate the mapper
@@ -273,13 +279,18 @@ class ExplainBrain(object):
                   test_blocks, time_steps, start_steps, end_steps, test_delay)
 
     if save:
+      print("Saving the model:")
       save_dir = self.model_dir + "_fold_"+str(fold_id)+"_delay_"+str(train_delay)
 
       # Save the mode
-      pickle.dump(mapper, open(save_dir, "wb"))
+      pickle.dump(mapper, open(save_dir, 'wb'))
 
       # Save the params
-      pickle.dump(self.hparams, open(save_dir+"_params", "wb"))
+      pickle.dump(self.hparams, open(save_dir+'_params', 'wb'))
+
+      # Save the selected voxels:
+      np.save(selected_voxels, open(save_dir+ 'selected_voxels', 'wb'))
+      np.save(post_selected_voxels, open(save_dir + '_post_selected_voxels', 'wb'))
 
     return mapper
 
@@ -321,7 +332,7 @@ class ExplainBrain(object):
         trained_mapper_dic[train_delay] = self.train_mapper(brain_activations, encoded_stimuli,
                                                             train_blocks,test_blocks,
                                                             time_steps, start_steps, end_steps,
-                                                            train_delay, test_delay, fold_index)
+                                                            train_delay, test_delay, fold_index, save=save)
       else:
         self.eval(trained_mapper_dic[train_delay], brain_activations, encoded_stimuli,
                          test_blocks, time_steps, start_steps, end_steps, test_delay)
