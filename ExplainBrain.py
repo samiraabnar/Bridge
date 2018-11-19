@@ -16,9 +16,11 @@ import itertools
 from tqdm import tqdm
 import os
 import pickle
+from pathlib import Path
+
 
 class ExplainBrain(object):
-  def __init__(self, hparams, brain_data_reader, stimuli_encoder, mapper_tuple, embedding_type, subject_id=1):
+  def __init__(self, hparams, brain_data_reader, stimuli_encoder, mapper_tuple):
     """
 
     :param brain_data_reader:
@@ -27,18 +29,21 @@ class ExplainBrain(object):
     :param embedding_type:
     :param subject_id:
     """
+    self.hparams = hparams
     self.brain_data_reader = brain_data_reader
     self.stimuli_encoder = stimuli_encoder
     self.mapper_tuple = mapper_tuple
     self.blocks = None
     self.folds = None
-    self.subject_id = subject_id
-    self.data_dir = "../bridge_data/processed/harrypotter/"+str(self.subject_id)+"_"
-    self.model_dir = os.path.join("../bridge_models/",str(self.subject_id)+"_"+str(embedding_type))
+    self.subject_id = self.hparams.subject_id
+
     self.voxel_selectors = [VarianceFeatureSelection()]
     self.post_train_voxel_selectors = [TopkFeatureSelection()]
-    self.embedding_type=embedding_type
-    self.hparams = hparams
+    self.embedding_type = self.hparams.embedding_type
+    self.past_window = self.hparams.past_window
+    self.future_window = self.hparams.future_window
+    self.data_dir = "../bridge_data/processed/harrypotter/" + str(self.subject_id) + "_" + self.hparams.context_mode + "_window"+str(self.past_window)+"-"+str(self.future_window) + "_"
+    self.model_dir = os.path.join("../bridge_models/", str(self.subject_id) + "_" + str(self.embedding_type)+"_"+self.hparams.context_mode+"_window"+str(self.past_window)+"-"+str(self.future_window))
 
   def load_brain_experiment(self, voxel_preprocessings=[], save=False, load=True):
     """Load stimili and brain measurements.
@@ -48,7 +53,7 @@ class ExplainBrain(object):
     brain_activations: {block_number: {time_step: vector of brain activation}
     stimuli: {block_number: {time_step: stimuli representation}
     """
-    if load:
+    if load and Path(self.data_dir+"brain_activations.npy").exists():
       brain_activations = np.load(self.data_dir+"brain_activations.npy").item()
       stimuli_in_context = np.load(self.data_dir + "stimuli_in_context.npy").item()
       time_steps = np.load(self.data_dir + "time_steps.npy").item()
@@ -79,7 +84,7 @@ class ExplainBrain(object):
 
     return time_steps, brain_activations, stimuli_in_context, start_steps, end_steps
 
-  def decompose_scan_events(self, scan_events, context_mode='sentence'):
+  def decompose_scan_events(self, scan_events):
     """
     :param scan_events:
     :return:
@@ -105,8 +110,9 @@ class ExplainBrain(object):
         context, stimuli_index = block.get_stimuli_in_context(
           scan_event=event,
           tokenizer=tokenizer,
-          context_mode='sentence',
-          past_window=0)
+          context_mode=self.hparams.context_mode,
+          past_window=self.hparams.past_window,
+          future_window=self.hparams.future_window)
 
         stimuli_in_context[block.block_id].append((context, stimuli_index))
         brain_activations[block.block_id].append(event.scan)
@@ -176,9 +182,12 @@ class ExplainBrain(object):
     :return:
     """
     mapper_output = mapper.map(inputs=encoded_stimuli,targets=brain_activations)
-    mapper_output = self.post_train_voxel_selection(mapper_output)
-
     predictions = mapper_output['predictions']
+
+    predictions, _ = self.post_train_voxel_selection(predictions)
+    brain_activations, _ = self.post_train_voxel_selection(brain_activations)
+
+
     for metric_name, metric_fn in self.metrics().items():
       metric_eval = metric_fn(predictions=predictions, targets=brain_activations)
       print(metric_name,":",metric_eval)
@@ -267,7 +276,7 @@ class ExplainBrain(object):
     # Select voxels based on performance on training set ...
     mapper_output = mapper.map(inputs=train_encoded_stimuli, targets=train_brain_activations)
     predictions = mapper_output['predictions']
-    _, post_selected_voxels = self.post_train_voxel_selection(brain_activations, predictions=predictions, labels=train_brain_activations, fit=True)
+    _, post_selected_voxels = self.post_train_voxel_selection(train_brain_activations, predictions=predictions, labels=train_brain_activations, fit=True)
 
 
     # Evaluate the mapper
@@ -301,6 +310,7 @@ class ExplainBrain(object):
     tf.logging.info('Loading brain data ...')
     time_steps, brain_activations, stimuli, start_steps, end_steps = self.load_brain_experiment()
 
+    self.blocks = [1]
     tf.logging.info('Blocks: %s' %str(self.blocks))
     print('Example Stimuli %s' % str(stimuli[1][0]))
 

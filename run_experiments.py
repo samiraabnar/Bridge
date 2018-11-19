@@ -18,6 +18,12 @@ tf.flags.DEFINE_boolean('cross_delay', True, 'try different train and test delay
 tf.flags.DEFINE_float('alpha', 1.0, 'alpha')
 tf.flags.DEFINE_string('embedding_dir', None, 'path to the file containing the embeddings')
 
+tf.flags.DEFINE_string('embedding_type', 'elmo', 'type of embedding')
+tf.flags.DEFINE_string('context_mode', 'sentence', 'type of context')
+tf.flags.DEFINE_integer('past_window', 0, 'window size to the past')
+tf.flags.DEFINE_integer('future_window', 0, 'window size to the future')
+
+
 hparams = FLAGS
 if __name__ == '__main__':
 
@@ -37,7 +43,7 @@ if __name__ == '__main__':
   # Build the pip
   # eline object
   print("4. initialize Explainer...")
-  explain_brain = ExplainBrain(hparams, brain_data_reader, stimuli_encoder, mapper, embedding_type='elmo', subject_id=hparams.subject_id)
+  explain_brain = ExplainBrain(hparams, brain_data_reader, stimuli_encoder, mapper)
 
   # Train and evaluate how well we can predict the brain activatiobs
   print("5. train and evaluate...")
