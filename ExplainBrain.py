@@ -310,7 +310,6 @@ class ExplainBrain(object):
     tf.logging.info('Loading brain data ...')
     time_steps, brain_activations, stimuli, start_steps, end_steps = self.load_brain_experiment()
 
-    self.blocks = [1]
     tf.logging.info('Blocks: %s' %str(self.blocks))
     print('Example Stimuli %s' % str(stimuli[1][0]))
 
