@@ -17,6 +17,8 @@ tf.flags.DEFINE_boolean('cross_delay', True, 'try different train and test delay
 
 tf.flags.DEFINE_float('alpha', 1.0, 'alpha')
 tf.flags.DEFINE_string('embedding_dir', None, 'path to the file containing the embeddings')
+tf.flags.DEFINE_string('brain_data_dir', '/Users/samiraabnar/Codes/Data/harrypotter/', 'Brain Data Dir')
+
 
 tf.flags.DEFINE_string('embedding_type', 'elmo', 'type of embedding')
 tf.flags.DEFINE_string('context_mode', 'sentence', 'type of context')
@@ -31,7 +33,7 @@ if __name__ == '__main__':
 
   # Define how we want to read the brain data
   print("1. initialize brain data reader ...")
-  brain_data_reader = HarryPotterReader(data_dir='/Users/samiraabnar/Codes/Data/harrypotter/')
+  brain_data_reader = HarryPotterReader(data_dir=hparams.brain_data_dir)
 
   # Define how we want to computationaly represent the stimuli
   print("2. initialize text encoder ...")

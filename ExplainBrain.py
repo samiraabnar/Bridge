@@ -298,8 +298,8 @@ class ExplainBrain(object):
       pickle.dump(self.hparams, open(save_dir+'_params', 'wb'))
 
       # Save the selected voxels:
-      np.save(selected_voxels, open(save_dir+ 'selected_voxels', 'wb'))
-      np.save(post_selected_voxels, open(save_dir + '_post_selected_voxels', 'wb'))
+      np.save(open(save_dir+ 'selected_voxels', 'wb'), selected_voxels)
+      np.save(open(save_dir + '_post_selected_voxels', 'wb'), post_selected_voxels)
 
     return mapper
 

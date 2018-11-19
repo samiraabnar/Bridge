@@ -157,6 +157,7 @@ class HarryPotterReader(FmriReader):
         # Data is in matlab format
         # Data structure is a dictionary with keys data, time, words, meta
         # Shapes for subject 1, block 1: data (1351,37913), time (1351,2) words (1, 5176)
+        print("Reading "+self.data_dir + "subject_" + str(subject_id) + ".mat")
         datafile = scipy.io.loadmat(self.data_dir + "subject_" + str(subject_id) + ".mat")
 
         # We have one scan every 2 seconds
