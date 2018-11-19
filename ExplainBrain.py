@@ -7,6 +7,7 @@ from voxel_preprocessing.preprocess_voxels import detrend
 from voxel_preprocessing.preprocess_voxels import minus_average_resting_states
 from voxel_preprocessing.preprocess_voxels import reduce_mean
 from voxel_preprocessing.select_voxels import VarianceFeatureSelection
+from voxel_preprocessing.select_voxels import TopkFeatureSelection
 from language_preprocessing.tokenize import SpacyTokenizer
 
 import tensorflow as tf
@@ -35,6 +36,7 @@ class ExplainBrain(object):
     self.data_dir = "../bridge_data/processed/harrypotter/"+str(self.subject_id)+"_"
     self.model_dir = os.path.join("../bridge_models/",str(self.subject_id)+"_"+str(embedding_type))
     self.voxel_selectors = [VarianceFeatureSelection()]
+    self.post_train_voxel_selectors[TopkFeatureSelection()]
     self.embedding_type=embedding_type
     self.hparams = hparams
 
@@ -168,6 +170,7 @@ class ExplainBrain(object):
     :return:
     """
     mapper_output = mapper.map(inputs=encoded_stimuli,targets=brain_activations)
+    mapper_output = self.post_train_voxel_selection(mapper_output)
 
     predictions = mapper_output['predictions']
     for metric_name, metric_fn in self.metrics().items():
@@ -197,6 +200,28 @@ class ExplainBrain(object):
     reduced_brain_activations = brain_activations
     for selector in self.voxel_selectors:
       reduced_brain_activations = selector.select_featurs(reduced_brain_activations, fit)
+      selected_voxels.append(selector.get_selected_indexes())
+
+    return reduced_brain_activations, selected_voxels
+
+  def post_train_voxel_selection(self, brain_activations, predictions=None, labels=None, fit=False):
+    """Voxel selection that needs to be applied after training and is based on training results.
+
+    :param brain_activations:
+    :param predictions:
+    :param labels:
+    :param fit:
+    :return:
+    """
+    if fit and labels is not None and predictions is not None:
+      print("Fitting post training voxel selectors")
+      for selector in self.post_train_voxel_selectors:
+        selector.fit(predictions, labels)
+
+    selected_voxels = []
+    reduced_brain_activations = brain_activations
+    for selector in self.post_train_voxel_selectors:
+      reduced_brain_activations = selector.select_featurs(reduced_brain_activations)
       selected_voxels.append(selector.get_selected_indexes())
 
     return reduced_brain_activations, selected_voxels
@@ -232,6 +257,12 @@ class ExplainBrain(object):
     tf.logging.info('Start training ...')
     mapper.train(inputs=train_encoded_stimuli,targets=train_brain_activations)
     tf.logging.info('Training done!')
+
+    # Select voxels based on performance on training set ...
+    mapper_output = mapper.map(inputs=train_encoded_stimuli, targets=train_brain_activations)
+    predictions = mapper_output['predictions']
+    self.post_train_voxel_selection(brain_activations, predictions=predictions, labels=train_brain_activations, fit=True)
+
 
     # Evaluate the mapper
     if eval:
