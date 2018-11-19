@@ -36,7 +36,7 @@ class ExplainBrain(object):
     self.data_dir = "../bridge_data/processed/harrypotter/"+str(self.subject_id)+"_"
     self.model_dir = os.path.join("../bridge_models/",str(self.subject_id)+"_"+str(embedding_type))
     self.voxel_selectors = [VarianceFeatureSelection()]
-    self.post_train_voxel_selectors[TopkFeatureSelection()]
+    self.post_train_voxel_selectors = [TopkFeatureSelection()]
     self.embedding_type=embedding_type
     self.hparams = hparams
 
