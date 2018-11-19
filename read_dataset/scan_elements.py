@@ -40,7 +40,7 @@ class Block(object):
     self.voxel_to_region_mapping = voxel_to_region_mapping
 
 
-  def get_sentence_context(self, scan_event, tokenizer, past_window=0, future_window=0):
+  def get_sentence_context(self, scan_event, tokenizer, only_past=False, past_window=0, future_window=0):
     """
 
     :param scan_event:
@@ -51,6 +51,9 @@ class Block(object):
       context (list of tokens), indexes of stimuli in the context
     """
     if len(scan_event.stimulus_pointer) > 0:
+      if only_past:
+        future_window = 0
+
       sentence_indexes, token_indexes = list(zip(*scan_event.stimulus_pointer))
       current_sentence_index_start = scan_event.stimulus_pointer[0][0]
       current_sentence_index_end = scan_event.stimulus_pointer[-1][0]
@@ -77,6 +80,8 @@ class Block(object):
       return context, stimuli_indexes
     else:
       return [''], None
+
+
 
   def get_stimuli_in_context(self,scan_event, tokenizer, context_mode, **kwargs):
     """
