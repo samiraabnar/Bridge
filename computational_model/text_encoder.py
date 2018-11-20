@@ -35,6 +35,18 @@ class TfHubElmoEncoder(TextEncoder):
     self.embedder = hub.Module('https://tfhub.dev/google/elmo/2', trainable=trainable)
 
   def get_embeddings(self, text_sequences, sequences_length, key='elmo'):
+    """
+
+    :param text_sequences:
+    :param sequences_length:
+    :param key:
+            word_emb: the character-based word representations with shape [batch_size, max_length, 512].
+            lstm_outputs1: the first LSTM hidden state with shape [batch_size, max_length, 1024].
+            lstm_outputs2: the second LSTM hidden state with shape [batch_size, max_length, 1024].
+            elmo: the weighted sum of the 3 layers, where the weights are trainable. This tensor has shape [batch_size, max_length, 1024]
+            default: a fixed mean-pooling of all contextualized word representations with shape [batch_size, 1024].
+    :return:
+    """
     padded_text_sequences = pad_lists(text_sequences)
     embeddings = self.embedder(
       inputs={'tokens': padded_text_sequences,
@@ -45,7 +57,7 @@ class TfHubElmoEncoder(TextEncoder):
 
   def get_text_embedding_column(key='elmo'):
     return hub.text_embedding_column(
-      key="sentence",
+      key=key,
       module_spec="https://tfhub.dev/google/elmo/2")
 
 

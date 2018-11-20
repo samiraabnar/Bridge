@@ -27,11 +27,9 @@ if __name__ == '__main__':
 
     context, index = block.get_stimuli_in_context(scan_event=block.scan_events[25],
                                                   tokenizer=tokenizer,
-                                                  context_mode='sentence',
-                                                  past_window=0)
+                                                  context_mode='sentence')
+
     print("Stimuli Context:", context)
     print("Stimuli index:", index)
-
-    print("new stimuli: ",np.asarray(context)[index])
-    print("old stimuli: ",sentences[stimuli[25][0][0]][stimuli[25][0][1]])
-
+    print("new stimuli: ", np.asarray(context)[index])
+    print("old stimuli: ", sentences[stimuli[25][0][0]][stimuli[25][0][1]])

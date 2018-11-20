@@ -53,6 +53,7 @@ class ExplainBrain(object):
     brain_activations: {block_number: {time_step: vector of brain activation}
     stimuli: {block_number: {time_step: stimuli representation}
     """
+    print("Processed brain data Exist:", Path(self.data_dir+"brain_activations.npy").exists())
     if self.hparams.load_data and Path(self.data_dir+"brain_activations.npy").exists():
       brain_activations = np.load(self.data_dir+"brain_activations.npy").item()
       stimuli_in_context = np.load(self.data_dir + "stimuli_in_context.npy").item()
@@ -119,6 +120,7 @@ class ExplainBrain(object):
         timesteps[block.block_id].append(event.timestamp)
 
     return list(stimuli_in_context.keys()), timesteps, brain_activations, stimuli_in_context
+
 
   def encode_stimuli(self, stimuli_in_context, integration_fn=np.mean):
     """Applies the text encoder on the stimuli.
@@ -321,7 +323,13 @@ class ExplainBrain(object):
 
     # Encode the stimuli and get the representations from the computational model.
     tf.logging.info('Encoding the stimuli ...')
-    encoded_stimuli = self.encode_stimuli(stimuli)
+
+    def integration_fn(inputs, axis, max_size=512):
+      inputs = np.mean(inputs, axis=axis)
+      print(inputs.shape)
+      return inputs[:max_size]
+
+    encoded_stimuli = self.encode_stimuli(stimuli,integration_fn=integration_fn)
 
     # Get the test and training sets
     train_blocks, test_blocks = self.get_folds(fold_index)

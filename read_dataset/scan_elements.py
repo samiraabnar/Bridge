@@ -93,18 +93,18 @@ class Block(object):
       context (list of tokens), indexes of stimuli in the context
     """
     if len(scan_event.stimulus_pointer) > 0:
-      if only_past:
-        future_window = 0
 
       sentence_indexes, token_indexes = list(zip(*scan_event.stimulus_pointer))
       current_sentence_index_start = scan_event.stimulus_pointer[0][0]
       current_sentence_index_end = scan_event.stimulus_pointer[-1][0]
-      start_sentence_index = np.max([current_sentence_index_start - past_window, 0])
-      last_sentence_index = np.min([len(self.sentences), current_sentence_index_end + future_window])
+      start_sentence_index = 0
+      last_sentence_index = len(self.sentences)
+      if only_past:
+        last_sentence_index = current_sentence_index_end
 
       stimuli_indexes = []
       context = []
-      for i in np.arange(start_sentence_index, last_sentence_index+1):
+      for i in np.arange(start_sentence_index, last_sentence_index):
 
         # Compute the index of stimuli in the context
         stimuli_tokens_in_current_sent_indexes = np.where(sentence_indexes == i)[0]
@@ -124,7 +124,7 @@ class Block(object):
     else:
       return [''], None
 
-  def get_no_context(self, scan_event, tokenizer):
+  def get_no_context(self, scan_event, tokenizer, only_past=False, past_window=0, future_window=0):
     """
 
     :param scan_event:
@@ -138,8 +138,8 @@ class Block(object):
       sentence_indexes, token_indexes = list(zip(*scan_event.stimulus_pointer))
       current_sentence_index_start = scan_event.stimulus_pointer[0][0]
       current_sentence_index_end = scan_event.stimulus_pointer[-1][0]
-      start_sentence_index = np.max([current_sentence_index_start - past_window, 0])
-      last_sentence_index = np.min([len(self.sentences), current_sentence_index_end + future_window])
+      start_sentence_index = current_sentence_index_start
+      last_sentence_index = current_sentence_index_end
 
       stimuli_indexes = []
       context = []
@@ -173,6 +173,12 @@ class Block(object):
     if context_mode == 'sentence':
       return self.get_sentence_context(scan_event=scan_event, tokenizer=tokenizer,
                                   **kwargs)
+    elif context_mode == 'none':
+      return self.get_no_context(scan_event=scan_event, tokenizer=tokenizer,
+                                       **kwargs)
+    elif context_mode == 'block':
+      return self.get_block_context(scan_event=scan_event, tokenizer=tokenizer,
+                                       **kwargs)
     else:
       raise NotImplementedError()
 

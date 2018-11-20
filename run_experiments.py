@@ -19,9 +19,8 @@ tf.flags.DEFINE_float('alpha', 1.0, 'alpha')
 tf.flags.DEFINE_string('embedding_dir', None, 'path to the file containing the embeddings')
 tf.flags.DEFINE_string('brain_data_dir', '/Users/samiraabnar/Codes/Data/harrypotter/', 'Brain Data Dir')
 
-
-tf.flags.DEFINE_string('embedding_type', 'elmo', 'type of embedding')
-tf.flags.DEFINE_string('context_mode', 'sentence', 'type of context')
+tf.flags.DEFINE_string('embedding_type', 'word_emb', 'type of embedding')
+tf.flags.DEFINE_string('context_mode', 'none', 'type of context (sentence, block, none)')
 tf.flags.DEFINE_integer('past_window', 0, 'window size to the past')
 tf.flags.DEFINE_integer('future_window', 0, 'window size to the future')
 
