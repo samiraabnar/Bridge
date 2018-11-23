@@ -27,13 +27,14 @@ class VarianceFeatureSelection(object):
 
 
 class TopkFeatureSelection(object):
-  def __init__(self, metric_fn=explained_variance, k=500):
+  def __init__(self, metric_fn=explained_variance, k=100):
     self.metric_fn = metric_fn
     self.selected_indexes = None
     self.k = k
 
   def fit(self, data_predictions, data_labels):
     metric_eval = self.metric_fn(data_predictions, data_labels)
+    print("metric eval shape: ",metric_eval.shape)
     self.selected_indexes = np.argsort(metric_eval)[-self.k:]
 
   def select_featurs(self, data):

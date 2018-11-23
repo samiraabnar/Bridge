@@ -2,7 +2,7 @@
 
 """
 import sys
-sys.path.append('/Users/samiraabnar/Codes/GoogleLM1b/')
+sys.path.append('../Codes/GoogleLM1b/')
 
 from ExplainBrain import ExplainBrain
 from read_dataset.harrypotter_data import HarryPotterReader
@@ -18,17 +18,17 @@ FLAGS = tf.flags.FLAGS
 
 tf.flags.DEFINE_integer('subject_id', 1, 'subject id')
 tf.flags.DEFINE_integer('fold_id', 0, 'fold id')
-tf.flags.DEFINE_list('delays',[0] , 'delay list')
+tf.flags.DEFINE_list('delays',[-6,-4,-2,0] , 'delay list')
 tf.flags.DEFINE_boolean('cross_delay', False, 'try different train and test delays')
 
-tf.flags.DEFINE_float('alpha', 10, 'alpha')
+tf.flags.DEFINE_float('alpha', 1, 'alpha')
 tf.flags.DEFINE_string('embedding_dir', None, 'path to the file containing the embeddings')
 tf.flags.DEFINE_string('brain_data_dir', '/Users/samiraabnar/Codes/Data/harrypotter/', 'Brain Data Dir')
 
 tf.flags.DEFINE_enum('text_encoder', 'glove',
                      ['glove','elmo', 'tf_token' ,'universal_large', 'google_lm'], 'which encoder to use')
 tf.flags.DEFINE_string('embedding_type', 'lstm_outputs1', 'ELMO: word_emb, lstm_outputs1, lstm_outputs2 ')
-tf.flags.DEFINE_string('context_mode', 'sentence', 'type of context (sentence, block, none)')
+tf.flags.DEFINE_string('context_mode', 'none', 'type of context (sentence, block, none)')
 tf.flags.DEFINE_integer('past_window', 3, 'window size to the past')
 tf.flags.DEFINE_integer('future_window', 0, 'window size to the future')
 tf.flags.DEFINE_boolean('only_past', True, 'window size to the future')
@@ -41,10 +41,38 @@ tf.flags.DEFINE_boolean('load_encoded_stimuli', True, 'load encoded stimuli')
 
 tf.flags.DEFINE_boolean('save_models', True ,'save models flag')
 
+tf.flags.DEFINE_string("param_set", 'basic_elmo', "which param set to use")
+
+def basic_glove_params(hparams):
+  hparams.context_mode = 'none'
+  hparams.text_encoder = 'glove'
+  hparams.alpha = 1.0
+
+  return hparams
+
+def sentence_glove_params(hparams):
+  hparams.context_mode = 'sentence'
+  hparams.text_encoder = 'glove'
+  hparams.alpha = 1.0
+  hparams.delays = [-6,-4,-2,0]
+
+  return hparams
+
+def basic_elmo_params(hparams):
+  hparams.context_mode = 'none'
+  hparams.text_encoder = 'elmo'
+  hparams.alpha = 1.0
+
+  return hparams
+
 
 
 hparams = FLAGS
 if __name__ == '__main__':
+  if hparams.param_set is 'glove':
+    hparams = basic_glove_params(hparams)
+  elif hparams.param_set is 'basic_elmo':
+    hparams = basic_elmo_params(hparams)
   print("***********")
   print(hparams)
   print("***********")
