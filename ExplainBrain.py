@@ -180,7 +180,7 @@ class ExplainBrain(object):
                                                                          start_steps=start_steps,
                                                                          end_steps=end_steps)
     test_brain_activations, _ = self.voxel_selection(test_brain_activations, fit=False)
-
+    test_brain_activations, selected_voxels = self.post_train_voxel_selection(test_brain_activations)
     self.eval_mapper(mapper, test_encoded_stimuli, test_brain_activations)
 
   def eval_mapper(self, mapper, encoded_stimuli, brain_activations):
@@ -194,9 +194,9 @@ class ExplainBrain(object):
     predictions = mapper_output['predictions']
 
     #predictions, selected_voxels = self.post_train_voxel_selection(predictions)
-    brain_activations, selected_voxels = self.post_train_voxel_selection(brain_activations)
+    # brain_activations, selected_voxels = self.post_train_voxel_selection(brain_activations)
 
-    print("number of voxels under evaluation:", len(selected_voxels), predictions.shape)
+    print("number of voxels under evaluation:", len(brain_activations[0]), predictions.shape)
     for metric_name, metric_fn in self.metrics().items():
       metric_eval = metric_fn(predictions=predictions, targets=brain_activations)
       print(metric_name,":",metric_eval)
