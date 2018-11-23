@@ -25,7 +25,7 @@ tf.flags.DEFINE_float('alpha', 10, 'alpha')
 tf.flags.DEFINE_string('embedding_dir', None, 'path to the file containing the embeddings')
 tf.flags.DEFINE_string('brain_data_dir', '/Users/samiraabnar/Codes/Data/harrypotter/', 'Brain Data Dir')
 
-tf.flags.DEFINE_enum('text_encoder', 'google_lm',
+tf.flags.DEFINE_enum('text_encoder', 'glove',
                      ['glove','elmo', 'tf_token' ,'universal_large', 'google_lm'], 'which encoder to use')
 tf.flags.DEFINE_string('embedding_type', 'lstm_outputs1', 'ELMO: word_emb, lstm_outputs1, lstm_outputs2 ')
 tf.flags.DEFINE_string('context_mode', 'sentence', 'type of context (sentence, block, none)')

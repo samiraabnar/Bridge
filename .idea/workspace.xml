@@ -14,7 +14,7 @@
     <SUITE FILE_PATH="coverage/Bridge$Interface_util.coverage" NAME="Interface_util Coverage Results" MODIFIED="1542904371180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../GoogleLM1b" />
     <SUITE FILE_PATH="coverage/Bridge$misc.coverage" NAME="misc Coverage Results" MODIFIED="1542825373917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
     <SUITE FILE_PATH="coverage/Bridge$test_harrypotter_data.coverage" NAME="test_harrypotter_data Coverage Results" MODIFIED="1542880375155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/read_dataset" />
-    <SUITE FILE_PATH="coverage/Bridge$run_experiments.coverage" NAME="run_experiments Coverage Results" MODIFIED="1542966952772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$run_experiments.coverage" NAME="run_experiments Coverage Results" MODIFIED="1542970402945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$word_embedings.coverage" NAME="word_embedings Coverage Results" MODIFIED="1542880165132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
   </component>
   <component name="FileEditorManager">
@@ -22,12 +22,12 @@
       <file leaf-file-name="text_encoder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+            <state relative-caret-position="235">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
-                <element signature="e#3614#4968#0" expanded="false" />
-                <element signature="e#6640#6691#0" expanded="false" />
+                <element signature="e#4396#5750#0" expanded="false" />
+                <element signature="e#7422#7473#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -46,11 +46,21 @@
       <file leaf-file-name="ExplainBrain.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4922">
-              <caret line="361" column="85" lean-forward="false" selection-start-line="361" selection-start-column="70" selection-end-line="361" selection-end-column="85" />
+            <state relative-caret-position="-584">
+              <caret line="47" column="20" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
               <folding>
                 <element signature="e#51#104#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metrics.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/evaluation/metrics.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,8 +78,8 @@
       <file leaf-file-name="run_experiments.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_experiments.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="245">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,7 +145,6 @@
     <findStrings>
       <find>elmo</find>
       <find>get_processed_sentences</find>
-      <find>eval</find>
       <find>inte</find>
       <find>embedding_dir</find>
       <find>word_embed</find>
@@ -146,9 +155,12 @@
       <find>save_encoded_stimuli</find>
       <find>load_encoded_stimuli</find>
       <find>100</find>
-      <find>Google_lm</find>
       <find>encode</find>
+      <find>train</find>
+      <find>eval</find>
       <find>GoogleLM</find>
+      <find>def eval</find>
+      <find>Google_lm</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -164,8 +176,8 @@
         <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/Interface_util.py" />
         <option value="$PROJECT_DIR$/util/word_embedings.py" />
         <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py" />
-        <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
         <option value="$PROJECT_DIR$/run_experiments.py" />
+        <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
         <option value="$PROJECT_DIR$/ExplainBrain.py" />
       </list>
     </option>
@@ -203,6 +215,16 @@
             <path>
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bridge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
+              <item name="evaluation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
+              <item name="voxel_preprocessing" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -368,8 +390,8 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295082" sideWeight="0.503231" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295082" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -404,7 +426,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/computational_model/text_encoder.py</url>
-          <line>59</line>
+          <line>75</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -414,7 +436,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/computational_model/text_encoder.py</url>
-          <line>191</line>
+          <line>207</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
@@ -428,16 +450,6 @@
         <state relative-caret-position="287">
           <caret line="67" column="42" lean-forward="false" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation/metrics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -497,14 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mapping_models/sk_mapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -534,26 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_experiments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="29" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#3614#4968#0" expanded="false" />
-            <element signature="e#6640#6691#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///anaconda/lib/python3.6/site-packages/scipy/signal/_arraytools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-711">
@@ -562,10 +546,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mapping_models/sk_mapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation/metrics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#4396#5750#0" expanded="false" />
+            <element signature="e#7422#7473#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_experiments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4922">
-          <caret line="361" column="85" lean-forward="false" selection-start-line="361" selection-start-column="70" selection-end-line="361" selection-end-column="85" />
+        <state relative-caret-position="-584">
+          <caret line="47" column="20" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
           <folding>
             <element signature="e#51#104#0" expanded="true" />
           </folding>

@@ -180,7 +180,7 @@ class ExplainBrain(object):
                                                                          start_steps=start_steps,
                                                                          end_steps=end_steps)
     test_brain_activations, _ = self.voxel_selection(test_brain_activations, fit=False)
-
+    test_brain_activations, selected_voxels = self.post_train_voxel_selection(test_brain_activations)
     self.eval_mapper(mapper, test_encoded_stimuli, test_brain_activations)
 
   def eval_mapper(self, mapper, encoded_stimuli, brain_activations):
@@ -193,10 +193,10 @@ class ExplainBrain(object):
     mapper_output = mapper.map(inputs=encoded_stimuli,targets=brain_activations)
     predictions = mapper_output['predictions']
 
-    predictions, selected_voxels = self.post_train_voxel_selection(predictions)
-    brain_activations, selected_voxels = self.post_train_voxel_selection(brain_activations)
+    #predictions, selected_voxels = self.post_train_voxel_selection(predictions)
+    # brain_activations, selected_voxels = self.post_train_voxel_selection(brain_activations)
 
-    print("number of voxels under evaluation:", len(selected_voxels), predictions.shape)
+    print("number of voxels under evaluation:", len(brain_activations[0]), predictions.shape)
     for metric_name, metric_fn in self.metrics().items():
       metric_eval = metric_fn(predictions=predictions, targets=brain_activations)
       print(metric_name,":",metric_eval)
@@ -263,6 +263,7 @@ class ExplainBrain(object):
                    test_blocks,time_steps, start_steps, end_steps, train_delay, test_delay, fold_id, save=True):
 
     mapper = self.mapper_tuple[0](**self.mapper_tuple[1])
+
     tf.logging.info('Prepare train pairs ...')
     train_encoded_stimuli, train_brain_activations = mapper.prepare_inputs(blocks=train_blocks,
                                                                                 timed_targets=brain_activations,
@@ -285,13 +286,15 @@ class ExplainBrain(object):
     # Select voxels based on performance on training set ...
     mapper_output = mapper.map(inputs=train_encoded_stimuli, targets=train_brain_activations)
     predictions = mapper_output['predictions']
+
     _, post_selected_voxels = self.post_train_voxel_selection(train_brain_activations, predictions=predictions, labels=train_brain_activations, fit=True)
 
+    mapper.train(inputs=train_encoded_stimuli,targets=np.asarray(train_brain_activations)[:,post_selected_voxels])
 
     # Evaluate the mapper
     if eval:
       tf.logging.info('Evaluating ...')
-      self.eval_mapper(mapper, train_encoded_stimuli, train_brain_activations)
+      self.eval_mapper(mapper, train_encoded_stimuli, np.asarray(train_brain_activations)[:,post_selected_voxels])
       if len(test_blocks) > 0:
         self.eval(mapper, brain_activations, encoded_stimuli,
                   test_blocks, time_steps, start_steps, end_steps, test_delay)
