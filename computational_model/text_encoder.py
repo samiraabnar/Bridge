@@ -66,7 +66,7 @@ class GloVeEncoder(TextEncoder):
   def __init__(self, hparams, dataset, dim=300):
     super(GloVeEncoder, self).__init__(hparams)
     self.dim = dim
-    self.we = WordEmbeddingLoader('/Users/samiraabnar/Codes/Data/word_embeddings/glove.6B/glove.6B.300d.txt', dim=300)
+    self.we = WordEmbeddingLoader(self.hparams.embedding_dir, dim=300)
     self.we.build_vocab(dataset)
     self.we.build_lookups()
 

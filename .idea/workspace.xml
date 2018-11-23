@@ -26,28 +26,44 @@
         <entry file="file://$PROJECT_DIR$/glove_exp_script">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elmo_exp_script" pinned="false" current-in-tab="true">
+      <file leaf-file-name="elmo_exp_script" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/elmo_exp_script">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="132">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_experiments.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="run_experiments.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_experiments.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1261">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="223">
+              <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text_encoder.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="68" column="60" lean-forward="false" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="60" />
+              <folding>
+                <element signature="e#310#384#0" expanded="false" />
+                <element signature="e#442#469#0" expanded="false" />
+                <element signature="e#556#741#0" expanded="false" />
+                <element signature="e#4348#5702#0" expanded="false" />
+                <element signature="e#7374#7425#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,7 +93,6 @@
     <findStrings>
       <find>get_processed_sentences</find>
       <find>inte</find>
-      <find>embedding_dir</find>
       <find>word_embed</find>
       <find>03189945411682129</find>
       <find>GloVeEncoder</find>
@@ -100,6 +115,7 @@
       <find>results_elmo-lstm1</find>
       <find>results</find>
       <find>]</find>
+      <find>embedding_dir</find>
     </findStrings>
     <replaceStrings>
       <replace>--cross_delay=True</replace>
@@ -124,12 +140,12 @@
         <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/Interface_util.py" />
         <option value="$PROJECT_DIR$/util/word_embedings.py" />
         <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py" />
-        <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
         <option value="$PROJECT_DIR$/voxel_preprocessing/select_voxels.py" />
-        <option value="$PROJECT_DIR$/run_experiments.py" />
         <option value="$PROJECT_DIR$/ExplainBrain.py" />
         <option value="$PROJECT_DIR$/elmo_exp_script" />
         <option value="$PROJECT_DIR$/glove_exp_script" />
+        <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
+        <option value="$PROJECT_DIR$/run_experiments.py" />
       </list>
     </option>
   </component>
@@ -166,6 +182,11 @@
             <path>
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bridge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
+              <item name="computational_model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
@@ -505,18 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-            <element signature="e#4396#5750#0" expanded="false" />
-            <element signature="e#7422#7473#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../GoogleLM1b/download.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -543,26 +552,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_experiments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1261">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/glove_exp_script">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elmo_exp_script">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="132">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="68" column="60" lean-forward="false" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="60" />
+          <folding>
+            <element signature="e#310#384#0" expanded="false" />
+            <element signature="e#442#469#0" expanded="false" />
+            <element signature="e#556#741#0" expanded="false" />
+            <element signature="e#4348#5702#0" expanded="false" />
+            <element signature="e#7374#7425#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_experiments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
           <folding />
         </state>
       </provider>

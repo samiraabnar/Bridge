@@ -22,8 +22,8 @@ tf.flags.DEFINE_list('delays',[-6,-4,-2,0] , 'delay list')
 tf.flags.DEFINE_boolean('cross_delay', False, 'try different train and test delays')
 
 tf.flags.DEFINE_float('alpha', 1, 'alpha')
-tf.flags.DEFINE_string('embedding_dir', None, 'path to the file containing the embeddings')
-tf.flags.DEFINE_string('brain_data_dir', '/Users/samiraabnar/Codes/Data/harrypotter/', 'Brain Data Dir')
+tf.flags.DEFINE_string('embedding_dir', '/Users/iSam/Codes/Data/word_embeddings/glove.6B/glove.6B.300d.txt', 'path to the file containing the embeddings')
+tf.flags.DEFINE_string('brain_data_dir', '/Users/iSam/Codes/Data/harrypotter/', 'Brain Data Dir')
 
 tf.flags.DEFINE_enum('text_encoder', 'glove',
                      ['glove','elmo', 'tf_token' ,'universal_large', 'google_lm'], 'which encoder to use')
