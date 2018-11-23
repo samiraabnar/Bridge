@@ -1,9 +1,9 @@
 #!/bin/bash
 
-google_lm_path=$3
+google_lm_path=$2
 export PYTHONPATH=$PYTHONPATH:$google_lm_path
 
-brain_data_dir=$2
+brain_data_dir=$1
 echo $brain_data_dir
 
 python run_experiments.py --subject_id=1 \
