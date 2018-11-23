@@ -355,6 +355,7 @@ class ExplainBrain(object):
 
     trained_mapper_dic = {}
     for train_delay, test_delay in delay_pairs:
+      train_delay, test_delay = int(train_delay), int(test_delay)
       print("Training with train time delay of %d and test time delay of %d" % (train_delay, test_delay))
       if train_delay not in trained_mapper_dic:
         trained_mapper_dic[train_delay] = self.train_mapper(brain_activations, encoded_stimuli,

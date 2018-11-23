@@ -22,67 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="text_encoder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
+      <file leaf-file-name="glove_exp_script" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/glove_exp_script">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-                <element signature="e#4396#5750#0" expanded="false" />
-                <element signature="e#7422#7473#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
-        <entry file="file:///anaconda/lib/python3.6/site-packages/tensorflow/python/client/session.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="1375" column="0" lean-forward="false" selection-start-line="1375" selection-start-column="0" selection-end-line="1375" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExplainBrain.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <element signature="e#51#104#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metrics.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/evaluation/metrics.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sk_mapper.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mapping_models/sk_mapper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run_experiments.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_experiments.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="104" lean-forward="false" selection-start-line="2" selection-start-column="104" selection-end-line="2" selection-end-column="104" />
               <folding />
             </state>
           </provider>
@@ -91,39 +35,31 @@
       <file leaf-file-name="elmo_exp_script" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/elmo_exp_script">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="225">
+              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="download.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../GoogleLM1b/download.sh">
+      <file leaf-file-name="run_experiments.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run_experiments.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="1261">
+              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="select_voxels.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/voxel_preprocessing/select_voxels.py">
+      <file leaf-file-name="ExplainBrain.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="29" column="54" lean-forward="false" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="word_embedings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/word_embedings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="4755">
+              <caret line="352" column="9" lean-forward="false" selection-start-line="352" selection-start-column="9" selection-end-line="352" selection-end-column="9" />
+              <folding>
+                <element signature="e#51#104#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,15 +92,23 @@
       <find>Google_lm</find>
       <find>delay</find>
       <find>--embedding_type=lstm_outputs1</find>
-      <find>GoogleLM</find>
       <find>def eval</find>
       <find>--only_past=True \</find>
       <find>elmo</find>
+      <find>onlypast</find>
+      <find>GoogleLM</find>
+      <find>results_elmo-lstm1</find>
+      <find>results</find>
+      <find>]</find>
     </findStrings>
     <replaceStrings>
       <replace>--cross_delay=True</replace>
       <replace>--embedding_type=lstm_outputs1 \</replace>
       <replace>--subject_id=1 \</replace>
+      <replace>onlypast_s-$subject_id&quot;_f-&quot;$fold_id</replace>
+      <replace>results_glove</replace>
+      <replace>results/results</replace>
+      <replace>'</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -181,10 +125,11 @@
         <option value="$PROJECT_DIR$/util/word_embedings.py" />
         <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py" />
         <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
-        <option value="$PROJECT_DIR$/ExplainBrain.py" />
         <option value="$PROJECT_DIR$/voxel_preprocessing/select_voxels.py" />
         <option value="$PROJECT_DIR$/run_experiments.py" />
+        <option value="$PROJECT_DIR$/ExplainBrain.py" />
         <option value="$PROJECT_DIR$/elmo_exp_script" />
+        <option value="$PROJECT_DIR$/glove_exp_script" />
       </list>
     </option>
   </component>
@@ -224,12 +169,12 @@
             </path>
             <path>
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
-              <item name="evaluation" type="462c0819:PsiDirectoryNode" />
+              <item name="bilm-tf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoogleLM1b" type="462c0819:PsiDirectoryNode" />
+              <item name="bilm-tf" type="462c0819:PsiDirectoryNode" />
+              <item name="bilm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -245,6 +190,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../GoogleLM1b/google_lm" />
     </key>
@@ -557,6 +505,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="false" />
+            <element signature="e#4396#5750#0" expanded="false" />
+            <element signature="e#7422#7473#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../GoogleLM1b/download.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -565,40 +525,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
+    <entry file="file://$PROJECT_DIR$/../bilm-tf/bilm/elmo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#4396#5750#0" expanded="false" />
-            <element signature="e#7422#7473#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="4755">
+          <caret line="352" column="9" lean-forward="false" selection-start-line="352" selection-start-column="9" selection-end-line="352" selection-end-column="9" />
           <folding>
             <element signature="e#51#104#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/glove_exp_script">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="104" lean-forward="false" selection-start-line="2" selection-start-column="104" selection-end-line="2" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run_experiments.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state relative-caret-position="1261">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elmo_exp_script">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="225">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding />
         </state>
       </provider>

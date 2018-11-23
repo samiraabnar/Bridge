@@ -1,17 +1,23 @@
 #!/bin/bash
 
+
+subject_id=$4
+fold_id=$3
+
+echo subject_id:$subject_id
+echo $fold_id
+
 google_lm_path=$2
 export PYTHONPATH=$PYTHONPATH:$google_lm_path
 
 brain_data_dir=$1
 echo $brain_data_dir
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs1 \
 --context_mode=none \
@@ -19,14 +25,13 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm1_none_w0-0_onlypast
+> results/results_elmo-lstm1_none_w0-0_onlypast_s-$subject_id"_f-"$fold_id
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs2 \
 --context_mode=none \
@@ -34,15 +39,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm2_none_w0-0_onlypast
+> results/results_elmo-lstm2_none_w0-0_onlypast_s-$subject_id"_f-"$fold_id_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=elmo \
 --context_mode=none \
@@ -50,15 +54,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-elmo_none_w0-0_onlypast
+> results/results_elmo-elmo_none_w0-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=word_emb \
 --context_mode=none \
@@ -66,17 +69,16 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-word_emb_none_w0-0_onlypast
+> results/results_elmo-word_emb_none_w0-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
 
 ###############
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs1 \
 --context_mode=sentence \
@@ -84,11 +86,11 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm1_sentence_w0-0_onlypast
+> results/results_elmo-lstm1_sentence_w0-0_onlypast_s-$subject_id"_f-"$fold_id
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
 --brain_data_dir='~/Codes/Data/harrypotter/' \
@@ -99,15 +101,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm2_sentence_w0-0_onlypast
+> results/results_elmo-lstm2_sentence_w0-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=elmo \
 --context_mode=sentence \
@@ -115,15 +116,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-elmo_sentence_w0-0_onlypast
+> results/results_elmo-elmo_sentence_w0-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=word_emb \
 --context_mode=sentence \
@@ -131,17 +131,16 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-word_emb_sentence_w0-0_onlypast
+> results/results_elmo-word_emb_sentence_w0-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
 #########################
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs1 \
 --context_mode=sentence \
@@ -149,14 +148,13 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm1_sentence_w1-0_onlypast
+> results/results_elmo-lstm1_sentence_w1-0_onlypast_s-$subject_id"_f-"$fold_id
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs2 \
 --context_mode=sentence \
@@ -164,15 +162,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm2_sentence_w1-0_onlypast
+> results/results_elmo-lstm2_sentence_w1-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=elmo \
 --context_mode=sentence \
@@ -180,15 +177,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-elmo_sentence_w1-0_onlypast
+> results/results_elmo-elmo_sentence_w1-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=word_emb \
 --context_mode=sentence \
@@ -196,17 +192,16 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-word_emb_sentence_w1-0_onlypast
+> results/results_elmo-word_emb_sentence_w1-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
 #########################
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs1 \
 --context_mode=sentence \
@@ -214,15 +209,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm1_sentence_w2-0_onlypast
+> results/results_elmo-lstm1_sentence_w2-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs2 \
 --context_mode=sentence \
@@ -230,15 +224,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm2_sentence_w2-0_onlypast
+> results/results_elmo-lstm2_sentence_w2-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=elmo \
 --context_mode=sentence \
@@ -246,15 +239,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-elmo_sentence_w2-0_onlypast
+> results/results_elmo-elmo_sentence_w2-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=word_emb \
 --context_mode=sentence \
@@ -262,16 +254,15 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-word_emb_sentence_w2-0_onlypast
+> results/results_elmo-word_emb_sentence_w2-0_onlypast_s-$subject_id"_f-"$fold_id
 
 #########################
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs1 \
 --context_mode=sentence \
@@ -279,15 +270,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm1_sentence_w3-0_onlypast
+> results/results_elmo-lstm1_sentence_w3-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs2 \
 --context_mode=sentence \
@@ -295,15 +285,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm2_sentence_w3-0_onlypast
+> results/results_elmo-lstm2_sentence_w3-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=elmo \
 --context_mode=sentence \
@@ -311,15 +300,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-elmo_sentence_w3-0_onlypast
+> results/results_elmo-elmo_sentence_w3-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=word_emb \
 --context_mode=sentence \
@@ -327,16 +315,15 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-word_emb_sentence_w3-0_onlypast
+> results/results_elmo-word_emb_sentence_w3-0_onlypast_s-$subject_id"_f-"$fold_id
 
 #########################
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs1 \
 --context_mode=sentence \
@@ -344,15 +331,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm1_sentence_w4-0_onlypast
+> results/results_elmo-lstm1_sentence_w4-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs2 \
 --context_mode=sentence \
@@ -360,15 +346,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm2_sentence_w4-0_onlypast
+> results/results_elmo-lstm2_sentence_w4-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=elmo \
 --context_mode=sentence \
@@ -376,15 +361,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-elmo_sentence_w4-0_onlypast
+> results/results_elmo-elmo_sentence_w4-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=word_emb \
 --context_mode=sentence \
@@ -392,16 +376,15 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-word_emb_sentence_w4-0_onlypast
+> results/results_elmo-word_emb_sentence_w4-0_onlypast_s-$subject_id"_f-"$fold_id
 
 #########################
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs1 \
 --context_mode=sentence \
@@ -409,15 +392,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm1_sentence_w5-0_onlypast
+> results/results_elmo-lstm1_sentence_w5-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs2 \
 --context_mode=sentence \
@@ -425,15 +407,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm2_sentence_w5-0_onlypast
+> results/results_elmo-lstm2_sentence_w5-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=elmo \
 --context_mode=sentence \
@@ -441,15 +422,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-elmo_sentence_w5-0_onlypast
+> results/results_elmo-elmo_sentence_w5-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=word_emb \
 --context_mode=sentence \
@@ -457,16 +437,15 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-word_emb_sentence_w5-0_onlypast
+> results/results_elmo-word_emb_sentence_w5-0_onlypast_s-$subject_id"_f-"$fold_id
 
 #########################
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs1 \
 --context_mode=sentence \
@@ -474,15 +453,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm1_sentence_w6-0_onlypast
+> results/results_elmo-lstm1_sentence_w6-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=lstm_outputs2 \
 --context_mode=sentence \
@@ -490,15 +468,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-lstm2_sentence_w6-0_onlypast
+> results/results_elmo-lstm2_sentence_w6-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=elmo \
 --context_mode=sentence \
@@ -506,15 +483,14 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-elmo_sentence_w6-0_onlypast
+> results/results_elmo-elmo_sentence_w6-0_onlypast_s-$subject_id"_f-"$fold_id
 
 
-python run_experiments.py --subject_id=1 \
---fold_id=0 \
---delays=[-6,-4,-2,0] \
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
 --cross_delay=True \
 --alpha=1 \
---brain_data_dir='~/Codes/Data/harrypotter/' \
 --text_encoder=elmo \
 --embedding_type=word_emb \
 --context_mode=sentence \
@@ -522,4 +498,4 @@ python run_experiments.py --subject_id=1 \
 --future_window=0 \
 --only_past=True \
 --brain_data_dir=$brain_data_dir \
-> results_elmo-word_emb_sentence_w6-0_onlypast
+> results/results_elmo-word_emb_sentence_w6-0_onlypast_s-$subject_id"_f-"$fold_id
