@@ -78,21 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_experiments.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run_experiments.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_experiments.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="88" column="50" lean-forward="false" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+            <state relative-caret-position="292">
+              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elmo_exp_script" pinned="false" current-in-tab="false">
+      <file leaf-file-name="elmo_exp_script" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/elmo_exp_script">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+            <state relative-caret-position="30">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -158,8 +158,8 @@
       <find>--embedding_type=lstm_outputs1</find>
       <find>GoogleLM</find>
       <find>def eval</find>
-      <find>elmo</find>
       <find>--only_past=True \</find>
+      <find>elmo</find>
     </findStrings>
     <replaceStrings>
       <replace>--cross_delay=True</replace>
@@ -183,8 +183,8 @@
         <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
         <option value="$PROJECT_DIR$/ExplainBrain.py" />
         <option value="$PROJECT_DIR$/voxel_preprocessing/select_voxels.py" />
-        <option value="$PROJECT_DIR$/elmo_exp_script" />
         <option value="$PROJECT_DIR$/run_experiments.py" />
+        <option value="$PROJECT_DIR$/elmo_exp_script" />
       </list>
     </option>
   </component>
@@ -587,18 +587,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elmo_exp_script">
+    <entry file="file://$PROJECT_DIR$/run_experiments.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
+        <state relative-caret-position="292">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_experiments.py">
+    <entry file="file://$PROJECT_DIR$/elmo_exp_script">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="88" column="50" lean-forward="false" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
