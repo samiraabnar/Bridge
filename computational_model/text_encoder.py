@@ -35,13 +35,29 @@ class GoogleLMEncoder(TextEncoder):
     self.google_lm_interface = GoogleLMInterface(path)
 
   def get_embeddings_values(self, text_sequences, sequences_length, key='lstm_0'):
-    embeddings = {'lstm_0':[],'lstm_1':[]}
-    with self.google_lm_interface.sess as sess:
-      for text_sequence in tqdm(text_sequences):
+    embeddings = {'lstm_0': [], 'lstm_1': []}
+
+    if self.hparams.context_mode == 'block':
+      concatenated_text_sequences = concat_lists(text_sequences)
+      whole_block = ' '.join(concatenated_text_sequences)
+      with self.google_lm_interface.sess as sess:
         self.google_lm_interface.sess.run(self.google_lm_interface.tensors['states_init'])
-        lstm_1, lstm_2 = self.google_lm_interface.forward(sess,' '.join(text_sequence))
+        lstm_1, lstm_2 = self.google_lm_interface.forward(sess, whole_block)
+      for text_sequence in tqdm(text_sequences):
         embeddings['lstm_0'].append(lstm_1)
         embeddings['lstm_1'].append(lstm_2)
+    else:
+      embeddings_dic = {}
+      with self.google_lm_interface.sess as sess:
+        for text_sequence in tqdm(text_sequences):
+          self.google_lm_interface.sess.run(self.google_lm_interface.tensors['states_init'])
+          current_input = ' '.join(text_sequence)
+          if current_input not in embeddings_dic:
+            lstm_1, lstm_2 = self.google_lm_interface.forward(sess, current_input)
+            embeddings_dic[current_input] = (lstm_1, lstm_2)
+
+          embeddings['lstm_0'].append(embeddings_dic[current_input][0])
+          embeddings['lstm_1'].append(embeddings_dic[current_input][1])
 
     return embeddings[key]
 
