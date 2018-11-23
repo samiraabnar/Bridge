@@ -2,7 +2,7 @@
 
 """
 import sys
-sys.path.append('../Codes/GoogleLM1b/')
+sys.path.append('~/Codes/GoogleLM1b/')
 
 from ExplainBrain import ExplainBrain
 from read_dataset.harrypotter_data import HarryPotterReader
