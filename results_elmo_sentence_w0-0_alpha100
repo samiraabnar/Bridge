@@ -1,0 +1,496 @@
+1. initialize brain data reader ...
+2. initialize text encoder ...
+3. initialize mapper ...
+4. initialize Explainer...
+5. train and evaluate...
+Reading /Users/iSam/Codes/Data/harrypotter/subject_1.mat
+Reading /Users/iSam/Codes/Data/harrypotter/subject_1.mat
+Reading /Users/iSam/Codes/Data/harrypotter/subject_1.mat
+Reading /Users/iSam/Codes/Data/harrypotter/subject_1.mat
+{1: 11, 2: 11, 3: 11, 4: 11}
+{1: 337, 2: 349, 3: 276, 4: 377}
+Saving the data ...
+Example Stimuli ([''], None)
+Encoding stimuli of block: 1
+Encoding stimuli of block: 2
+Encoding stimuli of block: 3
+Encoding stimuli of block: 4
+train blocks: [1, 2, 3]
+test blocks: [4]
+Training with train time delay of -8 and test time delay of -8
+(926, 37913)
+(926, 1024)
+number of selected voxels: 37684
+(926, 37684)
+Fitting post training voxel selectors
+number of voxels under evaluation: 500 (926, 500)
+mean_EV : 0.40823599421977996
+(365, 37913)
+(365, 1024)
+number of voxels under evaluation: 500 (365, 500)
+mean_EV : -0.05611509132385254
+Saving the model:
+Training with train time delay of -8 and test time delay of -6
+(366, 37913)
+(366, 1024)
+number of voxels under evaluation: 500 (366, 500)
+mean_EV : -0.04696639609336853
+Training with train time delay of -8 and test time delay of -4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.06649817800521851
+Training with train time delay of -8 and test time delay of -2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.107268115401268
+Training with train time delay of -8 and test time delay of 0
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.13828397381305696
+Training with train time delay of -8 and test time delay of 2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.15543479418754577
+Training with train time delay of -8 and test time delay of 4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.17237631154060365
+Training with train time delay of -8 and test time delay of 6
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.1668254430294037
+Training with train time delay of -8 and test time delay of 8
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.15654884862899782
+Training with train time delay of -6 and test time delay of -8
+(929, 37913)
+(929, 1024)
+number of selected voxels: 37684
+(929, 37684)
+Fitting post training voxel selectors
+number of voxels under evaluation: 500 (929, 500)
+mean_EV : 0.4162368862628937
+(365, 37913)
+(365, 1024)
+number of voxels under evaluation: 500 (365, 500)
+mean_EV : -0.05666392827033997
+Saving the model:
+Training with train time delay of -6 and test time delay of -6
+(366, 37913)
+(366, 1024)
+number of voxels under evaluation: 500 (366, 500)
+mean_EV : -0.035040993809700015
+Training with train time delay of -6 and test time delay of -4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.049631787180900576
+Training with train time delay of -6 and test time delay of -2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10233423840999603
+Training with train time delay of -6 and test time delay of 0
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.15211090099811553
+Training with train time delay of -6 and test time delay of 2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.17307201838493347
+Training with train time delay of -6 and test time delay of 4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.19574792313575745
+Training with train time delay of -6 and test time delay of 6
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.20319222331047057
+Training with train time delay of -6 and test time delay of 8
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.1930021960735321
+Training with train time delay of -4 and test time delay of -8
+(932, 37913)
+(932, 1024)
+number of selected voxels: 37684
+(932, 37684)
+Fitting post training voxel selectors
+number of voxels under evaluation: 500 (932, 500)
+mean_EV : 0.41443977868556975
+(365, 37913)
+(365, 1024)
+number of voxels under evaluation: 500 (365, 500)
+mean_EV : -0.0487257673740387
+Saving the model:
+Training with train time delay of -4 and test time delay of -6
+(366, 37913)
+(366, 1024)
+number of voxels under evaluation: 500 (366, 500)
+mean_EV : -0.022459747672080994
+Training with train time delay of -4 and test time delay of -4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.025321327805519104
+Training with train time delay of -4 and test time delay of -2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.07139799010753632
+Training with train time delay of -4 and test time delay of 0
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.1230417948961258
+Training with train time delay of -4 and test time delay of 2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.14755740785598756
+Training with train time delay of -4 and test time delay of 4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.17490704214572905
+Training with train time delay of -4 and test time delay of 6
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.1938640615940094
+Training with train time delay of -4 and test time delay of 8
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.19077432537078856
+Training with train time delay of -2 and test time delay of -8
+(932, 37913)
+(932, 1024)
+number of selected voxels: 37684
+(932, 37684)
+Fitting post training voxel selectors
+number of voxels under evaluation: 500 (932, 500)
+mean_EV : 0.39669090390205386
+(365, 37913)
+(365, 1024)
+number of voxels under evaluation: 500 (365, 500)
+mean_EV : -0.05485704326629639
+Saving the model:
+Training with train time delay of -2 and test time delay of -6
+(366, 37913)
+(366, 1024)
+number of voxels under evaluation: 500 (366, 500)
+mean_EV : -0.04554695928096771
+Training with train time delay of -2 and test time delay of -4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.04741187596321106
+Training with train time delay of -2 and test time delay of -2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.06854495930671692
+Training with train time delay of -2 and test time delay of 0
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.1005359148979187
+Training with train time delay of -2 and test time delay of 2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.11594102990627289
+Training with train time delay of -2 and test time delay of 4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.12991074073314668
+Training with train time delay of -2 and test time delay of 6
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.13889491629600526
+Training with train time delay of -2 and test time delay of 8
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.1420279825925827
+Training with train time delay of 0 and test time delay of -8
+(932, 37913)
+(932, 1024)
+number of selected voxels: 37684
+(932, 37684)
+Fitting post training voxel selectors
+number of voxels under evaluation: 500 (932, 500)
+mean_EV : 0.3891639577150345
+(365, 37913)
+(365, 1024)
+number of voxels under evaluation: 500 (365, 500)
+mean_EV : -0.05435292637348175
+Saving the model:
+Training with train time delay of 0 and test time delay of -6
+(366, 37913)
+(366, 1024)
+number of voxels under evaluation: 500 (366, 500)
+mean_EV : -0.06521147441864014
+Training with train time delay of 0 and test time delay of -4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.07727460253238679
+Training with train time delay of 0 and test time delay of -2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09235587573051453
+Training with train time delay of 0 and test time delay of 0
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.11438084924221038
+Training with train time delay of 0 and test time delay of 2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.12194479155540466
+Training with train time delay of 0 and test time delay of 4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.12579112088680267
+Training with train time delay of 0 and test time delay of 6
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.12654967761039734
+Training with train time delay of 0 and test time delay of 8
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.11928907358646393
+Training with train time delay of 2 and test time delay of -8
+(932, 37913)
+(932, 1024)
+number of selected voxels: 37684
+(932, 37684)
+Fitting post training voxel selectors
+number of voxels under evaluation: 500 (932, 500)
+mean_EV : 0.38564800918102266
+(365, 37913)
+(365, 1024)
+number of voxels under evaluation: 500 (365, 500)
+mean_EV : -0.06501795864105224
+Saving the model:
+Training with train time delay of 2 and test time delay of -6
+(366, 37913)
+(366, 1024)
+number of voxels under evaluation: 500 (366, 500)
+mean_EV : -0.07519795143604278
+Training with train time delay of 2 and test time delay of -4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.08487509870529175
+Training with train time delay of 2 and test time delay of -2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09371271753311157
+Training with train time delay of 2 and test time delay of 0
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10886793959140778
+Training with train time delay of 2 and test time delay of 2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.11829014885425568
+Training with train time delay of 2 and test time delay of 4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.12221038210391998
+Training with train time delay of 2 and test time delay of 6
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.12098160803318024
+Training with train time delay of 2 and test time delay of 8
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.11385307109355927
+Training with train time delay of 4 and test time delay of -8
+(932, 37913)
+(932, 1024)
+number of selected voxels: 37684
+(932, 37684)
+Fitting post training voxel selectors
+number of voxels under evaluation: 500 (932, 500)
+mean_EV : 0.387226105928421
+(365, 37913)
+(365, 1024)
+number of voxels under evaluation: 500 (365, 500)
+mean_EV : -0.08240813219547272
+Saving the model:
+Training with train time delay of 4 and test time delay of -6
+(366, 37913)
+(366, 1024)
+number of voxels under evaluation: 500 (366, 500)
+mean_EV : -0.085363933801651
+Training with train time delay of 4 and test time delay of -4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09323087096214294
+Training with train time delay of 4 and test time delay of -2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09749035346508027
+Training with train time delay of 4 and test time delay of 0
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10316458749771118
+Training with train time delay of 4 and test time delay of 2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10513309514522552
+Training with train time delay of 4 and test time delay of 4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10752858662605286
+Training with train time delay of 4 and test time delay of 6
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10759870147705078
+Training with train time delay of 4 and test time delay of 8
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10362547934055329
+Training with train time delay of 6 and test time delay of -8
+(932, 37913)
+(932, 1024)
+number of selected voxels: 37684
+(932, 37684)
+Fitting post training voxel selectors
+number of voxels under evaluation: 500 (932, 500)
+mean_EV : 0.39208123087882996
+(365, 37913)
+(365, 1024)
+number of voxels under evaluation: 500 (365, 500)
+mean_EV : -0.08077591872215271
+Saving the model:
+Training with train time delay of 6 and test time delay of -6
+(366, 37913)
+(366, 1024)
+number of voxels under evaluation: 500 (366, 500)
+mean_EV : -0.08711920070648194
+Training with train time delay of 6 and test time delay of -4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09436505150794983
+Training with train time delay of 6 and test time delay of -2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10047134983539581
+Training with train time delay of 6 and test time delay of 0
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10097520244121551
+Training with train time delay of 6 and test time delay of 2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09890687954425811
+Training with train time delay of 6 and test time delay of 4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10016799938678742
+Training with train time delay of 6 and test time delay of 6
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10689918780326843
+Training with train time delay of 6 and test time delay of 8
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.10026233839988709
+Training with train time delay of 8 and test time delay of -8
+(932, 37913)
+(932, 1024)
+number of selected voxels: 37684
+(932, 37684)
+Fitting post training voxel selectors
+number of voxels under evaluation: 500 (932, 500)
+mean_EV : 0.3938401362895966
+(365, 37913)
+(365, 1024)
+number of voxels under evaluation: 500 (365, 500)
+mean_EV : -0.07494787871837616
+Saving the model:
+Training with train time delay of 8 and test time delay of -6
+(366, 37913)
+(366, 1024)
+number of voxels under evaluation: 500 (366, 500)
+mean_EV : -0.07752318334579468
+Training with train time delay of 8 and test time delay of -4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.0794112092256546
+Training with train time delay of 8 and test time delay of -2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.08510334587097168
+Training with train time delay of 8 and test time delay of 0
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09178115403652191
+Training with train time delay of 8 and test time delay of 2
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09167562258243561
+Training with train time delay of 8 and test time delay of 4
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09115222299098968
+Training with train time delay of 8 and test time delay of 6
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09793335330486298
+Training with train time delay of 8 and test time delay of 8
+(367, 37913)
+(367, 1024)
+number of voxels under evaluation: 500 (367, 500)
+mean_EV : -0.09551781845092773
