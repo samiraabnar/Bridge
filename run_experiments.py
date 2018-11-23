@@ -86,7 +86,8 @@ if __name__ == '__main__':
   print(hparams)
   print("***********")
 
-  harrypotter_clean_sentences = np.load(os.oath.join(hparams.brain_data_dir,"harrypotter_cleaned_sentences.npy"))
+  print("brain data dir: ", hparams.brain_data_dir)
+  harrypotter_clean_sentences = np.load(os.path.join(hparams.brain_data_dir,"harrypotter_cleaned_sentences.npy"))
 
   TextEncoderDic = {'elmo':TfHubElmoEncoder(hparams),
                     'tf_token': TfTokenEncoder(hparams),
