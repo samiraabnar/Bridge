@@ -11,7 +11,7 @@ from mapping_models.sk_mapper import SkMapper
 
 import tensorflow as tf
 import numpy as np
-
+import os
 
 
 FLAGS = tf.flags.FLAGS
@@ -86,7 +86,7 @@ if __name__ == '__main__':
   print(hparams)
   print("***********")
 
-  harrypotter_clean_sentences = np.load("/Users/samiraabnar/Codes/Data/harrypotter/harrypotter_cleaned_sentences.npy")
+  harrypotter_clean_sentences = np.load(os.oath.join(hparams.brain_data_dir,"harrypotter_cleaned_sentences.npy"))
 
   TextEncoderDic = {'elmo':TfHubElmoEncoder(hparams),
                     'tf_token': TfTokenEncoder(hparams),
