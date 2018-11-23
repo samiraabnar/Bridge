@@ -41,7 +41,7 @@ tf.flags.DEFINE_boolean('load_encoded_stimuli', True, 'load encoded stimuli')
 
 tf.flags.DEFINE_boolean('save_models', True ,'save models flag')
 
-tf.flags.DEFINE_string("param_set", 'basic_elmo', "which param set to use")
+tf.flags.DEFINE_string("param_set", None, "which param set to use")
 
 def basic_glove_params(hparams):
   hparams.context_mode = 'none'
@@ -65,6 +65,13 @@ def basic_elmo_params(hparams):
 
   return hparams
 
+def sentence_elmo_params(hparams):
+  hparams.context_mode = 'sentence'
+  hparams.text_encoder = 'elmo'
+  hparams.alpha = 1.0
+
+  return hparams
+
 
 
 hparams = FLAGS
@@ -73,6 +80,8 @@ if __name__ == '__main__':
     hparams = basic_glove_params(hparams)
   elif hparams.param_set is 'basic_elmo':
     hparams = basic_elmo_params(hparams)
+  elif hparams.param_set is 'sentence_elmo':
+    hparams = sentence_elmo_params(hparams)
   print("***********")
   print(hparams)
   print("***********")
