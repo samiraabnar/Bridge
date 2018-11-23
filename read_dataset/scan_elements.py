@@ -18,6 +18,7 @@ class ScanEvent(object):
     self.scan = scan
 
 
+
 class Block(object):
   """One experimental block or run.
   """
@@ -38,6 +39,14 @@ class Block(object):
     self.sentences = sentences
     self.scan_events = scan_events
     self.voxel_to_region_mapping = voxel_to_region_mapping
+
+  def get_processed_sentences(self, tokenizer):
+    all_text = []
+    for sentence in self.sentences:
+      all_text.append(' '.join(tokenizer.tokenize(sentence)))
+
+    return all_text
+
 
 
   def get_sentence_context(self, scan_event, tokenizer, only_past=False, past_window=0, future_window=0):

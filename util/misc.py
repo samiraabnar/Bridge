@@ -55,5 +55,14 @@ def pad_lists(list_of_list, padding=''):
   return padded_lists
 
 
+def concat_lists(list_of_list, joint=' '):
+  concatenated_list = []
+  for list in list_of_list:
+    concatenated_list.append(joint.join(list))
+
+  return concatenated_list
+
+
 if __name__ == '__main__':
     print(pad_lists([['a','b'],['c']], ''))
+    print(concat_lists([['a', 'b'], ['c']]))

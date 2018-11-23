@@ -12,7 +12,7 @@ class SkMapper(BasicMapper):
   def build(self, is_train=True):
     """Create the model object using model_fn
     """
-    self.model = self.model_fn(alpha=self.alpha)
+    self.model = self.model_fn(alpha=self.alpha,normalize=True)
 
   def map(self, inputs, targets=None):
     if self.model is None:

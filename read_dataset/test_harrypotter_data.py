@@ -9,6 +9,7 @@ if __name__ == '__main__':
   subject_id = 1
   harry_data = harry_reader.read_all_events(subject_ids=[subject_id])
 
+  all_sentences = []
   tokenizer = SpacyTokenizer()
   tokenizer_fn = SpacyTokenizer.tokenize
   for block in harry_data[subject_id]:
@@ -27,9 +28,15 @@ if __name__ == '__main__':
 
     context, index = block.get_stimuli_in_context(scan_event=block.scan_events[25],
                                                   tokenizer=tokenizer,
-                                                  context_mode='sentence')
+                                                  context_mode='sentence',
+                                                  only_past=True)
 
     print("Stimuli Context:", context)
     print("Stimuli index:", index)
     print("new stimuli: ", np.asarray(context)[index])
     print("old stimuli: ", sentences[stimuli[25][0][0]][stimuli[25][0][1]])
+
+    all_sentences.extend(block.get_processed_sentences(tokenizer=tokenizer))
+
+  print(len(all_sentences))
+  np.save("/Users/samiraabnar/Codes/Data/harrypotter/harrypotter_cleaned_sentences", all_sentences)

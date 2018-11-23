@@ -113,7 +113,8 @@ class ExplainBrain(object):
           tokenizer=tokenizer,
           context_mode=self.hparams.context_mode,
           past_window=self.hparams.past_window,
-          future_window=self.hparams.future_window)
+          future_window=self.hparams.future_window,
+          only_past=self.hparams.only_past)
 
         stimuli_in_context[block.block_id].append((context, stimuli_index))
         brain_activations[block.block_id].append(event.scan)
@@ -128,21 +129,27 @@ class ExplainBrain(object):
     :param stimuli_in_context:
     :return:
     """
-    with tf.Session() as sess:
+    if self.hparams.load_encoded_stimuli and Path(self.model_dir+"encoded_stimuli_in_context.npy").exists():
+      encoded_stimuli_of_each_block = np.load(self.model_dir + "encoded_stimuli_in_context.npy").item()
+    else:
       encoded_stimuli_of_each_block = {}
-      sess.run(tf.global_variables_initializer())
-      sess.run(tf.tables_initializer())
       for block in self.blocks:
         encoded_stimuli_of_each_block[block] = []
         print("Encoding stimuli of block:", block)
         contexts, indexes = zip(*stimuli_in_context[block])
-        encoded_stimuli = sess.run(self.stimuli_encoder.get_embeddings(contexts, [len(c) for c in contexts], key=self.embedding_type))
-        for encoded, index in zip(encoded_stimuli,indexes):
-          # TODO(samira): maybe there is a better fix for this?
-          if index is None:
-            index = [0]
-          encoded_stimuli = integration_fn(encoded[index], axis=0)
-          encoded_stimuli_of_each_block[block].append(encoded_stimuli)
+        encoded_stimuli = self.stimuli_encoder.get_embeddings_values(contexts, [len(c) for c in contexts], key=self.embedding_type)
+        if len(encoded_stimuli.shape) > 2:
+          for encoded, index in zip(encoded_stimuli,indexes):
+            # TODO(samira): maybe there is a better fix for this?
+            if index is None:
+              index = [0]
+            encoded_stimuli = integration_fn(encoded[index], axis=0)
+            encoded_stimuli_of_each_block[block].append(encoded_stimuli)
+        else:
+          encoded_stimuli_of_each_block[block] = encoded_stimuli
+
+      if self.hparams.save_encoded_stimuli:
+        np.save(self.model_dir + "encoded_stimuli_in_context", encoded_stimuli_of_each_block)
 
     return encoded_stimuli_of_each_block
 
@@ -325,9 +332,10 @@ class ExplainBrain(object):
     tf.logging.info('Encoding the stimuli ...')
 
     def integration_fn(inputs, axis, max_size=512):
-      inputs = np.mean(inputs, axis=axis)
-      print(inputs.shape)
-      return inputs[:max_size]
+      if len(inputs.shape) > 1:
+        inputs = np.mean(inputs, axis=axis)
+      size = inputs.shape[-1]
+      return inputs[:np.min([max_size,size])]
 
     encoded_stimuli = self.encode_stimuli(stimuli,integration_fn=integration_fn)
 
