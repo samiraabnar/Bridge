@@ -6,11 +6,12 @@ This repository includes codes for:
 
 
 ## Requirements:
-tensorflow
-tensorflow_hub
-numpy
-sklearn
-spacy
+* tensorflow
+* tensorflow_hub
+* numpy
+* sklearn
+* spacy
+* https://github.com/samiraabnar/GoogleLM1b.git
 
 ### files:
 Path to the raw brain data, e.g.: '/Users/samiraabnar/Codes/Data/harrypotter/'
