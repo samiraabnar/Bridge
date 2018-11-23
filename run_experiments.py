@@ -24,6 +24,7 @@ tf.flags.DEFINE_boolean('cross_delay', False, 'try different train and test dela
 tf.flags.DEFINE_float('alpha', 1, 'alpha')
 tf.flags.DEFINE_string('embedding_dir', '/Users/iSam/Codes/Data/word_embeddings/glove.6B/glove.6B.300d.txt', 'path to the file containing the embeddings')
 tf.flags.DEFINE_string('brain_data_dir', '/Users/iSam/Codes/Data/harrypotter/', 'Brain Data Dir')
+tf.flags.DEFINE_string('root', '/Users/iSam/Codes/', 'general path root')
 
 tf.flags.DEFINE_enum('text_encoder', 'glove',
                      ['glove','elmo', 'tf_token' ,'universal_large', 'google_lm'], 'which encoder to use')
@@ -93,7 +94,7 @@ if __name__ == '__main__':
                     'tf_token': TfTokenEncoder(hparams),
                     'universal_large': TfHubLargeUniversalEncoder(hparams),
                     'glove': GloVeEncoder(hparams, harrypotter_clean_sentences),
-                    'google_lm': GoogleLMEncoder(hparams, path="/Users/samiraabnar/Codes/GoogleLM1b/")
+                    'google_lm': GoogleLMEncoder(hparams, path= os.path.join(hparams.root,"GoogleLM1b/"))
                     }
 
   tf.logging.set_verbosity(tf.logging.INFO)
