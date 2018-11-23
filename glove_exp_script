@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ./glove_exp_script /Users/samiraabnar/Codes/Data/harrypotter/ /Users/samiraabnar/Codes/GoogleLM1b/ 1 0
+# ./glove_exp_script /Users/samiraabnar/Codes/Data/harrypotter/ /Users/samiraabnar/Codes/GoogleLM1b/ 0 1
 
 subject_id=$4
 fold_id=$3
