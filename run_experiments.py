@@ -87,6 +87,7 @@ if __name__ == '__main__':
   print(hparams)
   print("***********")
 
+  print("roots", hparams.root)
   hparams.embedding_dir = os.path.join(hparams.root, hparams.embedding_dir)
   print("brain data dir: ", hparams.brain_data_dir)
   harrypotter_clean_sentences = np.load(os.path.join(hparams.brain_data_dir,"harrypotter_cleaned_sentences.npy"))

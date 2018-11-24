@@ -1,0 +1,16 @@
+script=$1 #glove_exp_script
+
+data=$2 #/Users/samiraabnar/Codes/Data/harrypotter/
+google_lm_1b=$3 #/Users/samiraabnar/Codes/GoogleLM1b/
+root=$4 # /Users/samiraabnar/Codes/
+
+echo "root:"$root
+
+for sub in 1 2 3 4 5 6 7 8
+do
+    for fold in 0 1 2 3
+    do
+        echo $script $data $google_lm_1b $fold $sub $root
+        ./$script $data $google_lm_1b $fold $sub $root
+    done
+done
