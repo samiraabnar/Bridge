@@ -22,7 +22,7 @@ tf.flags.DEFINE_list('delays',[-6,-4,-2,0] , 'delay list')
 tf.flags.DEFINE_boolean('cross_delay', False, 'try different train and test delays')
 
 tf.flags.DEFINE_float('alpha', 1, 'alpha')
-tf.flags.DEFINE_string('embedding_dir', '/Users/iSam/Codes/Data/word_embeddings/glove.6B/glove.6B.300d.txt', 'path to the file containing the embeddings')
+tf.flags.DEFINE_string('embedding_dir', 'Data/word_embeddings/glove.6B/glove.6B.300d.txt', 'path to the file containing the embeddings')
 tf.flags.DEFINE_string('brain_data_dir', '/Users/iSam/Codes/Data/harrypotter/', 'Brain Data Dir')
 tf.flags.DEFINE_string('root', '/Users/iSam/Codes/', 'general path root')
 
@@ -87,6 +87,7 @@ if __name__ == '__main__':
   print(hparams)
   print("***********")
 
+  hparams.embedding_dir = os.path.join(hparams.root, hparams.embedding_dir)
   print("brain data dir: ", hparams.brain_data_dir)
   harrypotter_clean_sentences = np.load(os.path.join(hparams.brain_data_dir,"harrypotter_cleaned_sentences.npy"))
 
