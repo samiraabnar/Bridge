@@ -14,7 +14,7 @@
     <SUITE FILE_PATH="coverage/Bridge$Interface_util.coverage" NAME="Interface_util Coverage Results" MODIFIED="1542904371180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../GoogleLM1b" />
     <SUITE FILE_PATH="coverage/Bridge$misc.coverage" NAME="misc Coverage Results" MODIFIED="1542825373917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
     <SUITE FILE_PATH="coverage/Bridge$test_harrypotter_data.coverage" NAME="test_harrypotter_data Coverage Results" MODIFIED="1542880375155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/read_dataset" />
-    <SUITE FILE_PATH="coverage/Bridge$run_experiments.coverage" NAME="run_experiments Coverage Results" MODIFIED="1542972882823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$run_experiments.coverage" NAME="run_experiments Coverage Results" MODIFIED="1543065179115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$word_embedings.coverage" NAME="word_embedings Coverage Results" MODIFIED="1542880165132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
   </component>
   <component name="FavoritesManager">
@@ -42,12 +42,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_scripts_on_all_folds" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run_scripts_on_all_folds" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_scripts_on_all_folds">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_results_file.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/read_results_file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/run_experiments.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
-              <caret line="91" column="51" lean-forward="true" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
+              <caret line="91" column="51" lean-forward="false" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -184,6 +196,7 @@
         <option value="$PROJECT_DIR$/voxel_preprocessing/run_scripts_on_all_folds" />
         <option value="$PROJECT_DIR$/run_experiments.py" />
         <option value="$PROJECT_DIR$/run_scripts_on_all_folds" />
+        <option value="$PROJECT_DIR$/read_results_file.py" />
       </list>
     </option>
   </component>
@@ -220,11 +233,6 @@
             <path>
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bridge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
-              <item name="voxel_preprocessing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
@@ -617,7 +625,7 @@
     <entry file="file://$PROJECT_DIR$/run_experiments.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="91" column="51" lean-forward="true" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
+          <caret line="91" column="51" lean-forward="false" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -625,8 +633,18 @@
     <entry file="file://$PROJECT_DIR$/run_scripts_on_all_folds">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_results_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
