@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #SBATCH -p gpu
-#SBATCH -l nodes=1
 #SBATCH -t 5:00:00
 
 
