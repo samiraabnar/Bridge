@@ -3,8 +3,9 @@
 """
 
 from itertools import combinations
-import numpy as np
 import random
+import scipy as sp
+import numpy as np
 
 def get_folds(block_list, test_ratio=0.25):
   """Given the list of blocks splits them into all possible test and train sets
@@ -61,6 +62,30 @@ def concat_lists(list_of_list, joint=' '):
     concatenated_list.append(joint.join(list))
 
   return concatenated_list
+
+
+def get_dists(data):
+  x = {}
+  C = {}
+
+  for i in np.arange(len(data)):
+    x[i] = data[i]
+    C[i] = sp.spatial.distance.cdist(x[i], x[i], 'cosine') + 0.00000000001
+    C[i] /= C[i].max()
+
+  return x, C
+
+
+def compute_dist_of_dists(x, C, labels):
+  keys = np.asarray(list(x.keys()))
+  klz = np.zeros((len(keys), len(keys)))
+  for i in np.arange(len(keys)):
+    for j in np.arange(len(keys)):
+      klz[i][j] = np.sum(sp.stats.entropy(C[keys[i]], C[keys[j]], base=None))
+
+  print(np.max(klz))
+
+  return klz, labels
 
 
 if __name__ == '__main__':
