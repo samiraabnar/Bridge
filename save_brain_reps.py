@@ -54,7 +54,7 @@ if __name__ == '__main__':
   hparams.embedding_dir = os.path.join(hparams.root, hparams.embedding_dir)
   hparams.brain_data_dir = os.path.join(hparams.root, hparams.brain_data_dir)
   harrypotter_clean_sentences = np.load(os.path.join(hparams.brain_data_dir,"harrypotter_cleaned_sentences.npy"))
-  saving_dir = os.path.join(hparams.root, hparams.emb_save_dir, str(hparams.subject_id) +"_Brain")
+  saving_dir = os.path.join(hparams.root, hparams.brain_save_dir, str(hparams.subject_id) +"_Brain")
   print("brain data dir: ", hparams.brain_data_dir)
   print("saving dir: ", saving_dir)
 

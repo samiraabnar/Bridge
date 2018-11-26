@@ -5,7 +5,7 @@
 module load eb
 module load Python/3.6.3-foss-2017b
 module load CUDA/9.0.176
-module load cuDNN/7.0.5-CUDA-9.0.176
+module load cuDNN/7.3.1-CUDA-10.0.130
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:/hpc/eb/Debian9/cuDNN/7.0.5-CUDA-9.0.176/lib64:$LD_LIBRARY_PATH
 export PYTHONPATH=$PYTHONPATH:/home/samigpu/Codes/GoogleLM1b/
 cd ~/Codes/Bridge

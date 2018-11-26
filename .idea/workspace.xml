@@ -11,7 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Bridge$text_encoder.coverage" NAME="text_encoder Coverage Results" MODIFIED="1542825063189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computational_model" />
-    <SUITE FILE_PATH="coverage/Bridge$Interface_util.coverage" NAME="Interface_util Coverage Results" MODIFIED="1542904371180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../GoogleLM1b" />
+    <SUITE FILE_PATH="coverage/Bridge$Interface_util.coverage" NAME="Interface_util Coverage Results" MODIFIED="1543239395394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../GoogleLM1b" />
     <SUITE FILE_PATH="coverage/Bridge$misc.coverage" NAME="misc Coverage Results" MODIFIED="1542825373917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
     <SUITE FILE_PATH="coverage/Bridge$encode_stimuli_in_context.coverage" NAME="encode_stimuli_in_context Coverage Results" MODIFIED="1543225515243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$test_harrypotter_data.coverage" NAME="test_harrypotter_data Coverage Results" MODIFIED="1542880375155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/read_dataset" />
@@ -23,41 +23,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="encode_stimuli_in_context.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="encode_stimuli_in_context.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="102" column="50" lean-forward="false" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="50" />
+            <state relative-caret-position="172">
+              <caret line="92" column="32" lean-forward="true" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Run_Lisa_save_embeddings" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings">
+      <file leaf-file-name="save_brain_reps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/save_brain_reps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            <state relative-caret-position="-67">
+              <caret line="56" column="64" lean-forward="false" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_1" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1">
+      <file leaf-file-name="interface_util.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="56">
+              <caret line="88" column="48" lean-forward="false" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
+              <folding>
+                <element signature="e#1693#1920#0" expanded="false" />
+                <element signature="e#2007#2509#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_2" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_2" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            <state relative-caret-position="105">
+              <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -167,8 +170,8 @@
       <find>pickle</find>
       <find>../bri</find>
       <find>lstm</find>
-      <find>harryp</find>
       <find>512</find>
+      <find>harryp</find>
     </findStrings>
     <replaceStrings>
       <replace>--cross_delay=True</replace>
@@ -193,7 +196,6 @@
         <option value="$PROJECT_DIR$/../GoogleLM1b/__init__.py" />
         <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/Interface_util.py" />
         <option value="$PROJECT_DIR$/util/word_embedings.py" />
-        <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py" />
         <option value="$PROJECT_DIR$/voxel_preprocessing/select_voxels.py" />
         <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
         <option value="$PROJECT_DIR$/glove_exp_script" />
@@ -216,11 +218,13 @@
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_5" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_3" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6" />
         <option value="$PROJECT_DIR$/encode_stimuli_in_context.py" />
+        <option value="$PROJECT_DIR$/save_brain_reps.py" />
+        <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2" />
       </list>
     </option>
   </component>
@@ -256,12 +260,12 @@
           <expand>
             <path>
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
+              <item name="GoogleLM1b" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
-              <item name="computational_model" type="462c0819:PsiDirectoryNode" />
+              <item name="GoogleLM1b" type="462c0819:PsiDirectoryNode" />
+              <item name="google_lm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -297,7 +301,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.encode_stimuli_in_context">
+  <component name="RunManager" selected="Python.Interface_util">
     <configuration name="Interface_util" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -402,9 +406,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.encode_stimuli_in_context" />
-        <item index="1" class="java.lang.String" itemvalue="Python.run_experiments" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Interface_util" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Interface_util" />
+        <item index="1" class="java.lang.String" itemvalue="Python.encode_stimuli_in_context" />
+        <item index="2" class="java.lang.String" itemvalue="Python.run_experiments" />
         <item index="3" class="java.lang.String" itemvalue="Python.test_harrypotter_data" />
         <item index="4" class="java.lang.String" itemvalue="Python.word_embedings" />
       </list>
@@ -432,7 +436,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.503231" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295082" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -610,17 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="25" />
-          <folding>
-            <element signature="e#1693#1920#0" expanded="false" />
-            <element signature="e#2007#2509#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/word_embedings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -679,14 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/voxel_preprocessing/save_brain_reps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -707,14 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -774,8 +751,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="102" column="50" lean-forward="false" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="50" />
+        <state relative-caret-position="172">
+          <caret line="92" column="32" lean-forward="true" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/save_brain_reps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="56" column="64" lean-forward="false" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="88" column="48" lean-forward="false" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
+          <folding>
+            <element signature="e#1693#1920#0" expanded="false" />
+            <element signature="e#2007#2509#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
           <folding />
         </state>
       </provider>
