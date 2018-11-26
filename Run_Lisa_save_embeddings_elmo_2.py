@@ -12,20 +12,17 @@ export LD_LIBRARY_PATH=$CUDA_HOME/lib64:/hpc/eb/Debian9/cuDNN/7.0.5-CUDA-9.0.176
 export PYTHONPATH=$PYTHONPATH:/home/samigpu/Codes/GoogleLM1b/
 cd ~/Codes/Bridge
 
-text_encoder='google_lm' #universal_large elmo glove tf_token
+text_encoder='elmo' #universal_large elmo glove tf_token
+past_window=2
 
-past_window=0
-embedding_type='lstm0'
+embedding_type='word_emb'
 python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
 
-past_window=0
-embedding_type='lstm1'
+embedding_type='lstm_outputs1'
 python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
 
-past_window=1
-embedding_type='lstm0'
+embedding_type='lstm_outputs2'
 python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
 
-past_window=1
-embedding_type='lstm1'
+embedding_type='elmo'
 python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
