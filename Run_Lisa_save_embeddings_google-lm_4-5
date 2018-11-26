@@ -1,6 +1,6 @@
 #PBS -S /bin/bash
+#PBS -q gpu
 #PBS -l walltime=5:00:00
-
 
 module load eb
 module load Python/3.6.3-foss-2017b
@@ -10,17 +10,20 @@ export LD_LIBRARY_PATH=$CUDA_HOME/lib64:/hpc/eb/Debian9/cuDNN/7.0.5-CUDA-9.0.176
 export PYTHONPATH=$PYTHONPATH:/home/samigpu/Codes/GoogleLM1b/
 cd ~/Codes/Bridge
 
-text_encoder='elmo' #universal_large elmo glove tf_token
+text_encoder='google_lm' #universal_large elmo glove tf_token
+
+past_window=4
+embedding_type='lstm0'
+python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+past_window=4
+embedding_type='lstm1'
+python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
 past_window=5
-
-embedding_type='word_emb'
+embedding_type='lstm0'
 python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
 
-embedding_type='lstm_outputs1'
-python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
-
-embedding_type='lstm_outputs2'
-python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
-
-embedding_type='elmo'
+past_window=5
+embedding_type='lstm1'
 python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence

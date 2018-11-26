@@ -23,11 +23,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="encode_stimuli_in_context.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
+      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_1" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="109" column="48" lean-forward="false" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="48" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_3" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_3">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_4" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_5" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_5">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_6" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Run_Lisa_save_embeddings_google-lm_4-5" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_4-5">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Run_Lisa_save_embeddings_google-lm_2-3" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_2-3">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -37,96 +107,18 @@
         <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_0-1">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+              <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Run_Lisa_save_embeddings_elmo" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo">
+      <file leaf-file-name="Run_Lisa_save_embeddings_google-lm_6-7" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_6-7">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="281">
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Run_Lisa_save_embeddings_google-lm_2-3" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_2-3">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="save_brain_reps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/save_brain_reps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-67">
-              <caret line="56" column="64" lean-forward="false" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="interface_util.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="92" column="27" lean-forward="false" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
-              <folding>
-                <element signature="e#1693#1920#0" expanded="false" />
-                <element signature="e#2007#2509#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_2" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_4" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExplainBrain.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="336" column="45" lean-forward="false" selection-start-line="336" selection-start-column="37" selection-end-line="336" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="text_encoder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="129" column="102" lean-forward="false" selection-start-line="129" selection-start-column="99" selection-end-line="129" selection-end-column="102" />
-              <folding>
-                <element signature="e#310#384#0" expanded="false" />
-                <element signature="e#442#469#0" expanded="false" />
-                <element signature="e#556#741#0" expanded="false" />
-                <element signature="e#7374#7425#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -214,17 +206,20 @@
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo.py" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings.py" />
         <option value="$PROJECT_DIR$/ExplainBrain.py" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_5" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_3" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6" />
         <option value="$PROJECT_DIR$/encode_stimuli_in_context.py" />
         <option value="$PROJECT_DIR$/save_brain_reps.py" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2" />
         <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_3" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_5" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_6-7" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_4-5" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_2-3" />
       </list>
     </option>
   </component>
@@ -649,38 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_5">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -702,26 +665,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/save_brain_reps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-67">
           <caret line="56" column="64" lean-forward="false" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -737,14 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_2-3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -753,15 +692,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_0-1">
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="240">
+          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo">
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_6-7">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_4-5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_2-3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_0-1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />

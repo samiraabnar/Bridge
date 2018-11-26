@@ -1,6 +1,5 @@
 #SBATCH -S /bin/bash
 
-#SBATCH -p gpu
 #SBATCH -lnodes=1
 #SBATCH -t 5:00:00
 
