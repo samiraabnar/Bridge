@@ -59,7 +59,7 @@ class GoogleLMEncoder(TextEncoder):
           embeddings['lstm_0'].append(embeddings_dic[current_input][0])
           embeddings['lstm_1'].append(embeddings_dic[current_input][1])
 
-    return embeddings[key]
+    return np.asarray(embeddings[key])
 
 
 class GloVeEncoder(TextEncoder):
