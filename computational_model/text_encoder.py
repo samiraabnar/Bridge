@@ -102,6 +102,13 @@ class TfTokenEncoder(TextEncoder):
     super(TfTokenEncoder, self).__init__(hparams)
     self.embedder = hub.Module("https://tfhub.dev/google/nnlm-en-dim128/1")
 
+  def get_embeddings_values(self, text_sequences, sequences_length, key='elmo'):
+    with tf.Session() as sess:
+      sess.run(tf.global_variables_initializer())
+      sess.run(tf.tables_initializer())
+      embeddings = sess.run(self.get_embeddings(text_sequences,sequences_length, key))
+    return embeddings
+  
   def get_embeddings(self, text_sequences, text_sequences_length=None, key=None):
     """
 
