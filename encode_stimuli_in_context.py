@@ -100,7 +100,7 @@ if __name__ == '__main__':
   tf.logging.info('Encoding the stimuli ...')
 
 
-  def integration_fn(inputs, axis, max_size=512):
+  def integration_fn(inputs, axis, max_size=200000):
     if len(inputs.shape) > 1:
       inputs = np.mean(inputs, axis=axis)
     size = inputs.shape[-1]

@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="encode_stimuli_in_context.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="encode_stimuli_in_context.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="322">
+              <caret line="102" column="50" lean-forward="false" selection-start-line="102" selection-start-column="50" selection-end-line="102" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -93,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_6" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_6" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -103,12 +103,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="save_brain_reps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/voxel_preprocessing/save_brain_reps.py">
+      <file leaf-file-name="ExplainBrain.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="54" />
+            <state relative-caret-position="178">
+              <caret line="336" column="45" lean-forward="false" selection-start-line="336" selection-start-column="37" selection-end-line="336" selection-end-column="45" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text_encoder.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="129" column="102" lean-forward="false" selection-start-line="129" selection-start-column="99" selection-end-line="129" selection-end-column="102" />
+              <folding>
+                <element signature="e#310#384#0" expanded="false" />
+                <element signature="e#442#469#0" expanded="false" />
+                <element signature="e#556#741#0" expanded="false" />
+                <element signature="e#7374#7425#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,7 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>03189945411682129</find>
       <find>GloVeEncoder</find>
       <find>print</find>
       <find>load_encoded_stimuli</find>
@@ -154,6 +168,7 @@
       <find>../bri</find>
       <find>lstm</find>
       <find>harryp</find>
+      <find>512</find>
     </findStrings>
     <replaceStrings>
       <replace>--cross_delay=True</replace>
@@ -187,7 +202,6 @@
         <option value="$PROJECT_DIR$/run_scripts_on_all_folds" />
         <option value="$PROJECT_DIR$/read_results_file.py" />
         <option value="$PROJECT_DIR$/run_experiments.py" />
-        <option value="$PROJECT_DIR$/encode_stimuli_in_context.py" />
         <option value="$PROJECT_DIR$/voxel_preprocessing/save_brain_reps.py" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6.py" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_5.py" />
@@ -206,6 +220,7 @@
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6" />
+        <option value="$PROJECT_DIR$/encode_stimuli_in_context.py" />
       </list>
     </option>
   </component>
@@ -242,6 +257,11 @@
             <path>
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bridge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
+              <item name="computational_model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -483,7 +503,7 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -609,20 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="68" column="60" lean-forward="false" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="60" />
-          <folding>
-            <element signature="e#310#384#0" expanded="false" />
-            <element signature="e#442#469#0" expanded="false" />
-            <element signature="e#556#741#0" expanded="false" />
-            <element signature="e#4348#5702#0" expanded="false" />
-            <element signature="e#7374#7425#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run_scripts_on_all_folds">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -673,16 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="48" column="23" lean-forward="false" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-          <folding>
-            <element signature="e#51#104#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/voxel_preprocessing/save_brain_reps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
@@ -695,14 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -739,14 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_5">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -759,6 +739,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="336" column="45" lean-forward="false" selection-start-line="336" selection-start-column="37" selection-end-line="336" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="129" column="102" lean-forward="false" selection-start-line="129" selection-start-column="99" selection-end-line="129" selection-end-column="102" />
+          <folding>
+            <element signature="e#310#384#0" expanded="false" />
+            <element signature="e#442#469#0" expanded="false" />
+            <element signature="e#556#741#0" expanded="false" />
+            <element signature="e#7374#7425#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="102" column="50" lean-forward="false" selection-start-line="102" selection-start-column="50" selection-end-line="102" selection-end-column="50" />
           <folding />
         </state>
       </provider>
