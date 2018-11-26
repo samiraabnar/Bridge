@@ -33,12 +33,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="save_brain_reps.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="save_brain_reps.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/voxel_preprocessing/save_brain_reps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="85" column="75" lean-forward="true" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
+            <state relative-caret-position="385">
+              <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="54" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExplainBrain.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+              <folding>
+                <element signature="e#51#104#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,8 +94,8 @@
       <find>encode_stimuli</find>
       <find>save_encoded_stimuli</find>
       <find>pickle</find>
-      <find>lstm</find>
       <find>harryp</find>
+      <find>lstm</find>
     </findStrings>
     <replaceStrings>
       <replace>--cross_delay=True</replace>
@@ -110,7 +122,6 @@
         <option value="$PROJECT_DIR$/util/word_embedings.py" />
         <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py" />
         <option value="$PROJECT_DIR$/voxel_preprocessing/select_voxels.py" />
-        <option value="$PROJECT_DIR$/ExplainBrain.py" />
         <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
         <option value="$PROJECT_DIR$/glove_exp_script" />
         <option value="$PROJECT_DIR$/elmo_exp_script" />
@@ -128,6 +139,7 @@
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1.py" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo.py" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings.py" />
+        <option value="$PROJECT_DIR$/ExplainBrain.py" />
       </list>
     </option>
   </component>
@@ -330,6 +342,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="72" width="1280" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.503231" order="-1" side_tool="true" content_ui="tabs" />
@@ -337,7 +350,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.78484106" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.78484106" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -576,16 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="306" column="26" lean-forward="false" selection-start-line="306" selection-start-column="26" selection-end-line="306" selection-end-column="46" />
-          <folding>
-            <element signature="e#51#104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/glove_exp_script">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -678,9 +681,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/voxel_preprocessing/save_brain_reps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="85" column="75" lean-forward="true" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
+        <state relative-caret-position="385">
+          <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="54" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+          <folding>
+            <element signature="e#51#104#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

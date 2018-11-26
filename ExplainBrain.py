@@ -42,7 +42,7 @@ class ExplainBrain(object):
     self.embedding_type = self.hparams.embedding_type
     self.past_window = self.hparams.past_window
     self.future_window = self.hparams.future_window
-    self.data_dir = "../bridge_data/processed/harrypotter/" + str(self.subject_id) + "_" + self.hparams.context_mode + "_window"+str(self.past_window)+"-"+str(self.future_window) + "_"
+    self.data_dir = self.hparams.root+"/bridge_data/processed/harrypotter/" + str(self.subject_id) + "_" + self.hparams.context_mode + "_window"+str(self.past_window)+"-"+str(self.future_window) + "_"
     self.model_dir = os.path.join("../bridge_models/", str(self.subject_id) + "_" + str(self.embedding_type)+"_"+self.hparams.context_mode+"_window"+str(self.past_window)+"-"+str(self.future_window))
 
   def load_brain_experiment(self):
