@@ -1,8 +1,6 @@
-#!/bin/bash
-
-#SBATCH -p gpu
-#SBATCH -lnodes=1
-#SBATCH -t 5:00:00
+#PBS -S /bin/bash
+#PBS -q gpu
+#PBS -l walltime=5:00:00
 
 
 module load eb
