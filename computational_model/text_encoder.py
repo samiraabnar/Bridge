@@ -108,7 +108,7 @@ class TfTokenEncoder(TextEncoder):
       sess.run(tf.tables_initializer())
       embeddings = sess.run(self.get_embeddings(text_sequences,sequences_length, key))
     return embeddings
-  
+
   def get_embeddings(self, text_sequences, text_sequences_length=None, key=None):
     """
 

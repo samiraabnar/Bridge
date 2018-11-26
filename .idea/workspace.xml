@@ -66,34 +66,34 @@
       <file leaf-file-name="Run_Lisa_save_embeddings_tf_token_0-3" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_0-3">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="39">
+              <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text_encoder.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Run_Lisa_save_embeddings_tf_token_4-7" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_4-7">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text_encoder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="110" column="2" lean-forward="false" selection-start-line="110" selection-start-column="2" selection-end-line="110" selection-end-column="2" />
+            <state relative-caret-position="125">
+              <caret line="214" column="12" lean-forward="false" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="12" />
               <folding>
                 <element signature="e#310#384#0" expanded="false" />
                 <element signature="e#442#469#0" expanded="false" />
                 <element signature="e#556#741#0" expanded="false" />
-                <element signature="e#7727#7778#0" expanded="false" />
+                <element signature="e#7725#7776#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Run_Lisa_save_embeddings_elmo_3" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_3">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="24" column="56" lean-forward="false" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -139,7 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>100</find>
       <find>encode</find>
       <find>train</find>
       <find>eval</find>
@@ -169,6 +168,7 @@
       <find>voxel_to_region_mapping</find>
       <find>Googlelm</find>
       <find>samigpu</find>
+      <find>tftoken</find>
     </findStrings>
     <replaceStrings>
       <replace>--cross_delay=True</replace>
@@ -230,6 +230,7 @@
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_0-3" />
         <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
+        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_4-7" />
       </list>
     </option>
   </component>
@@ -831,24 +832,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_0-3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="110" column="2" lean-forward="false" selection-start-line="110" selection-start-column="2" selection-end-line="110" selection-end-column="2" />
+        <state relative-caret-position="125">
+          <caret line="214" column="12" lean-forward="false" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="12" />
           <folding>
             <element signature="e#310#384#0" expanded="false" />
             <element signature="e#442#469#0" expanded="false" />
             <element signature="e#556#741#0" expanded="false" />
-            <element signature="e#7727#7778#0" expanded="false" />
+            <element signature="e#7725#7776#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_0-3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_4-7">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
