@@ -1,4 +1,4 @@
-#PBS -S #!/bin/bash
+#PBS -S /bin/bash
 #PBS -q gpu
 #PBS -l walltime=5:00:00
 
