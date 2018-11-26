@@ -1,4 +1,4 @@
-#SBATCH -S /bin/bash
+#!/bin/bash
 
 #SBATCH -p gpu
 #SBATCH -lnodes=1
