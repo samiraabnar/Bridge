@@ -27,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="102" column="50" lean-forward="false" selection-start-line="102" selection-start-column="50" selection-end-line="102" selection-end-column="50" />
+              <caret line="102" column="50" lean-forward="false" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -775,7 +775,7 @@
     <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="102" column="50" lean-forward="false" selection-start-line="102" selection-start-column="50" selection-end-line="102" selection-end-column="50" />
+          <caret line="102" column="50" lean-forward="false" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="50" />
           <folding />
         </state>
       </provider>
