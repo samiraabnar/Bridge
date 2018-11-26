@@ -32,9 +32,11 @@ class TextEncoder(object):
 class GoogleLMEncoder(TextEncoder):
   def __init__(self, hparams, path):
     super(GoogleLMEncoder, self).__init__(hparams)
-    self.google_lm_interface = GoogleLMInterface(path)
+    self.path = path
 
   def get_embeddings_values(self, text_sequences, sequences_length, key='lstm_0'):
+    self.google_lm_interface = GoogleLMInterface(self.path)
+
     embeddings = {'lstm_0': [], 'lstm_1': []}
 
     if self.hparams.context_mode == 'block':
