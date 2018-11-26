@@ -11,19 +11,16 @@ export PYTHONPATH=$PYTHONPATH:/home/samigpu/Codes/GoogleLM1b/
 cd ~/Codes/Bridge
 
 text_encoder='tf_token' #universal_large elmo glove tf_token
+embedding_type='none'
 
 past_window=0
-embedding_type='lstm_0'
-python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
-
-past_window=0
-embedding_type='lstm_1'
 python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
 
 past_window=1
-embedding_type='lstm_0'
 python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
 
-past_window=1
-embedding_type='lstm_1'
+past_window=2
+python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+past_window=3
 python encode_stimuli_in_context.py --root /home/samigpu/Codes/ --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
