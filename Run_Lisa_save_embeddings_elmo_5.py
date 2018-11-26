@@ -1,8 +1,9 @@
-#PBS -S /bin/bash
+#SBATCH -S /bin/bash
 
-#PBS -qgpu
-#PBS -lnodes=1
-#PBS -lwalltime=10:00:00
+#SBATCH -p gpu
+#SBATCH -lnodes=1
+#SBATCH -t 5:00:00
+
 
 module load eb
 module load Python/3.6.3-foss-2017b
