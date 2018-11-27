@@ -22,7 +22,7 @@ class VarianceFeatureSelection(object):
 
 
   def get_selected_indexes(self):
-    return self.model.get_support(indices=False)
+    return self.model.get_support(indices=True)
 
 
 

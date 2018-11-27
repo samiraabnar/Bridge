@@ -7,6 +7,14 @@ import tensorflow as tf
 import numpy as np
 import os
 import pickle
+from ExplainBrain import ExplainBrain
+from read_dataset.harrypotter_data import HarryPotterReader
+from util.misc import get_dists, compute_dist_of_dists
+from util.plotting import plot
+from voxel_preprocessing.select_voxels import VarianceFeatureSelection
+import tensorflow as tf
+import numpy as np
+import os
 
 FLAGS = tf.flags.FLAGS
 
@@ -17,8 +25,8 @@ tf.flags.DEFINE_boolean('cross_delay', False, 'try different train and test dela
 
 tf.flags.DEFINE_float('alpha', 1, 'alpha')
 tf.flags.DEFINE_string('embedding_dir', 'Data/word_embeddings/glove.6B/glove.6B.300d.txt', 'path to the file containing the embeddings')
-tf.flags.DEFINE_string('brain_data_dir', '/Users/iSam/Codes/Data/harrypotter/', 'Brain Data Dir')
-tf.flags.DEFINE_string('root', '/Users/iSam/Codes/', 'general path root')
+tf.flags.DEFINE_string('brain_data_dir', 'Data/harrypotter/', 'Brain Data Dir')
+tf.flags.DEFINE_string('root', '/Users/samiraabnar/Codes/', 'general path root')
 
 tf.flags.DEFINE_enum('text_encoder', 'glove',
                      ['glove','elmo', 'tf_token' ,'universal_large', 'google_lm'], 'which encoder to use')
@@ -35,56 +43,95 @@ tf.flags.DEFINE_boolean('save_encoded_stimuli', True, 'save encoded stimuli')
 tf.flags.DEFINE_boolean('load_encoded_stimuli', True, 'load encoded stimuli')
 
 tf.flags.DEFINE_boolean('save_models', True ,'save models flag')
-
 tf.flags.DEFINE_string("param_set", None, "which param set to use")
 
-def basic_glove_params(hparams):
-  hparams.context_mode = 'none'
-  hparams.text_encoder = 'glove'
-  hparams.alpha = 1.0
 
-  return hparams
-
-def sentence_glove_params(hparams):
-  hparams.context_mode = 'sentence'
-  hparams.text_encoder = 'glove'
-  hparams.alpha = 1.0
-  hparams.delays = [-6,-4,-2,0]
-
-  return hparams
-
-def basic_elmo_params(hparams):
-  hparams.context_mode = 'none'
-  hparams.text_encoder = 'elmo'
-  hparams.alpha = 1.0
-
-  return hparams
-
-def sentence_elmo_params(hparams):
-  hparams.context_mode = 'sentence'
-  hparams.text_encoder = 'elmo'
-  hparams.alpha = 1.0
-
-  return hparams
+tf.flags.DEFINE_string("emb_save_dir",'bridge_models/embeddings/', 'where to save embeddings')
 
 
+def compare_brains_in_regions(brain_regions, regions_to_voxels):
+  for region_name, voxels in regions_to_voxels[i].items():
+    if region_name in best_brain_regions:
+      if region_name not in brain_regions:
+        brain_regions[region_name] = []
+      voxels = [v for v in voxels if v in brain_fs[i].get_selected_indexes()]
+      brain_regions[region_name].append(brains[-1][:, voxels])
 
-hparams = FLAGS
+  for region_name in brain_regions:
+    if min(map(len, brain_regions[region_name])) > 0:
+      x_brain, C_brain = get_dists(brain_regions[region_name])
+      klz_brain, labels_brain = compute_dist_of_dists(x_brain, C_brain, brain_labels)
+      print(region_name, '\t', np.mean(klz_brain), '\t', np.std(klz_brain))
+      plot(klz_brain, labels_brain)
+
+
 if __name__ == '__main__':
-  if hparams.param_set is 'glove':
-    hparams = basic_glove_params(hparams)
-  elif hparams.param_set is 'basic_elmo':
-    hparams = basic_elmo_params(hparams)
-  elif hparams.param_set is 'sentence_elmo':
-    hparams = sentence_elmo_params(hparams)
-  print("***********")
-  print(hparams)
-  print("***********")
+  hparams = FLAGS
+  print("roots", hparams.root)
 
-  hparams.embedding_dir = os.path.join(hparams.root, hparams.embedding_dir)
-  harrypotter_clean_sentences = np.load(os.path.join(hparams.brain_data_dir,"harrypotter_cleaned_sentences.npy"))
+  hparams.brain_data_dir = os.path.join(hparams.root, hparams.brain_data_dir)
+  hparams.emb_save_dir = os.path.join(hparams.root, hparams.emb_save_dir)
+
+  saving_dir = os.path.join(hparams.root, hparams.emb_save_dir,hparams.text_encoder +"_"+ hparams.embedding_type +"_"+ hparams.context_mode
+                            + "_" + str(hparams.past_window) +"-"+ str(hparams.future_window) + "_onlypast-" + str(hparams.only_past))
+  print("brain data dir: ", hparams.brain_data_dir)
+  print("saving dir: ", saving_dir)
+
+  brain_data_reader = HarryPotterReader(data_dir=hparams.brain_data_dir)
+  delay = 2
+  blocks = [1]
 
 
+  voxel_to_regions = {}
+  regions_to_voxels = {}
+  brain_fs = {}
+  for subject in [1,2,3,4,5,6,7,8]:
+    voxel_to_regions[subject], regions_to_voxels[subject] = brain_data_reader.get_voxel_to_region_mapping(subject_id=subject)
+    brain_fs[subject] = VarianceFeatureSelection()
+
+  best_brain_regions = ['Postcentral_L',
+                        'Temporal_Inf_R',
+                        'Cerebelum_Crus1_L',
+                        'Fusiform_R',
+                        'Temporal_Pole_Mid_L',
+                        'Pallidum_L',
+                        'Temporal_Mid_R',
+                        'Temporal_Pole_Sup_L',
+                        'Putamen_R',
+                        'ParaHippocampal_L',
+                        'Hippocampus_R',
+                        'Amygdala_L',
+                        'Postcentral_R',
+                        'Thalamus_R',
+                        'Precentral_R',
+                        'Parietal_Sup_L' ]
+
+  brain_regions = {}
+  #Load Brains
+  brains = []
+  brain_labels = []
+  for i in np.arange(1, 9):
+    brains.append([])
+    a = pickle.load(open(os.path.join(hparams.emb_save_dir,str(i) + '_Brain'),
+                         'rb'))
+    for b in blocks:
+      brains[-1].extend(a['brain_activations'][b][delay:])
+
+
+    brains[-1] = np.asarray(brains[-1])
+    brain_fs[i].fit(brains[-1])
+    selected_voxels = brain_fs[i].get_selected_indexes()
+    selected_voxels = [v for v in brain_fs[i].get_selected_indexes() if voxel_to_regions[i][v] in best_brain_regions]
+    brains[-1] = brains[-1][:,selected_voxels]
+    brain_labels.append('brain_' + str(i))
+    print(brains[-1].shape)
+
+
+
+
+
+  embeddings = {}
+  labels = {}
   #Load Elmo:
 
   #Load Glove Embeddings
@@ -92,36 +139,40 @@ if __name__ == '__main__':
   #Load Google LM
 
   #Load Universal Embeddings
-  universal_embeddings = []
-  uni_labels = []
-  for context_size in np.arange(7):
-    universal_embeddings.append([])
-    a = pickle.load(
-      open('gdrive/My Drive/harrypotter/universal_large_none_sentence_' + str(context_size) + '-0_onlypast-True', 'rb'))
-    universal_embeddings[-1].extend(a['encoded_stimuli'][1])
-    universal_embeddings[-1].extend(a['encoded_stimuli'][2])
-    universal_embeddings[-1].extend(a['encoded_stimuli'][3])
-    universal_embeddings[-1].extend(a['encoded_stimuli'][4])
+  encoder_types = ['universal_large','google_lm','glove']
+  embedding_types = {
+    'universal_large': ['none'],
+    'google_lm': ['lstm_0', 'lstm_1'],
+    'glove': ['none']
+  }
+  for encoder_type in encoder_types:
+    for embedding_type in embedding_types[encoder_type]:
+      embedding_key = encoder_type +"_"+embedding_type
+    embeddings[embedding_key] = []
+    labels[embedding_key] = []
+    for context_size in np.arange(7):
+      embeddings[embedding_key].append([])
+      a = pickle.load(
+        open(os.path.join(hparams.emb_save_dir,
+                          encoder_type+'_'+embedding_type+'_sentence_' + str(context_size) + '-0_onlypast-True'),
+             'rb'))
 
-    universal_embeddings[-1] = np.asarray(universal_embeddings[-1])
-    uni_labels.append('uni_context_' + str(context_size))
-    print(universal_embeddings[-1].shape)
+      for b in blocks:
+        embeddings[embedding_key][-1].extend(a['encoded_stimuli'][b][:-delay])
 
+      embeddings[embedding_key][-1] = np.asarray(embeddings[embedding_key][-1])
+      labels[embedding_key].append(embedding_key+'_context_' + str(context_size))
 
-  #Load Brains
-  brains = []
-  brain_labels = []
-  for i in np.arange(1, 9):
-    brains.append([])
-    a = pickle.load(open('/content/gdrive/My Drive/harrypotter/' + str(i) + '_Brain', 'rb'))
-    brains[-1].extend(a['brain_activations'][1])
-    brains[-1].extend(a['brain_activations'][2])
-    brains[-1].extend(a['brain_activations'][3])
-    brains[-1].extend(a['brain_activations'][4])
+  all_embeddings = []
+  all_labels = []
+  for key in embeddings.keys():
+    all_embeddings += embeddings[key]
+    all_labels += labels[key]
 
-    brains[-1] = np.asarray(brains[-1])
-    brain_labels.append('brain_' + str(i))
-    print(brains[-1].shape)
+  x, C = get_dists(brains + all_embeddings)
+  klz, labels_ = compute_dist_of_dists(x, C, brain_labels + all_labels)
+  plot(klz, labels_)
+
 
 
   #Get brain regions:

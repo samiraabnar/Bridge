@@ -234,15 +234,26 @@ class HarryPotterReader(FmriReader):
     # Voxel 5 has the same coordinates in all scans for subject 2, but they differ from the coordinates for subject 1.
     # Same with regions: Each region spans a different set of voxels depending on the subject!
     def get_voxel_to_region_mapping(self, subject_id):
-        metadata = scipy.io.loadmat(self.data_dir + "subject_" + str(subject_id) + ".mat")["meta"]
-        roi_of_nth_voxel = metadata[0][0][8][0]
-        roi_names = metadata[0][0][10][0]
-        voxel_to_region = {}
-        for voxel in range(0, roi_of_nth_voxel.shape[0]):
-            roi = roi_of_nth_voxel[voxel]
-            voxel_to_region[voxel] = roi_names[roi][0]
-        # for name in roi_names:
-        #  print(name[0])
-        return voxel_to_region
+      """
+
+      :param subject_id:
+      :return: voxel_to_region, region_to_voxels
+      """
+      metadata = scipy.io.loadmat(self.data_dir + "subject_" + str(subject_id) + ".mat")["meta"]
+      roi_of_nth_voxel = metadata[0][0][8][0]
+      roi_names = metadata[0][0][10][0]
+      voxel_to_region = {}
+      region_to_voxels = {}
+      for voxel in range(0, roi_of_nth_voxel.shape[0]):
+        roi = roi_of_nth_voxel[voxel]
+        voxel_to_region[voxel] = roi_names[roi][0]
+
+        if roi_names[roi][0] not in region_to_voxels:
+          region_to_voxels[roi_names[roi][0]] = []
+
+        region_to_voxels[roi_names[roi][0]].append(voxel)
+      # for name in roi_names:
+      #  print(name[0])
+      return voxel_to_region, region_to_voxels
 
 

@@ -1,6 +1,6 @@
 #PBS -S /bin/bash
 #PBS -q gpu
-#PBS -l walltime=5:00:00
+#PBS -l walltime=10:00:00
 
 module load eb
 module load Python/3.6.3-foss-2017b

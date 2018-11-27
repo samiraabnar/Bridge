@@ -83,8 +83,6 @@ def compute_dist_of_dists(x, C, labels):
     for j in np.arange(len(keys)):
       klz[i][j] = np.sum(sp.stats.entropy(C[keys[i]], C[keys[j]], base=None))
 
-  print(np.max(klz))
-
   return klz, labels
 
 
