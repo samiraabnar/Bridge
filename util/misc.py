@@ -79,12 +79,42 @@ def get_dists(data):
 def compute_dist_of_dists(x, C, labels):
   keys = np.asarray(list(x.keys()))
   klz = np.zeros((len(keys), len(keys)))
+  prz = np.zeros((len(keys), len(keys)))
   for i in np.arange(len(keys)):
     for j in np.arange(len(keys)):
       klz[i][j] = np.sum(sp.stats.entropy(C[keys[i]], C[keys[j]], base=None))
+      pz = []
+      for a,b in zip(C[keys[i]], C[keys[j]]):
+        p, _ = sp.stats.pearsonr(a,b)
+        pz.append(p)
 
-  return klz, labels
+      prz[i][j] = np.mean(pz)
 
+  return klz, prz, labels
+
+def compute_dist_of_dists_over_time(x, C, labels):
+  """
+
+  :param x:
+  :param C: pair wise distances of xs
+  :param labels: e.g. tokens of the story
+  :return:
+  """
+  keys = np.asarray(list(x.keys()))
+  klz = np.zeros((len(keys), len(labels)))
+  prz = np.zeros((len(keys), len(labels)))
+  for i in np.arange(len(keys)):
+    for j in np.arange(len(keys)):
+
+      klz[i][j] = np.sum(sp.stats.entropy(C[keys[i]], C[keys[j]], base=None))
+      pz = []
+      for a,b in zip(C[keys[i]], C[keys[j]]):
+        p, _ = sp.stats.pearsonr(a,b)
+        pz.append(p)
+
+      prz[i][j] = np.mean(pz)
+
+  return klz, prz, labels
 
 if __name__ == '__main__':
     print(pad_lists([['a','b'],['c']], ''))

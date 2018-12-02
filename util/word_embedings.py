@@ -52,7 +52,7 @@ class WordEmbeddingLoader(object):
     self.vocab_to_int = {word: int(index_no) for index_no, word in self.int_to_vocab.items()}
 
   def encode(self,inputs):
-    max_length = max([len(inp) for inp in inputs])
+    max_length = max([len(inp.split()) for inp in inputs])
     print("max length:", max_length)
     encoded_data = []
     for sentence in inputs:
@@ -60,6 +60,8 @@ class WordEmbeddingLoader(object):
       for word in sentence.split():
         if word.lower() in self.vocab_to_int:
           sentence_.append(self.vocab_to_int[word.lower()])
+        else:
+          sentence_.append(self.vocab_to_int['UNK'])
       sentence_.extend([self.vocab_to_int['PAD']] * max([0, max_length - len(sentence_)]))
       encoded_data.append(sentence_)
 

@@ -10,6 +10,7 @@ import pickle
 from ExplainBrain import ExplainBrain
 from read_dataset.harrypotter_data import HarryPotterReader
 from util.misc import get_dists, compute_dist_of_dists
+from util.cca import get_cca_similarity
 from util.plotting import plot
 from voxel_preprocessing.select_voxels import VarianceFeatureSelection
 import tensorflow as tf
@@ -117,7 +118,7 @@ if __name__ == '__main__':
   #Load Google LM
 
   #Load Universal Embeddings
-  encoder_types = ['google_lm', 'elmo','universal_large', 'glove', 'google_lm','tf_token']
+  encoder_types = ['google_lm'] #, 'elmo','universal_large', 'glove', 'google_lm','tf_token']
   embedding_types = {
     'universal_large': ['none'],
     'google_lm': ['lstm_0', 'lstm_1'],
@@ -125,7 +126,7 @@ if __name__ == '__main__':
     'tf_token': ['none'],
     'elmo': ['word_emb','lstm_outputs1','lstm_outputs2', 'elmo']
   }
-  """
+
   for encoder_type in encoder_types:
     for embedding_type in embedding_types[encoder_type]:
       embedding_key = encoder_type +"_"+embedding_type
@@ -152,7 +153,8 @@ if __name__ == '__main__':
   for key in embeddings.keys():
     all_embeddings += embeddings[key]
     all_labels += labels[key]
-  """
+
+
   brain_regions = []
   brain_regions_labels = []
   #Load Brains
@@ -182,36 +184,6 @@ if __name__ == '__main__':
     brain_labels.append('brain_' + str(i))
     print(brains[-1].shape)
 
-  #x, C = get_dists(brains + all_embeddings)
-  #klz, prz, labels_ = compute_dist_of_dists(x, C, brain_labels + all_labels)
-  #plot(prz, brain_regions_labels)
-  #klz = np.asarray(klz)
-  #print(klz.shape)
-
-  #print(brain_regions_labels)
-
-  x, C = get_dists(brain_regions)
-  klz, prz, labels_ = compute_dist_of_dists(x, C, brain_regions_labels)
-
-  region_sim_dic = {}
-  for region in best_brain_regions:
-    region_sim_dic[region] = []
-    for i in np.arange(len(brain_regions_labels)):
-      if brain_regions_labels[i].endswith(region):
-        for j in np.arange(len(brain_regions_labels)):
-          region_sim_dic[region].append(klz[i][j])
-
-
-  for key in region_sim_dic:
-    print(key," ", np.mean(region_sim_dic[key]), len(region_sim_dic[key]))
-  #import csv
-
-    # with open('whole_selected_klz_'+str(delay)+'.csv', 'w') as f:
-    #   writer = csv.writer(f)
-    #   writer.writerows(klz)
-    #
-    # with open('whole_selected_prz_'+str(delay)+'.csv', 'w') as f:
-    #   writer = csv.writer(f)
-    #   writer.writerows(prz)
-    #
-  #Get brain regions:
+  print(all_embeddings[0].shape)
+  c = get_cca_similarity(np.transpose(all_embeddings[0]), np.transpose(all_embeddings[1]))
+  print(c)

@@ -110,14 +110,7 @@ if __name__ == '__main__':
 
   embeddings = {}
   labels = {}
-  #Load Elmo:
-
-  #Load Glove Embeddings
-
-  #Load Google LM
-
-  #Load Universal Embeddings
-  encoder_types = ['google_lm', 'elmo','universal_large', 'glove', 'google_lm','tf_token']
+  encoder_types = ['google_lm', 'elmo','universal_large', 'glove', 'tf_token']
   embedding_types = {
     'universal_large': ['none'],
     'google_lm': ['lstm_0', 'lstm_1'],
@@ -125,7 +118,7 @@ if __name__ == '__main__':
     'tf_token': ['none'],
     'elmo': ['word_emb','lstm_outputs1','lstm_outputs2', 'elmo']
   }
-  """
+
   for encoder_type in encoder_types:
     for embedding_type in embedding_types[encoder_type]:
       embedding_key = encoder_type +"_"+embedding_type
@@ -152,7 +145,8 @@ if __name__ == '__main__':
   for key in embeddings.keys():
     all_embeddings += embeddings[key]
     all_labels += labels[key]
-  """
+
+
   brain_regions = []
   brain_regions_labels = []
   #Load Brains

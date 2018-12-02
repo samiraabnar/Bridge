@@ -32,6 +32,7 @@ class ExplainBrain(object):
     self.hparams = hparams
     self.brain_data_reader = brain_data_reader
     self.stimuli_encoder = stimuli_encoder
+    print("class name:", self.stimuli_encoder.__class__)
     self.mapper_tuple = mapper_tuple
     self.blocks = None
     self.folds = None
@@ -137,6 +138,7 @@ class ExplainBrain(object):
         encoded_stimuli_of_each_block[block] = []
         print("Encoding stimuli of block:", block)
         contexts, indexes = zip(*stimuli_in_context[block])
+        print("class name:", self.stimuli_encoder.__class__)
         encoded_stimuli = self.stimuli_encoder.get_embeddings_values(contexts, [len(c) for c in contexts], key=self.embedding_type)
         if len(encoded_stimuli.shape) > 2:
           for encoded, index in zip(encoded_stimuli,indexes):
@@ -146,7 +148,7 @@ class ExplainBrain(object):
             encoded_stimuli = integration_fn(encoded[index], axis=0)
             encoded_stimuli_of_each_block[block].append(encoded_stimuli)
         else:
-          encoded_stimuli_of_each_block[block] = encoded_stimuli
+          encoded_stimuli_of_each_block[block] = np.asarray(encoded_stimuli)
 
       if self.hparams.save_encoded_stimuli:
         np.save(self.model_dir + "encoded_stimuli_in_context", encoded_stimuli_of_each_block)

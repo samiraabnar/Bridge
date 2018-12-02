@@ -1,0 +1,65 @@
+export PYTHONPATH=$PYTHONPATH:/Users/samiraabnar/Codes/GoogleLM1b/
+
+text_encoder='elmo' #universal_large elmo glove tf_token
+past_window=3
+embedding_type='lstm_outputs1'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='word_emb'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='lstm_outputs1'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='lstm_outputs2'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='elmo'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+
+text_encoder='elmo' #universal_large elmo glove tf_token
+past_window=4
+
+embedding_type='word_emb'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='lstm_outputs1'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='lstm_outputs2'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='elmo'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+
+text_encoder='elmo' #universal_large elmo glove tf_token
+past_window=5
+
+embedding_type='word_emb'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='lstm_outputs1'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='lstm_outputs2'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='elmo'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+text_encoder='elmo' #universal_large elmo glove tf_token
+past_window=6
+
+embedding_type='word_emb'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='lstm_outputs1'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='lstm_outputs2'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence
+
+embedding_type='elmo'
+python encode_stimuli_in_context.py --root /Users/samiraabnar/Codes --text_encoder=$text_encoder --embedding_type=$embedding_type --past_window=$past_window --context_mode=sentence

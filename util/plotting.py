@@ -127,7 +127,7 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}",
 
 
 def plot(klz, labels):
-  fig, ax = plt.subplots(figsize=(5, 5))
+  fig, ax = plt.subplots(figsize=(20, 20))
 
   im, cbar = heatmap(klz, labels, labels, ax=ax,
                      cmap="YlGn", cbarlabel="Explained Variance")

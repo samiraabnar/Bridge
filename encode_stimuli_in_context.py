@@ -40,7 +40,7 @@ tf.flags.DEFINE_boolean('only_past', True, 'window size to the future')
 tf.flags.DEFINE_boolean('save_data', True ,'save data flag')
 tf.flags.DEFINE_boolean('load_data', True ,'load data flag')
 tf.flags.DEFINE_boolean('save_encoded_stimuli', True, 'save encoded stimuli')
-tf.flags.DEFINE_boolean('load_encoded_stimuli', True, 'load encoded stimuli')
+tf.flags.DEFINE_boolean('load_encoded_stimuli', False, 'load encoded stimuli')
 
 tf.flags.DEFINE_boolean('save_models', True ,'save models flag')
 
@@ -109,5 +109,7 @@ if __name__ == '__main__':
 
   encoded_stimuli = explain_brain.encode_stimuli(stimuli, integration_fn=integration_fn)
 
+  print("shape of encoded:",np.asarray(encoded_stimuli[1]).shape)
   saving_dic = {'time_steps':time_steps, 'start_steps':start_steps, 'end_steps':end_steps, 'encoded_stimuli':encoded_stimuli, 'stimuli':stimuli}
   pickle.dump(saving_dic, open(saving_dir, 'wb'))
+

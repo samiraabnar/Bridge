@@ -78,8 +78,8 @@ if __name__ == '__main__':
   print("saving dir: ", saving_dir)
 
   brain_data_reader = HarryPotterReader(data_dir=hparams.brain_data_dir)
-  delay = 0
-  blocks = [1,2,3,4]
+  delay = 2
+  blocks = [3]
 
 
   voxel_to_regions = {}
@@ -125,7 +125,6 @@ if __name__ == '__main__':
     'tf_token': ['none'],
     'elmo': ['word_emb','lstm_outputs1','lstm_outputs2', 'elmo']
   }
-  """
   for encoder_type in encoder_types:
     for embedding_type in embedding_types[encoder_type]:
       embedding_key = encoder_type +"_"+embedding_type
@@ -152,7 +151,7 @@ if __name__ == '__main__':
   for key in embeddings.keys():
     all_embeddings += embeddings[key]
     all_labels += labels[key]
-  """
+
   brain_regions = []
   brain_regions_labels = []
   #Load Brains
@@ -163,7 +162,7 @@ if __name__ == '__main__':
     a = pickle.load(open(os.path.join(hparams.emb_save_dir,str(i) + '_Brain'),
                          'rb'))
     for b in blocks:
-      brains[-1].extend(a['brain_activations'][b][11+delay:-3])
+      brains[-1].extend(a['brain_activations'][b][11+delay:-1])
 
 
     brains[-1] = np.asarray(brains[-1])
@@ -182,36 +181,19 @@ if __name__ == '__main__':
     brain_labels.append('brain_' + str(i))
     print(brains[-1].shape)
 
-  #x, C = get_dists(brains + all_embeddings)
-  #klz, prz, labels_ = compute_dist_of_dists(x, C, brain_labels + all_labels)
-  #plot(prz, brain_regions_labels)
-  #klz = np.asarray(klz)
-  #print(klz.shape)
+  x, C = get_dists(brain_regions + all_embeddings)
+  klz, prz, labels_ = compute_dist_of_dists(x, C, brain_regions_labels + all_labels)
+  plot(prz, labels_)
+  klz = np.asarray(klz)
+  print(klz.shape)
 
-  #print(brain_regions_labels)
+  import csv
 
-  x, C = get_dists(brain_regions)
-  klz, prz, labels_ = compute_dist_of_dists(x, C, brain_regions_labels)
+  with open('klz_'+str(delay)+'.csv', "w") as f:
+    writer = csv.writer(f)
+    writer.writerows(klz)
 
-  region_sim_dic = {}
-  for region in best_brain_regions:
-    region_sim_dic[region] = []
-    for i in np.arange(len(brain_regions_labels)):
-      if brain_regions_labels[i].endswith(region):
-        for j in np.arange(len(brain_regions_labels)):
-          region_sim_dic[region].append(klz[i][j])
-
-
-  for key in region_sim_dic:
-    print(key," ", np.mean(region_sim_dic[key]), len(region_sim_dic[key]))
-  #import csv
-
-    # with open('whole_selected_klz_'+str(delay)+'.csv', 'w') as f:
-    #   writer = csv.writer(f)
-    #   writer.writerows(klz)
-    #
-    # with open('whole_selected_prz_'+str(delay)+'.csv', 'w') as f:
-    #   writer = csv.writer(f)
-    #   writer.writerows(prz)
-    #
+  with open('prz_'+str(delay)+'.csv', "w") as f:
+    writer = csv.writer(f)
+    writer.writerows(prz)
   #Get brain regions:
