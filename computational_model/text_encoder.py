@@ -1,3 +1,7 @@
+import sys
+sys.path.append("../Codes/bert")
+sys.path.append("../Codes")
+
 import tensorflow as tf
 import tensorflow_hub as hub
 from util.misc import pad_lists, concat_lists
@@ -5,6 +9,14 @@ from util.word_embedings import WordEmbeddingLoader
 import numpy as np
 from google_lm.interface_util import GoogleLMInterface
 from tqdm import tqdm
+import codecs
+import collections
+import json
+import re
+import bert
+import bert.modeling
+import bert.tokenization
+import bert.extract_features_utils as extract_features
 
 class TextEncoder(object):
   def __init__(self, hparams):
@@ -205,13 +217,101 @@ class TfHubLargeUniversalEncoder(TfHubUniversalEncoder):
 
 
 class BertEncoder(TextEncoder):
-  def __init__(self):
-    raise NotImplementedError()
+  def __init__(self, hparams):
+    self.vocab_file = "/Users/samiraabnar/Codes/bert/pretrained_models/cased_L-12_H-768_A-12/vocab.txt"
+    self.config_file = "/Users/samiraabnar/Codes/bert/pretrained_models/cased_L-12_H-768_A-12/bert_config.json"
+    self.init_checkpoint = "/Users/samiraabnar/Codes/bert/pretrained_models/cased_L-12_H-768_A-12/bert_model.ckpt"
 
+    self.layer_indexes = [int(x) for x in hparams.layers.split(",")]
+
+    self.bert_config = bert.modeling.BertConfig.from_json_file(self.config_file)
+
+    self.tokenizer = bert.tokenization.FullTokenizer(
+      vocab_file=self.vocab_file, do_lower_case=False)
+
+    is_per_host = tf.contrib.tpu.InputPipelineConfig.PER_HOST_V2
+    self.run_config = tf.contrib.tpu.RunConfig(
+      master=None,
+      tpu_config=tf.contrib.tpu.TPUConfig(
+        num_shards=None,
+        per_host_input_for_training=is_per_host))
+
+
+  def convert_example(self, input_sequences):
+    examples = []
+    unique_id = 0
+    for sequence in input_sequences:
+      line = bert.tokenization.convert_to_unicode(sequence)
+      line = line.strip()
+      text_a = None
+      text_b = None
+      m = re.match(r"^(.*) \|\|\| (.*)$", line)
+      if m is None:
+        text_a = line
+      else:
+        text_a = m.group(1)
+        text_b = m.group(2)
+      examples.append(
+        extract_features.InputExample(unique_id=unique_id, text_a=text_a, text_b=text_b))
+      unique_id += 1
+
+    return examples
+
+  def get_embeddings_values(self, text_sequences, sequences_length, key=None):
+    examples = self.convert_example(text_sequences)
+
+    features = extract_features.convert_examples_to_features(
+      examples=examples, seq_length=128, tokenizer=self.tokenizer)
+
+    unique_id_to_feature = {}
+    for feature in features:
+      unique_id_to_feature[feature.unique_id] = feature
+
+    model_fn = extract_features.model_fn_builder(
+      bert_config=self.bert_config,
+      init_checkpoint=self.init_checkpoint,
+      layer_indexes=self.layer_indexes,
+      use_tpu=False,
+      use_one_hot_embeddings=False)
+
+    # If TPU is not available, this will fall back to normal Estimator on CPU
+    # or GPU.
+    estimator = tf.contrib.tpu.TPUEstimator(
+      use_tpu=False,
+      model_fn=model_fn,
+      config=self.run_config,
+      predict_batch_size=32)
+
+    input_fn = extract_features.input_fn_builder(
+      features=features, seq_length=128)
+
+    output_embeddings = []
+    for result in estimator.predict(input_fn, yield_single_examples=True):
+      unique_id = int(result["unique_id"])
+      feature = unique_id_to_feature[unique_id]
+
+      all_features = []
+      for (i, token) in enumerate(feature.tokens):
+        all_layers = []
+        for (j, layer_index) in enumerate(self.layer_indexes):
+          layer_output = result["layer_output_%d" % j]
+          layers = collections.OrderedDict()
+          layers["index"] = layer_index
+          layers["values"] = [
+            round(float(x), 6) for x in layer_output[i:(i + 1)].flat
+          ]
+
+          all_layers.append(layers)
+        features = collections.OrderedDict()
+        features["token"] = token
+        features["layers"] = all_layers
+        all_features.append(features)
+      output_embeddings.append(all_features)
+    return output_embeddings
 
 import os
 
-if __name__ == '__main__':
+def test():
   FLAGS = tf.flags.FLAGS
   tf.flags.DEFINE_integer('subject_id', 1, 'subject id')
   tf.flags.DEFINE_integer('fold_id', 0, 'fold id')
@@ -278,3 +378,28 @@ if __name__ == '__main__':
     uni_embedding = integration_fn(uni_embedding[0][indexes], axis=0)
   print(glove_embedding.shape)
   print(uni_embedding.shape)
+
+if __name__ == '__main__':
+  FLAGS = tf.flags.FLAGS
+  tf.flags.DEFINE_string('layers', '0,1,2,3,4,5,6,7,8,9,10,11', 'layers')
+  hparams = FLAGS
+
+  bert_encoder_obj = BertEncoder(hparams)
+
+  embeddings_for_each_layer={0:[],1:[],2:[],3:[],4:[],5:[],6:[],
+                             7:[], 8:[], 9:[],10:[],11:[]}
+  sentences = ['this is a cat']
+  output_embeddings = bert_encoder_obj.get_embeddings_values(['this is a cat'],[4])
+
+  for sent, output in zip(sentences,output_embeddings):
+    print(sent)
+    sent_embeddings_for_each_layer = {0:[],1:[],2:[],3:[],4:[],5:[],6:[],
+                                      7:[], 8:[], 9:[],10:[],11:[]}
+    for f in output:
+      print(f['token'])
+      for i in np.arange(12):
+        print((f['layers'][i]))
+        sent_embeddings_for_each_layer[i].append(np.asarray(f['layers'][i]['values']))
+
+  for i in np.arange(12):
+    print(np.asarray(sent_embeddings_for_each_layer[i]).shape)

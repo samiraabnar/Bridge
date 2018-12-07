@@ -78,9 +78,12 @@ if __name__ == '__main__':
   print("saving dir: ", saving_dir)
 
   brain_data_reader = HarryPotterReader(data_dir=hparams.brain_data_dir)
+
+  story_features = np.load('story_features.npy').item()
   delay = 0
   blocks = [1,2,3,4]
-
+  selected_steps = {}
+  selecting_feature = 'none'
 
   voxel_to_regions = {}
   regions_to_voxels = {}
@@ -110,49 +113,89 @@ if __name__ == '__main__':
 
   embeddings = {}
   labels = {}
-  #Load Elmo:
 
-  #Load Glove Embeddings
-
-  #Load Google LM
-
-  #Load Universal Embeddings
-  encoder_types = ['google_lm', 'elmo','universal_large', 'glove', 'google_lm','tf_token']
+  encoder_types = ['google_lm','elmo','universal_large', 'glove'] #, 'google_lm','tf_token']
   embedding_types = {
     'universal_large': ['none'],
     'google_lm': ['lstm_0', 'lstm_1'],
     'glove': ['none'],
     'tf_token': ['none'],
-    'elmo': ['word_emb','lstm_outputs1','lstm_outputs2', 'elmo']
+    'elmo': ['lstm_outputs1','lstm_outputs2']
   }
-  """
+
   for encoder_type in encoder_types:
     for embedding_type in embedding_types[encoder_type]:
       embedding_key = encoder_type +"_"+embedding_type
       embeddings[embedding_key] = []
       labels[embedding_key] = []
+      embeddings[embedding_key].append([])
+      a = pickle.load(
+        open(os.path.join(hparams.emb_save_dir,
+                          encoder_type + '_' + embedding_type + '_none_' + str(0) + '-0_onlypast-True'),
+             'rb'))
+      time_steps = a['time_steps']
+      selected_steps = {1: {}, 2: {}, 3: {}, 4: {}}
+      for b in blocks:
+        selected_steps[b][embedding_key + "_none" ] = []
+        for i in np.arange(len(time_steps[b])):
+          current_step = time_steps[b][i]
+          if selecting_feature == 'none':
+            if i >= a['start_steps'][b] and i < a['end_steps'][b]:
+              selected_steps[b][embedding_key + "_none"].append(i)
+          elif story_features[selecting_feature][b][current_step] == 1 and i >= a['start_steps'][b] and i < \
+              a['end_steps'][b]:
+            selected_steps[b][embedding_key + "_none"].append(i)
+
+        print(a['start_steps'][b], a['end_steps'][b])
+        embeddings[embedding_key][-1].extend(
+          list(np.asarray(a['encoded_stimuli'][b])[selected_steps[b][embedding_key + "_none"]]))
+
+      embeddings[embedding_key][-1] = np.asarray(embeddings[embedding_key][-1])
+      print(embedding_key)
+      print(embeddings[embedding_key][-1].shape)
+      labels[embedding_key].append(embedding_key + '_context_none')
+
       for context_size in np.arange(7):
         embeddings[embedding_key].append([])
         a = pickle.load(
           open(os.path.join(hparams.emb_save_dir,
                             encoder_type+'_'+embedding_type+'_sentence_' + str(context_size) + '-0_onlypast-True'),
                'rb'))
-
+        time_steps = a['time_steps']
+        selected_steps = {1:{},2:{},3:{},4:{}}
         for b in blocks:
+          selected_steps[b][embedding_key+"_"+str(context_size)] = []
+          for i in np.arange(len(time_steps[b])):
+            current_step = time_steps[b][i]
+            if selecting_feature == 'none':
+              if i >= a['start_steps'][b] and i < a['end_steps'][b]:
+                selected_steps[b][embedding_key +"_"+ str(context_size)].append(i)
+            elif story_features[selecting_feature][b][current_step] == 1 and i >= a['start_steps'][b] and i < a['end_steps'][b]:
+              selected_steps[b][embedding_key +"_"+ str(context_size)].append(i)
+
           print(a['start_steps'][b],a['end_steps'][b])
-          embeddings[embedding_key][-1].extend(list(a['encoded_stimuli'][b][a['start_steps'][b]:a['end_steps'][b]]))
+          embeddings[embedding_key][-1].extend(list(np.asarray(a['encoded_stimuli'][b])[selected_steps[b][embedding_key+"_"+str(context_size)]]))
 
         embeddings[embedding_key][-1] = np.asarray(embeddings[embedding_key][-1])
         print(embedding_key)
         print(embeddings[embedding_key][-1].shape)
         labels[embedding_key].append(embedding_key+'_context_' + str(context_size))
 
+  print("selected steps (they should be the same:")
+  brain_selected_steps = {1:[],2:[],3:[],4:[]}
+  for b in [1,2,3,4]:
+    for sel in selected_steps[b]:
+      print(sel, selected_steps[b][sel])
+      brain_selected_steps[b] = list(np.asarray(selected_steps[b][sel])+delay)
+
+  print("for brain: ", brain_selected_steps[1])
+  print("####################################")
   all_embeddings = []
   all_labels = []
   for key in embeddings.keys():
     all_embeddings += embeddings[key]
     all_labels += labels[key]
-  """
+
   brain_regions = []
   brain_regions_labels = []
   #Load Brains
@@ -163,7 +206,7 @@ if __name__ == '__main__':
     a = pickle.load(open(os.path.join(hparams.emb_save_dir,str(i) + '_Brain'),
                          'rb'))
     for b in blocks:
-      brains[-1].extend(a['brain_activations'][b][11+delay:-3])
+      brains[-1].extend(a['brain_activations'][b][brain_selected_steps[b]])
 
 
     brains[-1] = np.asarray(brains[-1])
@@ -171,12 +214,13 @@ if __name__ == '__main__':
     original_selected_voxels = brain_fs[i].get_selected_indexes()
     print(len(original_selected_voxels))
 
+    """
     for region_name, voxels in regions_to_voxels[i].items():
       if region_name in best_brain_regions:
         voxels = [v for v in voxels if v in original_selected_voxels]
         brain_regions.append(brains[-1][:, voxels])
         brain_regions_labels.append(['subject_'+str(i)+region_name])
-
+    """
     selected_voxels = [v for v in original_selected_voxels if voxel_to_regions[i][v] in best_brain_regions]
     brains[-1] = brains[-1][:, selected_voxels]
     brain_labels.append('brain_' + str(i))
@@ -190,6 +234,17 @@ if __name__ == '__main__':
 
   #print(brain_regions_labels)
 
+  for context_size in np.arange(1):
+    output = str(context_size)+' '
+    for key in embeddings:
+      print(key,embeddings[key][context_size].shape)
+      embedding_key = key+'_'+str(context_size)
+      x, C = get_dists(brains + [embeddings[key][context_size]])
+      klz, prz, labels_ = compute_dist_of_dists(x, C, brain_labels + [embedding_key])
+      output += str(np.mean(prz[8,0:8]))+ ' '
+    print(output)
+
+  """
   x, C = get_dists(brain_regions)
   klz, prz, labels_ = compute_dist_of_dists(x, C, brain_regions_labels)
 
@@ -204,6 +259,7 @@ if __name__ == '__main__':
 
   for key in region_sim_dic:
     print(key," ", np.mean(region_sim_dic[key]), len(region_sim_dic[key]))
+  """
   #import csv
 
     # with open('whole_selected_klz_'+str(delay)+'.csv', 'w') as f:

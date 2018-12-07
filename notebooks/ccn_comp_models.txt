@@ -1,0 +1,1512 @@
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_0   google_lm_lstm_0 :  (0.9999763129516058, 0.9999763129516058)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_0   google_lm_lstm_1 :  (0.9305292172492072, 0.9305292172491954)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_0   elmo_lstm_outputs1 :  (0.9304005031798289, 0.9304005031798305)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_0   elmo_lstm_outputs2 :  (0.9284344688518029, 0.9284344688517978)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_0   universal_large_none :  (0.8830709288647902, 0.8839155619688259)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_0   glove_none :  (0.9380490455219791, 0.9387744981445223)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_1   google_lm_lstm_0 :  (0.9305292172491954, 0.9305292172492072)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_1   google_lm_lstm_1 :  (0.9999068681164368, 0.9999068681164368)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_1   elmo_lstm_outputs1 :  (0.9288535769280208, 0.9288535769280352)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_1   elmo_lstm_outputs2 :  (0.9300763036286769, 0.9300763036286834)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_1   universal_large_none :  (0.8948989136343238, 0.8957207420551057)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   google_lm_lstm_1   glove_none :  (0.9257673679156245, 0.9265601946705896)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs1   google_lm_lstm_0 :  (0.9304005031798305, 0.9304005031798289)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs1   google_lm_lstm_1 :  (0.9288535769280352, 0.9288535769280208)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs1   elmo_lstm_outputs1 :  (0.9999258167337979, 0.9999258167337979)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs1   elmo_lstm_outputs2 :  (0.941126259201597, 0.9411262592015902)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs1   universal_large_none :  (0.8859206050573735, 0.8867572046189183)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs1   glove_none :  (0.9384466091669689, 0.9391581093014578)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs2   google_lm_lstm_0 :  (0.9284344688517978, 0.9284344688518029)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs2   google_lm_lstm_1 :  (0.9300763036286834, 0.9300763036286769)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs2   elmo_lstm_outputs1 :  (0.9411262592015902, 0.941126259201597)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs2   elmo_lstm_outputs2 :  (0.9999291055455456, 0.9999291055455456)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs2   universal_large_none :  (0.8922231394670022, 0.8930513217702795)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   elmo_lstm_outputs2   glove_none :  (0.9307113010593085, 0.9314682586815223)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   universal_large_none   google_lm_lstm_0 :  (0.8839155619688259, 0.8830709288647902)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   universal_large_none   google_lm_lstm_1 :  (0.8957207420551057, 0.8948989136343238)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   universal_large_none   elmo_lstm_outputs1 :  (0.8867572046189183, 0.8859206050573735)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   universal_large_none   elmo_lstm_outputs2 :  (0.8930513217702795, 0.8922231394670022)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   universal_large_none   universal_large_none :  (0.9969852239499785, 0.9969852239499785)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   universal_large_none   glove_none :  (0.5874721031655757, 0.5887980949240803)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   glove_none   google_lm_lstm_0 :  (0.9387744981445223, 0.9380490455219791)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   glove_none   google_lm_lstm_1 :  (0.9265601946705896, 0.9257673679156245)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   glove_none   elmo_lstm_outputs1 :  (0.9391581093014578, 0.9384466091669689)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   glove_none   elmo_lstm_outputs2 :  (0.9314682586815223, 0.9307113010593085)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   glove_none   universal_large_none :  (0.5887980949240803, 0.5874721031655757)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+0   glove_none   glove_none :  (0.999653824860871, 0.999653824860871)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_0   google_lm_lstm_0 :  (0.9999771267842382, 0.9999771267842382)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_0   google_lm_lstm_1 :  (0.9304188208576669, 0.9304188208576812)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_0   elmo_lstm_outputs1 :  (0.9293397914325648, 0.9293397914325616)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_0   elmo_lstm_outputs2 :  (0.9280883240626886, 0.9280883240626874)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_0   universal_large_none :  (0.8970218624996121, 0.8977880957897602)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_0   glove_none :  (0.937637818711819, 0.9383619131868658)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_1   google_lm_lstm_0 :  (0.9304188208576812, 0.9304188208576669)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_1   google_lm_lstm_1 :  (0.9998842279939695, 0.9998842279939695)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_1   elmo_lstm_outputs1 :  (0.9284723780207517, 0.9284723780207345)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_1   elmo_lstm_outputs2 :  (0.9287703418010878, 0.9287703418010735)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_1   universal_large_none :  (0.9073764682687112, 0.9081162862947401)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   google_lm_lstm_1   glove_none :  (0.9254362699557724, 0.9262221480338323)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs1   google_lm_lstm_0 :  (0.9293397914325616, 0.9293397914325648)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs1   google_lm_lstm_1 :  (0.9284723780207345, 0.9284723780207517)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs1   elmo_lstm_outputs1 :  (0.9999248360036471, 0.9999248360036471)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs1   elmo_lstm_outputs2 :  (0.9413104932716932, 0.9413104932716947)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs1   universal_large_none :  (0.8975359883034963, 0.8983061333334338)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs1   glove_none :  (0.9385612809950293, 0.9392688724222744)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs2   google_lm_lstm_0 :  (0.9280883240626874, 0.9280883240626886)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs2   google_lm_lstm_1 :  (0.9287703418010735, 0.9287703418010878)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs2   elmo_lstm_outputs1 :  (0.9413104932716947, 0.9413104932716932)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs2   elmo_lstm_outputs2 :  (0.9999092503778151, 0.9999092503778151)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs2   universal_large_none :  (0.901995714225806, 0.902758047282043)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   elmo_lstm_outputs2   glove_none :  (0.9310721467228905, 0.9318331702283289)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   universal_large_none   google_lm_lstm_0 :  (0.8977880957897602, 0.8970218624996121)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   universal_large_none   google_lm_lstm_1 :  (0.9081162862947401, 0.9073764682687112)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   universal_large_none   elmo_lstm_outputs1 :  (0.8983061333334338, 0.8975359883034963)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   universal_large_none   elmo_lstm_outputs2 :  (0.902758047282043, 0.901995714225806)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   universal_large_none   universal_large_none :  (0.999011597192053, 0.999011597192053)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   universal_large_none   glove_none :  (0.6266485247950643, 0.6279821818649257)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   glove_none   google_lm_lstm_0 :  (0.9383619131868658, 0.937637818711819)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   glove_none   google_lm_lstm_1 :  (0.9262221480338323, 0.9254362699557724)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   glove_none   elmo_lstm_outputs1 :  (0.9392688724222744, 0.9385612809950293)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   glove_none   elmo_lstm_outputs2 :  (0.9318331702283289, 0.9310721467228905)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   glove_none   universal_large_none :  (0.6279821818649257, 0.6266485247950643)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+1   glove_none   glove_none :  (0.9996553100043447, 0.9996553100043447)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_0   google_lm_lstm_0 :  (0.9999770603898117, 0.9999770603898117)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_0   google_lm_lstm_1 :  (0.9306489629161595, 0.930648962916161)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_0   elmo_lstm_outputs1 :  (0.9304023992171415, 0.9304023992171381)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_0   elmo_lstm_outputs2 :  (0.9287264755624149, 0.9287264755624082)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_0   universal_large_none :  (0.8961989656217201, 0.8961989656357802)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_0   glove_none :  (0.9376225967282175, 0.9383511267543286)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_1   google_lm_lstm_0 :  (0.930648962916161, 0.9306489629161595)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_1   google_lm_lstm_1 :  (0.9998965641182773, 0.9998965641182773)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_1   elmo_lstm_outputs1 :  (0.9286498766629763, 0.9286498766629707)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_1   elmo_lstm_outputs2 :  (0.928675879227238, 0.9286758792272294)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_1   universal_large_none :  (0.9080039161499335, 0.9087412457487262)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   google_lm_lstm_1   glove_none :  (0.9249633329607148, 0.9257575636895845)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs1   google_lm_lstm_0 :  (0.9304023992171381, 0.9304023992171415)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs1   google_lm_lstm_1 :  (0.9286498766629707, 0.9286498766629763)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs1   elmo_lstm_outputs1 :  (0.9999255089601137, 0.9999255089601137)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs1   elmo_lstm_outputs2 :  (0.942457004323316, 0.9424570043233121)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs1   universal_large_none :  (0.8946781363885828, 0.8954573072872033)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs1   glove_none :  (0.9397259277745854, 0.9404224664455172)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs2   google_lm_lstm_0 :  (0.9287264755624082, 0.9287264755624149)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs2   google_lm_lstm_1 :  (0.9286758792272294, 0.928675879227238)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs2   elmo_lstm_outputs1 :  (0.9424570043233121, 0.942457004323316)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs2   elmo_lstm_outputs2 :  (0.9999114555380035, 0.9999114555380035)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs2   universal_large_none :  (0.8990349363780853, 0.8998057598190113)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   elmo_lstm_outputs2   glove_none :  (0.9330170865906487, 0.9337632676578573)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   universal_large_none   google_lm_lstm_0 :  (0.8961989656357802, 0.8961989656217201)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   universal_large_none   google_lm_lstm_1 :  (0.9087412457487262, 0.9080039161499335)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   universal_large_none   elmo_lstm_outputs1 :  (0.8954573072872033, 0.8946781363885828)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   universal_large_none   elmo_lstm_outputs2 :  (0.8998057598190113, 0.8990349363780853)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   universal_large_none   universal_large_none :  (0.9987526602603427, 0.9987526602603427)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   universal_large_none   glove_none :  (0.6177521406333575, 0.6190718090723542)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   glove_none   google_lm_lstm_0 :  (0.9383511267543286, 0.9376225967282175)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   glove_none   google_lm_lstm_1 :  (0.9257575636895845, 0.9249633329607148)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   glove_none   elmo_lstm_outputs1 :  (0.9404224664455172, 0.9397259277745854)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   glove_none   elmo_lstm_outputs2 :  (0.9337632676578573, 0.9330170865906487)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   glove_none   universal_large_none :  (0.6190718090723542, 0.6177521406333575)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+2   glove_none   glove_none :  (0.9996532814725694, 0.9996532814725694)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_0   google_lm_lstm_0 :  (0.9999769601160645, 0.9999769601160645)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_0   google_lm_lstm_1 :  (0.9306886808683756, 0.9306886808683882)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_0   elmo_lstm_outputs1 :  (0.9305354190328651, 0.9305354190328664)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_0   elmo_lstm_outputs2 :  (0.928264699997159, 0.9282646999971507)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_0   universal_large_none :  (0.895347034125023, 0.8961197065508717)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_0   glove_none :  (0.9377912993392983, 0.9385254213870485)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_1   google_lm_lstm_0 :  (0.9306886808683882, 0.9306886808683756)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_1   google_lm_lstm_1 :  (0.9998989368311617, 0.9998989368311617)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_1   elmo_lstm_outputs1 :  (0.9286910985496475, 0.9286910985496345)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_1   elmo_lstm_outputs2 :  (0.9284710202915691, 0.9284710202915468)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_1   universal_large_none :  (0.9071672736576519, 0.9079082632736397)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   google_lm_lstm_1   glove_none :  (0.9247468348421316, 0.9255402759185488)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs1   google_lm_lstm_0 :  (0.9305354190328664, 0.9305354190328651)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs1   google_lm_lstm_1 :  (0.9286910985496345, 0.9286910985496475)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs1   elmo_lstm_outputs1 :  (0.9999266626483586, 0.9999266626483586)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs1   elmo_lstm_outputs2 :  (0.942476301160301, 0.9424763011602914)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs1   universal_large_none :  (0.8932455593825038, 0.8940350862649596)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs1   glove_none :  (0.9399229576748543, 0.9406227149702071)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs2   google_lm_lstm_0 :  (0.9282646999971507, 0.928264699997159)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs2   google_lm_lstm_1 :  (0.9284710202915468, 0.9284710202915691)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs2   elmo_lstm_outputs1 :  (0.9424763011602914, 0.942476301160301)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs2   elmo_lstm_outputs2 :  (0.9999096283850025, 0.9999096283850025)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs2   universal_large_none :  (0.8989155313867409, 0.8996899576332261)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   elmo_lstm_outputs2   glove_none :  (0.9332517999153278, 0.9332517999152484)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   universal_large_none   google_lm_lstm_0 :  (0.8961197065508717, 0.895347034125023)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   universal_large_none   google_lm_lstm_1 :  (0.9079082632736397, 0.9071672736576519)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   universal_large_none   elmo_lstm_outputs1 :  (0.8940350862649596, 0.8932455593825038)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   universal_large_none   elmo_lstm_outputs2 :  (0.8996899576332261, 0.8989155313867409)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   universal_large_none   universal_large_none :  (0.9980980977431586, 0.9980980977431586)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   universal_large_none   glove_none :  (0.6158288977241608, 0.6171373216231111)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   glove_none   google_lm_lstm_0 :  (0.9385254213870485, 0.9377912993392983)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   glove_none   google_lm_lstm_1 :  (0.9255402759185488, 0.9247468348421316)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   glove_none   elmo_lstm_outputs1 :  (0.9406227149702071, 0.9399229576748543)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   glove_none   elmo_lstm_outputs2 :  (0.9332517999152484, 0.9332517999153278)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   glove_none   universal_large_none :  (0.6171373216231111, 0.6158288977241608)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+3   glove_none   glove_none :  (0.9996537077705615, 0.9996537077705615)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_0   google_lm_lstm_0 :  (0.9999768867853275, 0.9999768867853275)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_0   google_lm_lstm_1 :  (0.9306679494504084, 0.9306679494504089)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_0   elmo_lstm_outputs1 :  (0.9304509512822307, 0.9304509512822403)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_0   elmo_lstm_outputs2 :  (0.9289764690525333, 0.9289764690525365)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_0   universal_large_none :  (0.8938943047838669, 0.8946742595824497)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_0   glove_none :  (0.9376805538697169, 0.9384015629390332)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_1   google_lm_lstm_0 :  (0.9306679494504089, 0.9306679494504084)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_1   google_lm_lstm_1 :  (0.999897963526548, 0.999897963526548)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_1   elmo_lstm_outputs1 :  (0.9283437948993621, 0.9283437948993711)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_1   elmo_lstm_outputs2 :  (0.9288429160563603, 0.9288429160563618)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_1   universal_large_none :  (0.9069388958852966, 0.9076978379777783)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   google_lm_lstm_1   glove_none :  (0.9250667897401947, 0.9258543901253895)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs1   google_lm_lstm_0 :  (0.9304509512822403, 0.9304509512822307)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs1   google_lm_lstm_1 :  (0.9283437948993711, 0.9283437948993621)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs1   elmo_lstm_outputs1 :  (0.9999271102165882, 0.9999271102165882)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs1   elmo_lstm_outputs2 :  (0.9427895113965402, 0.9427895113965326)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs1   universal_large_none :  (0.8923849378181167, 0.8931733541941808)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs1   glove_none :  (0.9399101454380885, 0.9406033171854494)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs2   google_lm_lstm_0 :  (0.9289764690525365, 0.9289764690525333)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs2   google_lm_lstm_1 :  (0.9288429160563618, 0.9288429160563603)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs2   elmo_lstm_outputs1 :  (0.9427895113965326, 0.9427895113965402)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs2   elmo_lstm_outputs2 :  (0.9999091569616739, 0.9999091569616739)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs2   universal_large_none :  (0.897927683947735, 0.898723426226664)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   elmo_lstm_outputs2   glove_none :  (0.9325485754004676, 0.9332925522823231)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   universal_large_none   google_lm_lstm_0 :  (0.8946742595824497, 0.8938943047838669)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   universal_large_none   google_lm_lstm_1 :  (0.9076978379777783, 0.9069388958852966)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   universal_large_none   elmo_lstm_outputs1 :  (0.8931733541941808, 0.8923849378181167)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   universal_large_none   elmo_lstm_outputs2 :  (0.898723426226664, 0.897927683947735)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   universal_large_none   universal_large_none :  (0.9977089843655644, 0.9977089843655644)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   universal_large_none   glove_none :  (0.6135767422336076, 0.6148974280481543)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   glove_none   google_lm_lstm_0 :  (0.9384015629390332, 0.9376805538697169)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   glove_none   google_lm_lstm_1 :  (0.9258543901253895, 0.9250667897401947)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   glove_none   elmo_lstm_outputs1 :  (0.9406033171854494, 0.9399101454380885)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   glove_none   elmo_lstm_outputs2 :  (0.9332925522823231, 0.9325485754004676)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   glove_none   universal_large_none :  (0.6148974280481543, 0.6135767422336076)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+4   glove_none   glove_none :  (0.9996563242075505, 0.9996563242075505)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_0   google_lm_lstm_0 :  (0.9999767798468711, 0.9999767798468711)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_0   google_lm_lstm_1 :  (0.9308373793836721, 0.9308373793836583)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_0   elmo_lstm_outputs1 :  (0.9304669746946069, 0.9304669746946002)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_0   elmo_lstm_outputs2 :  (0.9284326038880659, 0.9284326038880668)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_0   universal_large_none :  (0.892524663259087, 0.89331847987472)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_0   glove_none :  (0.9376965806608206, 0.9384217622116839)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_1   google_lm_lstm_0 :  (0.9308373793836583, 0.9308373793836721)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_1   google_lm_lstm_1 :  (0.9999037019535465, 0.9999037019535465)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_1   elmo_lstm_outputs1 :  (0.9285119554514216, 0.9285119554514276)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_1   elmo_lstm_outputs2 :  (0.92941967641417, 0.9294196764141848)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_1   universal_large_none :  (0.9058904922687235, 0.9066453408500955)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   google_lm_lstm_1   glove_none :  (0.9249275142471006, 0.9257213800181693)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs1   google_lm_lstm_0 :  (0.9304669746946002, 0.9304669746946069)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs1   google_lm_lstm_1 :  (0.9285119554514276, 0.9285119554514216)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs1   elmo_lstm_outputs1 :  (0.9999274721596697, 0.9999274721596697)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs1   elmo_lstm_outputs2 :  (0.9426835435558503, 0.9426835435558589)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs1   universal_large_none :  (0.8912198960302337, 0.8920087053537817)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs1   glove_none :  (0.9399337335411377, 0.9406291027156143)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs2   google_lm_lstm_0 :  (0.9284326038880668, 0.9284326038880659)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs2   google_lm_lstm_1 :  (0.9294196764141848, 0.92941967641417)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs2   elmo_lstm_outputs1 :  (0.9426835435558589, 0.9426835435558503)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs2   elmo_lstm_outputs2 :  (0.9999084517652032, 0.9999084517652032)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs2   universal_large_none :  (0.8981251471085457, 0.8988980863651111)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   elmo_lstm_outputs2   glove_none :  (0.9325561008440205, 0.9333077569848085)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   universal_large_none   google_lm_lstm_0 :  (0.89331847987472, 0.892524663259087)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   universal_large_none   google_lm_lstm_1 :  (0.9066453408500955, 0.9058904922687235)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   universal_large_none   elmo_lstm_outputs1 :  (0.8920087053537817, 0.8912198960302337)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   universal_large_none   elmo_lstm_outputs2 :  (0.8988980863651111, 0.8981251471085457)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   universal_large_none   universal_large_none :  (0.9968444541534482, 0.9968444541534482)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   universal_large_none   glove_none :  (0.6109119629745875, 0.6122320081548829)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   glove_none   google_lm_lstm_0 :  (0.9384217622116839, 0.9376965806608206)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   glove_none   google_lm_lstm_1 :  (0.9257213800181693, 0.9249275142471006)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   glove_none   elmo_lstm_outputs1 :  (0.9406291027156143, 0.9399337335411377)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   glove_none   elmo_lstm_outputs2 :  (0.9333077569848085, 0.9325561008440205)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   glove_none   universal_large_none :  (0.6122320081548829, 0.6109119629745875)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+5   glove_none   glove_none :  (0.9996496903884577, 0.9996496903884577)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_0   google_lm_lstm_0 :  (0.9999767458764015, 0.9999767458764015)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_0   google_lm_lstm_1 :  (0.9308878335022337, 0.9308878335022128)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_0   elmo_lstm_outputs1 :  (0.9304706124772251, 0.930470612477222)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_0   elmo_lstm_outputs2 :  (0.9284157312783199, 0.9284157312783213)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_0   universal_large_none :  (0.8918850783631812, 0.8926713788676472)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_0   glove_none :  (0.937653988134538, 0.9383822664182108)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_1   google_lm_lstm_0 :  (0.9308878335022128, 0.9308878335022337)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_1   google_lm_lstm_1 :  (0.9999027289421305, 0.9999027289421305)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_1   elmo_lstm_outputs1 :  (0.9286038460455298, 0.9286038460455456)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_1   elmo_lstm_outputs2 :  (0.9290091568892925, 0.929009156889316)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_1   universal_large_none :  (0.905796658704869, 0.906540225442871)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   google_lm_lstm_1   glove_none :  (0.9252753548597464, 0.926087330325268)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs1   google_lm_lstm_0 :  (0.930470612477222, 0.9304706124772251)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs1   google_lm_lstm_1 :  (0.9286038460455456, 0.9286038460455298)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs1   elmo_lstm_outputs1 :  (0.9999273823330004, 0.9999273823330004)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs1   elmo_lstm_outputs2 :  (0.9426543959473596, 0.9426543959473648)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs1   universal_large_none :  (0.8909829104379186, 0.8917774909259056)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs1   glove_none :  (0.9400084651528544, 0.9406967001479932)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs2   google_lm_lstm_0 :  (0.9284157312783213, 0.9284157312783199)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs2   google_lm_lstm_1 :  (0.929009156889316, 0.9290091568892925)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs2   elmo_lstm_outputs1 :  (0.9426543959473648, 0.9426543959473596)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs2   elmo_lstm_outputs2 :  (0.9999082157041476, 0.9999082157041476)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs2   universal_large_none :  (0.8967221562136233, 0.8975017722921044)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   elmo_lstm_outputs2   glove_none :  (0.9327048814896051, 0.9334459743847521)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   universal_large_none   google_lm_lstm_0 :  (0.8926713788676472, 0.8918850783631812)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   universal_large_none   google_lm_lstm_1 :  (0.906540225442871, 0.905796658704869)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   universal_large_none   elmo_lstm_outputs1 :  (0.8917774909259056, 0.8909829104379186)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   universal_large_none   elmo_lstm_outputs2 :  (0.8975017722921044, 0.8967221562136233)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   universal_large_none   universal_large_none :  (0.9962192978179664, 0.9962192978179664)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   universal_large_none   glove_none :  (0.610705406113145, 0.6107054062220219)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   glove_none   google_lm_lstm_0 :  (0.9383822664182108, 0.937653988134538)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   glove_none   google_lm_lstm_1 :  (0.926087330325268, 0.9252753548597464)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   glove_none   elmo_lstm_outputs1 :  (0.9406967001479932, 0.9400084651528544)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   glove_none   elmo_lstm_outputs2 :  (0.9334459743847521, 0.9327048814896051)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   glove_none   universal_large_none :  (0.6107054062220219, 0.610705406113145)
+adding eps to diagonal and taking inverse
+taking square root
+dot products...
+trying to take final svd
+computed everything!
+6   glove_none   glove_none :  (0.9996567637714702, 0.9996567637714702)

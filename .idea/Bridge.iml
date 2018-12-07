@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="GoogleLM1b" />
     <orderEntry type="module" module-name="bilm-tf" />
+    <orderEntry type="module" module-name="bert" />
   </component>
 </module>
