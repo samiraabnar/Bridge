@@ -1,6 +1,6 @@
 import sys
-sys.path.append("../Codes/bert")
-sys.path.append("../Codes")
+sys.path.append("/Users/samiraabnar/Codes/bert")
+sys.path.append("/Users/samiraabnar/Codes/")
 
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -218,9 +218,9 @@ class TfHubLargeUniversalEncoder(TfHubUniversalEncoder):
 
 class BertEncoder(TextEncoder):
   def __init__(self, hparams):
-    self.vocab_file = "/Users/samiraabnar/Codes/bert/pretrained_models/cased_L-12_H-768_A-12/vocab.txt"
-    self.config_file = "/Users/samiraabnar/Codes/bert/pretrained_models/cased_L-12_H-768_A-12/bert_config.json"
-    self.init_checkpoint = "/Users/samiraabnar/Codes/bert/pretrained_models/cased_L-12_H-768_A-12/bert_model.ckpt"
+    self.vocab_file = hparams.root+"/bert/pretrained_models/cased_L-12_H-768_A-12/vocab.txt"
+    self.config_file = hparams.root+"/bert/pretrained_models/cased_L-12_H-768_A-12/bert_config.json"
+    self.init_checkpoint = hparams.root+"/bert/pretrained_models/cased_L-12_H-768_A-12/bert_model.ckpt"
 
     self.layer_indexes = [int(x) for x in hparams.layers.split(",")]
 
@@ -389,16 +389,17 @@ if __name__ == '__main__':
   embeddings_for_each_layer={0:[],1:[],2:[],3:[],4:[],5:[],6:[],
                              7:[], 8:[], 9:[],10:[],11:[]}
   sentences = ['this is a cat']
-  output_embeddings = bert_encoder_obj.get_embeddings_values(['this is a cat'],[4])
+  output_embeddings = bert_encoder_obj.get_embeddings_values(['this is a  grubby cat'],[4])
 
   for sent, output in zip(sentences,output_embeddings):
     print(sent)
     sent_embeddings_for_each_layer = {0:[],1:[],2:[],3:[],4:[],5:[],6:[],
                                       7:[], 8:[], 9:[],10:[],11:[]}
-    for f in output:
+    k = 0
+    while k < len(output):
+      f = output[k]
       print(f['token'])
       for i in np.arange(12):
-        print((f['layers'][i]))
         sent_embeddings_for_each_layer[i].append(np.asarray(f['layers'][i]['values']))
 
   for i in np.arange(12):

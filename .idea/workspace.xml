@@ -17,7 +17,7 @@
     <SUITE FILE_PATH="coverage/Bridge$test_harrypotter_data.coverage" NAME="test_harrypotter_data Coverage Results" MODIFIED="1542880375155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/read_dataset" />
     <SUITE FILE_PATH="coverage/Bridge$run_experiments.coverage" NAME="run_experiments Coverage Results" MODIFIED="1543065179115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$word_embedings.coverage" NAME="word_embedings Coverage Results" MODIFIED="1542880165132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
-    <SUITE FILE_PATH="coverage/Bridge$text_encoder.coverage" NAME="text_encoder Coverage Results" MODIFIED="1544200719096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computational_model" />
+    <SUITE FILE_PATH="coverage/Bridge$text_encoder.coverage" NAME="text_encoder Coverage Results" MODIFIED="1544283891995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computational_model" />
     <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_models.coverage" NAME="compute_rep_sim_models Coverage Results" MODIFIED="1543948943173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$encode_stimuli_in_context.coverage" NAME="encode_stimuli_in_context Coverage Results" MODIFIED="1543225515243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_with_whole_brain.coverage" NAME="compute_rep_sim_with_whole_brain Coverage Results" MODIFIED="1543686573329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -42,10 +42,10 @@
       <file leaf-file-name="text_encoder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1394">
-              <caret line="235" column="24" lean-forward="false" selection-start-line="235" selection-start-column="24" selection-end-line="235" selection-end-column="24" />
+            <state relative-caret-position="141">
+              <caret line="222" column="42" lean-forward="false" selection-start-line="222" selection-start-column="42" selection-end-line="222" selection-end-column="42" />
               <folding>
-                <element signature="e#683#710#0" expanded="false" />
+                <element signature="e#716#743#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -54,8 +54,8 @@
       <file leaf-file-name="encode_stimuli_in_context_bert.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context_bert.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="126" column="35" lean-forward="false" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
+            <state relative-caret-position="111">
+              <caret line="89" column="40" lean-forward="false" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
               <folding>
                 <element signature="e#3676#3816#0" expanded="false" />
               </folding>
@@ -66,8 +66,8 @@
       <file leaf-file-name="run_bert_encoder" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_bert_encoder">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+            <state relative-caret-position="275">
+              <caret line="20" column="176" lean-forward="false" selection-start-line="20" selection-start-column="176" selection-end-line="20" selection-end-column="176" />
               <folding />
             </state>
           </provider>
@@ -84,9 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find />
-      <find>3</find>
-      <find>.</find>
       <find>L'</find>
       <find>,</find>
       <find>cca</find>
@@ -114,6 +111,9 @@
       <find>print</find>
       <find>time_steps</find>
       <find>root</find>
+      <find>bertEncoder</find>
+      <find>pretrained_</find>
+      <find>pretrained</find>
     </findStrings>
     <replaceStrings>
       <replace>--cross_delay=True</replace>
@@ -183,8 +183,8 @@
         <option value="$PROJECT_DIR$/../bert/extract_features_utils.py" />
         <option value="$PROJECT_DIR$/compute_rep_sim.py" />
         <option value="$PROJECT_DIR$/encode_stimuli_in_context.py" />
-        <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
         <option value="$PROJECT_DIR$/encode_stimuli_in_context_bert.py" />
+        <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
         <option value="$PROJECT_DIR$/run_bert_encoder" />
       </list>
     </option>
@@ -902,16 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1394">
-          <caret line="235" column="24" lean-forward="false" selection-start-line="235" selection-start-column="24" selection-end-line="235" selection-end-column="24" />
-          <folding>
-            <element signature="e#683#710#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -922,18 +912,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context_bert.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="126" column="35" lean-forward="false" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
+        <state relative-caret-position="111">
+          <caret line="89" column="40" lean-forward="false" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
           <folding>
             <element signature="e#3676#3816#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="222" column="42" lean-forward="false" selection-start-line="222" selection-start-column="42" selection-end-line="222" selection-end-column="42" />
+          <folding>
+            <element signature="e#716#743#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run_bert_encoder">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        <state relative-caret-position="275">
+          <caret line="20" column="176" lean-forward="false" selection-start-line="20" selection-start-column="176" selection-end-line="20" selection-end-column="176" />
           <folding />
         </state>
       </provider>
