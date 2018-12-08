@@ -66,8 +66,8 @@
       <file leaf-file-name="run_bert_encoder" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_bert_encoder">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="18" column="128" lean-forward="false" selection-start-line="18" selection-start-column="113" selection-end-line="18" selection-end-column="128" />
+            <state relative-caret-position="159">
+              <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -932,8 +932,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run_bert_encoder">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="18" column="128" lean-forward="false" selection-start-line="18" selection-start-column="113" selection-end-line="18" selection-end-column="128" />
+        <state relative-caret-position="159">
+          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
           <folding />
         </state>
       </provider>
