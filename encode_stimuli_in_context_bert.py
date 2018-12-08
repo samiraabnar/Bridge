@@ -118,12 +118,14 @@ if __name__ == '__main__':
 
   output_embeddings = bert_encoder_obj.get_embeddings_values(sentences, sentences_lengths)
 
-  for sent, output in zip(sentences, output_embeddings):
-    print(sent)
+  for sent_len, sent,  index, output in zip(sentences_lengths, sentences,target_indexes, output_embeddings):
+    if (len(output)-2) != len(sent_len):
+      print(sent)
+      print(sent_len, len(output), len(index) if index is not None else 0)
+
     sent_embeddings_for_each_layer = {0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [],
                                       7: [], 8: [], 9: [], 10: [], 11: []}
     for f in output:
-      print(f['token'])
       for i in np.arange(12):
         sent_embeddings_for_each_layer[i].append(np.asarray(f['layers'][i]['values']))
 
