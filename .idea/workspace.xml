@@ -43,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1394">
-              <caret line="235" column="24" lean-forward="true" selection-start-line="235" selection-start-column="24" selection-end-line="235" selection-end-column="24" />
+              <caret line="235" column="24" lean-forward="false" selection-start-line="235" selection-start-column="24" selection-end-line="235" selection-end-column="24" />
               <folding>
                 <element signature="e#683#710#0" expanded="false" />
               </folding>
@@ -51,14 +51,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="encode_stimuli_in_context_bert.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="encode_stimuli_in_context_bert.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context_bert.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="122" column="17" lean-forward="false" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+            <state relative-caret-position="167">
+              <caret line="126" column="35" lean-forward="false" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
               <folding>
                 <element signature="e#3676#3816#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run_bert_encoder" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/run_bert_encoder">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="18" column="128" lean-forward="false" selection-start-line="18" selection-start-column="113" selection-end-line="18" selection-end-column="128" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,11 +109,11 @@
       <find>extreact_features</find>
       <find>extract_features</find>
       <find>ber</find>
-      <find>time_steps</find>
       <find>bertencoder</find>
       <find>bert</find>
-      <find>root</find>
       <find>print</find>
+      <find>time_steps</find>
+      <find>root</find>
     </findStrings>
     <replaceStrings>
       <replace>--cross_delay=True</replace>
@@ -125,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/save_brain_reps.py" />
         <option value="$PROJECT_DIR$/../GoogleLM1b/google_lm/interface_util.py" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_0-3" />
         <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_4-7" />
@@ -176,6 +185,7 @@
         <option value="$PROJECT_DIR$/encode_stimuli_in_context.py" />
         <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
         <option value="$PROJECT_DIR$/encode_stimuli_in_context_bert.py" />
+        <option value="$PROJECT_DIR$/run_bert_encoder" />
       </list>
     </option>
   </component>
@@ -214,10 +224,6 @@
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bridge" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bert" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -232,8 +238,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../bert" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/../bert" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -518,20 +524,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_2-3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/klz.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -876,7 +868,7 @@
         <state relative-caret-position="272">
           <caret line="352" column="0" lean-forward="true" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
           <folding>
-            <element signature="e#670#708#0" expanded="true" />
+            <element signature="e#670#708#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -886,7 +878,7 @@
         <state relative-caret-position="602">
           <caret line="62" column="37" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="37" />
           <folding>
-            <element signature="e#670#708#0" expanded="true" />
+            <element signature="e#670#708#0" expanded="false" />
             <element signature="e#4594#6118#0" expanded="false" />
             <element signature="e#6190#9445#0" expanded="false" />
             <element signature="e#9506#10083#0" expanded="false" />
@@ -913,20 +905,36 @@
     <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1394">
-          <caret line="235" column="24" lean-forward="true" selection-start-line="235" selection-start-column="24" selection-end-line="235" selection-end-column="24" />
+          <caret line="235" column="24" lean-forward="false" selection-start-line="235" selection-start-column="24" selection-end-line="235" selection-end-column="24" />
           <folding>
             <element signature="e#683#710#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context_bert.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="122" column="17" lean-forward="false" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+        <state relative-caret-position="167">
+          <caret line="126" column="35" lean-forward="false" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
           <folding>
             <element signature="e#3676#3816#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_bert_encoder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" column="128" lean-forward="false" selection-start-line="18" selection-start-column="113" selection-end-line="18" selection-end-column="128" />
+          <folding />
         </state>
       </provider>
     </entry>
