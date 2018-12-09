@@ -52,14 +52,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="encode_stimuli_in_context_bert.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="encode_stimuli_in_context_bert.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context_bert.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1045">
-              <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="36" />
+            <state relative-caret-position="183">
+              <caret line="150" column="18" lean-forward="false" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="18" />
               <folding>
                 <element signature="e#3702#3842#0" expanded="false" />
-                <element signature="e#4391#6150#0" expanded="false" />
                 <element signature="e#4432#4562#0" expanded="false" />
               </folding>
             </state>
@@ -76,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_bert_encoder" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run_bert_encoder" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_bert_encoder">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -207,8 +206,8 @@
         <option value="$PROJECT_DIR$/encode_stimuli_in_context.py" />
         <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
         <option value="$PROJECT_DIR$/ttdd" />
-        <option value="$PROJECT_DIR$/encode_stimuli_in_context_bert.py" />
         <option value="$PROJECT_DIR$/run_bert_encoder" />
+        <option value="$PROJECT_DIR$/encode_stimuli_in_context_bert.py" />
       </list>
     </option>
   </component>
@@ -932,15 +931,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context_bert.py">
+    <entry file="file://$PROJECT_DIR$/all_elmo_on_my_computer">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1045">
-          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="36" />
-          <folding>
-            <element signature="e#3702#3842#0" expanded="false" />
-            <element signature="e#4391#6150#0" expanded="false" />
-            <element signature="e#4432#4562#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_bert_encoder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -952,19 +955,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/all_elmo_on_my_computer">
+    <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context_bert.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_bert_encoder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="183">
+          <caret line="150" column="18" lean-forward="false" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="18" />
+          <folding>
+            <element signature="e#3702#3842#0" expanded="false" />
+            <element signature="e#4432#4562#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

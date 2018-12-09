@@ -144,6 +144,7 @@ if __name__ == '__main__':
 
         real_ind += 1
       for layer_ind in np.arange(12):
+        print(np.asarray(sent_embeddings_for_each_layer[layer_ind]).shape)
         embeddings_for_each_layer[layer_ind][block].append(np.asarray(sent_embeddings_for_each_layer[layer_ind]))
         encoded_stimuli_per_each_layer[layer_ind][block].append(np.asarray(sent_embeddings_for_each_layer[layer_ind])[index])
 
