@@ -15,6 +15,7 @@ import tensorflow as tf
 import numpy as np
 import os
 import pickle
+from tqdm import tqdm
 
 FLAGS = tf.flags.FLAGS
 
@@ -31,8 +32,8 @@ tf.flags.DEFINE_string('root', '/Users/samiraabnar/Codes/', 'general path root')
 tf.flags.DEFINE_enum('text_encoder', 'bert',
                      ['glove','elmo', 'tf_token' ,'universal_large', 'google_lm', 'bert'], 'which encoder to use')
 tf.flags.DEFINE_string('embedding_type', '', 'ELMO: word_emb, lstm_outputs1, lstm_outputs2, elmo ')
-tf.flags.DEFINE_string('context_mode', 'none', 'type of context (sentence, block, none)')
-tf.flags.DEFINE_integer('past_window', 0, 'window size to the past')
+tf.flags.DEFINE_string('context_mode', 'sentence', 'type of context (sentence, block, none)')
+tf.flags.DEFINE_integer('past_window', 6, 'window size to the past')
 tf.flags.DEFINE_integer('future_window', 0, 'window size to the future')
 tf.flags.DEFINE_boolean('only_past', True, 'window size to the future')
 
@@ -100,40 +101,58 @@ if __name__ == '__main__':
 
   bert_encoder_obj = BertEncoder(hparams)
 
-  encoded_stimuli_per_each_layer = {0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [],
-                               7: [], 8: [], 9: [], 10: [], 11: []}
+  encoded_stimuli_per_each_layer = {0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {},
+                               7: {}, 8: {}, 9: {}, 10: {}, 11: {}}
 
-  embeddings_for_each_layer = {0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [],
-                               7: [], 8: [], 9: [], 10: [], 11: []}
+  embeddings_for_each_layer = {0: {}, 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {},
+                               7: {}, 8: {}, 9: {}, 10: {}, 11: {}}
 
   print("#########")
-  sentences = []
-  target_indexes = []
-  sentences_lengths = []
+  sentences = {1:[],2:[],3:[],4:[]}
+  target_indexes = {1:[],2:[],3:[],4:[]}
+  sentences_lengths = {1:[],2:[],3:[],4:[]}
+  output_embeddings = {}
   for block in [1, 2, 3, 4]:
     for stim, index in stimuli[block]:
-      sentences.append(' '.join(stim))
-      target_indexes.append(index)
-      sentences_lengths.append(len(stim))
+      sentences[block].append(' '.join(stim))
+      target_indexes[block].append(index)
+      sentences_lengths[block].append(len(stim))
+    for layer_ind in np.arange(12):
+      encoded_stimuli_per_each_layer[layer_ind][block] = []
+      embeddings_for_each_layer[layer_ind][block] = []
 
-  output_embeddings = bert_encoder_obj.get_embeddings_values(sentences, sentences_lengths)
+    output_embeddings[block] = bert_encoder_obj.get_embeddings_values(sentences[block], sentences_lengths[block])
 
-  for sent_len, sent,  index, output in zip(sentences_lengths, sentences,target_indexes, output_embeddings):
-    if (len(output)-2) != len(sent_len):
+    for sent_len, sent,  index, output in tqdm(zip(sentences_lengths[block], sentences[block],target_indexes[block], output_embeddings[block])):
       print(sent)
-      print(sent_len, len(output), len(index) if index is not None else 0)
+      sent_embeddings_for_each_layer = {0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [],
+                                        7: [], 8: [], 9: [], 10: [], 11: []}
+      current_outputs = []
+      real_ind = 0
+      while real_ind < len(output):
+        f = output[real_ind]
+        if f['token'] != '[CLS]' and f['token'] != '[SEP]':
+          if f['token'].startswith("##"):
+            print("cont", f['token'])
+            for layer_ind in np.arange(12):
+              sent_embeddings_for_each_layer[layer_ind][-1] = np.mean(
+                [sent_embeddings_for_each_layer[layer_ind][-1], np.asarray(f['layers'][layer_ind]['values'])], axis=0)
+          else:
+            print("new", f['token'])
+            for layer_ind in np.arange(12):
+              sent_embeddings_for_each_layer[layer_ind].append(np.asarray(f['layers'][layer_ind]['values']))
 
-    sent_embeddings_for_each_layer = {0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [],
-                                      7: [], 8: [], 9: [], 10: [], 11: []}
-    for f in output:
-      for i in np.arange(12):
-        sent_embeddings_for_each_layer[i].append(np.asarray(f['layers'][i]['values']))
+        real_ind += 1
+      for layer_ind in np.arange(12):
+        embeddings_for_each_layer[layer_ind][block].append(np.asarray(sent_embeddings_for_each_layer[layer_ind]))
+        encoded_stimuli_per_each_layer[layer_ind][block].append(np.asarray(sent_embeddings_for_each_layer[layer_ind])[index])
 
-  for i in np.arange(12):
-    print(np.asarray(sent_embeddings_for_each_layer[i]).shape)
+  for layer_ind in np.arange(12):
+    print(embeddings_for_each_layer[layer_ind][1][11].shape)
+    print(encoded_stimuli_per_each_layer[layer_ind][1][11].shape)
 
-  """
-  print("shape of encoded:",np.asarray(encoded_stimuli[1]).shape)
-  saving_dic = {'time_steps':time_steps, 'start_steps':start_steps, 'end_steps':end_steps, 'encoded_stimuli':encoded_stimuli, 'stimuli':stimuli}
-  pickle.dump(saving_dic, open(saving_dir, 'wb'))
-  """
+    saving_dic = {'time_steps':time_steps, 'start_steps':start_steps, 'end_steps':end_steps, 'encoded_stimuli':encoded_stimuli_per_each_layer[layer_ind], 'stimuli':stimuli}
+    pickle.dump(saving_dic, open(saving_dir+'_'+str(layer_ind), 'wb'))
+    
+    saving_dic = {'time_steps':time_steps, 'start_steps':start_steps, 'end_steps':end_steps, 'stimuli_embeddings': embeddings_for_each_layer[layer_ind], 'stimuli':stimuli}
+    pickle.dump(saving_dic, open(saving_dir+'_all_'+str(layer_ind), 'wb'))
