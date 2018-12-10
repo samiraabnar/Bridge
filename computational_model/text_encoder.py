@@ -261,7 +261,7 @@ class BertEncoder(TextEncoder):
     examples = self.convert_example(text_sequences)
 
     features = extract_features.convert_examples_to_features(
-      examples=examples, seq_length=128, tokenizer=self.tokenizer)
+      examples=examples, seq_length=256, tokenizer=self.tokenizer)
 
     unique_id_to_feature = {}
     for feature in features:
@@ -283,7 +283,7 @@ class BertEncoder(TextEncoder):
       predict_batch_size=32)
 
     input_fn = extract_features.input_fn_builder(
-      features=features, seq_length=128)
+      features=features, seq_length=256)
 
     output_embeddings = []
     for result in estimator.predict(input_fn, yield_single_examples=True):

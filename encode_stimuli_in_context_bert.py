@@ -124,7 +124,7 @@ if __name__ == '__main__':
     output_embeddings[block] = bert_encoder_obj.get_embeddings_values(sentences[block], sentences_lengths[block])
 
     for sent_len, sent,  index, output in tqdm(zip(sentences_lengths[block], sentences[block],target_indexes[block], output_embeddings[block])):
-      print(sent)
+      print("len sent",len(sent), len(output))
       sent_embeddings_for_each_layer = {0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [],
                                         7: [], 8: [], 9: [], 10: [], 11: []}
       current_outputs = []
@@ -133,12 +133,10 @@ if __name__ == '__main__':
         f = output[real_ind]
         if f['token'] != '[CLS]' and f['token'] != '[SEP]':
           if f['token'].startswith("##"):
-            print("cont", f['token'])
             for layer_ind in np.arange(12):
               sent_embeddings_for_each_layer[layer_ind][-1] = np.mean(
                 [sent_embeddings_for_each_layer[layer_ind][-1], np.asarray(f['layers'][layer_ind]['values'])], axis=0)
           else:
-            print("new", f['token'])
             for layer_ind in np.arange(12):
               sent_embeddings_for_each_layer[layer_ind].append(np.asarray(f['layers'][layer_ind]['values']))
 
