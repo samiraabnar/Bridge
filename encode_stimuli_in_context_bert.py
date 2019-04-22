@@ -8,7 +8,7 @@ sys.path.append('~/Codes/GoogleLM1b/')
 sys.path.append('~/Codes/bert/')
 
 from ExplainBrain import ExplainBrain
-from read_dataset.harrypotter_data import HarryPotterReader
+from data_readers.harrypotter_data import HarryPotterReader
 from computational_model.text_encoder import BertEncoder
 
 import tensorflow as tf

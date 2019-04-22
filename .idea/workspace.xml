@@ -1,7 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb1d9b89-d0e0-407d-852c-39dac1938e1a" name="Default" comment="" />
+    <list default="true" id="eb1d9b89-d0e0-407d-852c-39dac1938e1a" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/rsa/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_1" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_2" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_3" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_3" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_4" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_5" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_5" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_6" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_0-1" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_google-lm_0-1" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_2-3" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_google-lm_2-3" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_4-5" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_google-lm_4-5" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_6-7" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_google-lm_6-7" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_0-3" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_tf_token_0-3" />
+      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_4-7" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_tf_token_4-7" />
+      <change beforePath="$PROJECT_DIR$/all_elmo_on_my_computer" afterPath="$PROJECT_DIR$/scripts/all_elmo_on_my_computer" />
+      <change beforePath="$PROJECT_DIR$/all_glove_on_my_computer" afterPath="$PROJECT_DIR$/scripts/all_glove_on_my_computer" />
+      <change beforePath="$PROJECT_DIR$/all_universal_on_my_computer" afterPath="$PROJECT_DIR$/scripts/all_universal_on_my_computer" />
+      <change beforePath="$PROJECT_DIR$/brain_sim.txt" afterPath="$PROJECT_DIR$/rsa_results/brain_sim.txt" />
+      <change beforePath="$PROJECT_DIR$/compute_ccn_sim.py" afterPath="$PROJECT_DIR$/rsa/compute_ccn_sim.py" />
+      <change beforePath="$PROJECT_DIR$/compute_rep_sim._computational_modelspy" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/compute_rep_sim.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim.py" />
+      <change beforePath="$PROJECT_DIR$/compute_rep_sim_bert.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim_bert.py" />
+      <change beforePath="$PROJECT_DIR$/compute_rep_sim_brain_regions.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim_brain_regions.py" />
+      <change beforePath="$PROJECT_DIR$/compute_rep_sim_models.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim_models.py" />
+      <change beforePath="$PROJECT_DIR$/compute_rep_sim_over_story.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim_over_story.py" />
+      <change beforePath="$PROJECT_DIR$/compute_rep_sim_with_whole_brain.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim_with_whole_brain.py" />
+      <change beforePath="$PROJECT_DIR$/elmo_exp_script" afterPath="$PROJECT_DIR$/scripts/elmo_exp_script" />
+      <change beforePath="$PROJECT_DIR$/elmo_exp_script_alpha10" afterPath="$PROJECT_DIR$/scripts/elmo_exp_script_alpha10" />
+      <change beforePath="$PROJECT_DIR$/elmo_lstm_1" afterPath="$PROJECT_DIR$/rsa_results/elmo_lstm_1" />
+      <change beforePath="$PROJECT_DIR$/elmo_lstm_1.nii" afterPath="$PROJECT_DIR$/rsa_results/elmo_lstm_1.nii" />
+      <change beforePath="$PROJECT_DIR$/elmo_lstm_2" afterPath="$PROJECT_DIR$/rsa_results/elmo_lstm_2" />
+      <change beforePath="$PROJECT_DIR$/elmo_lstm_2.nii" afterPath="$PROJECT_DIR$/rsa_results/elmo_lstm_2.nii" />
+      <change beforePath="$PROJECT_DIR$/elmo_sentence_w0-0_alpha10" afterPath="$PROJECT_DIR$/scripts/elmo_sentence_w0-0_alpha10" />
+      <change beforePath="$PROJECT_DIR$/encode_stimuli_in_context.py" afterPath="$PROJECT_DIR$/encode_stimuli_in_context.py" />
+      <change beforePath="$PROJECT_DIR$/encode_stimuli_in_context_bert.py" afterPath="$PROJECT_DIR$/encode_stimuli_in_context_bert.py" />
+      <change beforePath="$PROJECT_DIR$/gitignore" afterPath="$PROJECT_DIR$/gitignore" />
+      <change beforePath="$PROJECT_DIR$/glove" afterPath="$PROJECT_DIR$/rsa_results/glove" />
+      <change beforePath="$PROJECT_DIR$/glove.nii" afterPath="$PROJECT_DIR$/rsa_results/glove.nii" />
+      <change beforePath="$PROJECT_DIR$/glove_exp_script" afterPath="$PROJECT_DIR$/scripts/glove_exp_script" />
+      <change beforePath="$PROJECT_DIR$/google_lm_lstm_0" afterPath="$PROJECT_DIR$/rsa_results/google_lm_lstm_0" />
+      <change beforePath="$PROJECT_DIR$/google_lm_lstm_0.nii" afterPath="$PROJECT_DIR$/rsa_results/google_lm_lstm_0.nii" />
+      <change beforePath="$PROJECT_DIR$/google_lm_lstm_1" afterPath="$PROJECT_DIR$/rsa_results/google_lm_lstm_1" />
+      <change beforePath="$PROJECT_DIR$/google_lm_lstm_1.nii" afterPath="$PROJECT_DIR$/rsa_results/google_lm_lstm_1.nii" />
+      <change beforePath="$PROJECT_DIR$/notebooks/HarrypotterDatasetStat.ipynb" afterPath="$PROJECT_DIR$/notebooks/HarrypotterDatasetStat.ipynb" />
+      <change beforePath="$PROJECT_DIR$/notebooks/LoadandEval.ipynb" afterPath="$PROJECT_DIR$/notebooks/LoadandEval.ipynb" />
+      <change beforePath="$PROJECT_DIR$/read_dataset/__init__.py" afterPath="$PROJECT_DIR$/data_readers/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/read_dataset/brain_data_reader.py" afterPath="$PROJECT_DIR$/data_readers/brain_data_reader.py" />
+      <change beforePath="$PROJECT_DIR$/read_dataset/harrypotter_data.py" afterPath="$PROJECT_DIR$/data_readers/harrypotter_data.py" />
+      <change beforePath="$PROJECT_DIR$/read_dataset/harrypotter_util.py" afterPath="$PROJECT_DIR$/data_readers/harrypotter_util.py" />
+      <change beforePath="$PROJECT_DIR$/read_dataset/scan_elements.py" afterPath="$PROJECT_DIR$/data_readers/scan_elements.py" />
+      <change beforePath="$PROJECT_DIR$/read_dataset/test_harrypotter_data.py" afterPath="$PROJECT_DIR$/data_readers/test_harrypotter_data.py" />
+      <change beforePath="$PROJECT_DIR$/repair_google_lm.py" afterPath="$PROJECT_DIR$/repair_google_lm.py" />
+      <change beforePath="$PROJECT_DIR$/run_experiments.py" afterPath="$PROJECT_DIR$/run_experiments.py" />
+      <change beforePath="$PROJECT_DIR$/run_fast_experiments.py" afterPath="$PROJECT_DIR$/run_fast_experiments.py" />
+      <change beforePath="$PROJECT_DIR$/run_scripts_on_all_folds" afterPath="$PROJECT_DIR$/scripts/run_scripts_on_all_folds" />
+      <change beforePath="$PROJECT_DIR$/save_brain_reps.py" afterPath="$PROJECT_DIR$/save_brain_reps.py" />
+      <change beforePath="$PROJECT_DIR$/subject_4_region_sims" afterPath="$PROJECT_DIR$/rsa_results/subject_4_region_sims" />
+      <change beforePath="$PROJECT_DIR$/tt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ttdd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/universal" afterPath="$PROJECT_DIR$/rsa_results/universal" />
+      <change beforePath="$PROJECT_DIR$/universal.nii" afterPath="$PROJECT_DIR$/rsa_results/universal.nii" />
+      <change beforePath="$PROJECT_DIR$/util/misc.py" afterPath="$PROJECT_DIR$/util/misc.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,19 +74,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_brain_regions.coverage" NAME="compute_rep_sim_brain_regions Coverage Results" MODIFIED="1544393357293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_brain_regions.coverage" NAME="compute_rep_sim_brain_regions Coverage Results" MODIFIED="1554413350650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$Interface_util.coverage" NAME="Interface_util Coverage Results" MODIFIED="1543318093603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../GoogleLM1b" />
     <SUITE FILE_PATH="coverage/Bridge$compute_results_from_csv.coverage" NAME="compute_results_from_csv Coverage Results" MODIFIED="1543761739132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$misc.coverage" NAME="misc Coverage Results" MODIFIED="1542825373917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
+    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_only_bert.coverage" NAME="compute_rep_sim_only_bert Coverage Results" MODIFIED="1551361459310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$compute_ccn_sim.coverage" NAME="compute_ccn_sim Coverage Results" MODIFIED="1543837665575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_each_model.coverage" NAME="compute_rep_sim_each_model Coverage Results" MODIFIED="1551348042024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_bert_and_others.coverage" NAME="compute_rep_sim_bert_and_others Coverage Results" MODIFIED="1551359654395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$test_harrypotter_data.coverage" NAME="test_harrypotter_data Coverage Results" MODIFIED="1542880375155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/read_dataset" />
     <SUITE FILE_PATH="coverage/Bridge$run_experiments.coverage" NAME="run_experiments Coverage Results" MODIFIED="1543065179115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$word_embedings.coverage" NAME="word_embedings Coverage Results" MODIFIED="1542880165132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/util" />
     <SUITE FILE_PATH="coverage/Bridge$text_encoder.coverage" NAME="text_encoder Coverage Results" MODIFIED="1544291512404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/computational_model" />
-    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_models.coverage" NAME="compute_rep_sim_models Coverage Results" MODIFIED="1543948943173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Bridge$encode_stimuli_in_context.coverage" NAME="encode_stimuli_in_context Coverage Results" MODIFIED="1543225515243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_with_whole_brain.coverage" NAME="compute_rep_sim_with_whole_brain Coverage Results" MODIFIED="1543686573329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim.coverage" NAME="compute_rep_sim Coverage Results" MODIFIED="1544096075037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_models.coverage" NAME="compute_rep_sim_models Coverage Results" MODIFIED="1551359517610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$encode_stimuli_in_context.coverage" NAME="encode_stimuli_in_context Coverage Results" MODIFIED="1555438423665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_bert.coverage" NAME="compute_rep_sim_bert Coverage Results" MODIFIED="1551358515720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim_with_whole_brain.coverage" NAME="compute_rep_sim_with_whole_brain Coverage Results" MODIFIED="1554412841905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$read_results_file.coverage" NAME="read_results_file Coverage Results" MODIFIED="1551278651762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bridge$compute_rep_sim.coverage" NAME="compute_rep_sim Coverage Results" MODIFIED="1555581903953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$encode_stimuli_in_context_bert.coverage" NAME="encode_stimuli_in_context_bert Coverage Results" MODIFIED="1544434867988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bridge$repair_google_lm.coverage" NAME="repair_google_lm Coverage Results" MODIFIED="1544061037470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -30,113 +99,7 @@
     <favorites_list name="Bridge" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="subject_4_region_sims" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/subject_4_region_sims">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="92" lean-forward="false" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="google_lm_lstm_0" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/google_lm_lstm_0">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="elmo_lstm_1" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elmo_lstm_1">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="elmo_lstm_2" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elmo_lstm_2">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="universal" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/universal">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="glove" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/glove">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="google_lm_lstm_1" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/google_lm_lstm_1">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="encode_stimuli_in_context_bert.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context_bert.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-145">
-              <caret line="131" column="35" lean-forward="false" selection-start-line="131" selection-start-column="35" selection-end-line="131" selection-end-column="35" />
-              <folding>
-                <element signature="e#3702#3842#0" expanded="false" />
-                <element signature="e#4432#4562#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="compute_rep_sim_bert.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/compute_rep_sim_bert.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="116" column="24" lean-forward="false" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="text_encoder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/computational_model/text_encoder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="285" column="39" lean-forward="false" selection-start-line="285" selection-start-column="39" selection-end-line="285" selection-end-column="39" />
-              <folding>
-                <element signature="e#716#743#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,11 +110,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>save</find>
-      <find>text_encoder</find>
-      <find>E</find>
-      <find>context_mode</find>
-      <find>delay =</find>
       <find>Bery</find>
       <find>InputExample</find>
       <find>model_fn_builder</find>
@@ -172,11 +130,16 @@
       <find>pretrained_</find>
       <find>pretrained</find>
       <find>time_steps</find>
-      <find />
-      <find>Temporal_Pole_Mid_L</find>
-      <find />
       <find>128</find>
+      <find>Temporal_Pole_Mid_L</find>
       <find>past_</find>
+      <find />
+      <find>i</find>
+      <find>brain_regions</find>
+      <find>best_brain_regions</find>
+      <find>selecting_feature</find>
+      <find>story_features</find>
+      <find>saving_dir</find>
     </findStrings>
     <replaceStrings>
       <replace>--cross_delay=True</replace>
@@ -195,29 +158,16 @@
       <replace>,</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/read_dataset/harrypotter_data.py" />
-        <option value="$PROJECT_DIR$/voxel_preprocessing/select_voxels.py" />
-        <option value="$PROJECT_DIR$/brain_sim.txt" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_6-7" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_4-5" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_2-3" />
-        <option value="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_0-1" />
-        <option value="$PROJECT_DIR$/util/word_embedings.py" />
-        <option value="$PROJECT_DIR$/all_glove_on_my_computer" />
-        <option value="$PROJECT_DIR$/all_universal_on_my_computer" />
-        <option value="$PROJECT_DIR$/ExplainBrain.py" />
-        <option value="$PROJECT_DIR$/util/plotting.py" />
-        <option value="$PROJECT_DIR$/all_elmo_on_my_computer" />
-        <option value="$PROJECT_DIR$/util/misc.py" />
-        <option value="$PROJECT_DIR$/compute_rep_sim_with_whole_brain.py" />
         <option value="$PROJECT_DIR$/klz_1.csv" />
         <option value="$PROJECT_DIR$/prz_1.csv" />
         <option value="$PROJECT_DIR$/prz_3.csv" />
         <option value="$PROJECT_DIR$/prz_2.csv" />
-        <option value="$PROJECT_DIR$/tt" />
         <option value="$PROJECT_DIR$/whole_selected_prz_0.csv" />
         <option value="$PROJECT_DIR$/whole_selected_prz_3.csv" />
         <option value="$PROJECT_DIR$/whole_selected_prz_2.csv" />
@@ -234,11 +184,8 @@
         <option value="$PROJECT_DIR$/compute_rep_sim_models.py" />
         <option value="$PROJECT_DIR$/repair_google_lm.py" />
         <option value="$PROJECT_DIR$/../bert/extract_features_utils.py" />
-        <option value="$PROJECT_DIR$/compute_rep_sim.py" />
-        <option value="$PROJECT_DIR$/encode_stimuli_in_context.py" />
         <option value="$PROJECT_DIR$/ttdd" />
         <option value="$PROJECT_DIR$/run_bert_encoder" />
-        <option value="$PROJECT_DIR$/compute_rep_sim_brain_regions.py" />
         <option value="$PROJECT_DIR$/subject_4_region_sims" />
         <option value="$PROJECT_DIR$/glove" />
         <option value="$PROJECT_DIR$/universal" />
@@ -248,7 +195,26 @@
         <option value="$PROJECT_DIR$/google_lm_lstm_1" />
         <option value="$PROJECT_DIR$/encode_stimuli_in_context_bert.py" />
         <option value="$PROJECT_DIR$/computational_model/text_encoder.py" />
+        <option value="$PROJECT_DIR$/tt" />
         <option value="$PROJECT_DIR$/compute_rep_sim_bert.py" />
+        <option value="$PROJECT_DIR$/compute_rep_sim_bert_and_others.py" />
+        <option value="$PROJECT_DIR$/models_sim" />
+        <option value="$PROJECT_DIR$/bert_model_sim_prz.csv" />
+        <option value="$PROJECT_DIR$/compute_rep_sim_brain_regions_bert.py" />
+        <option value="$PROJECT_DIR$/bert_brain" />
+        <option value="$PROJECT_DIR$/bert_all" />
+        <option value="$PROJECT_DIR$/mapping_models/GP.py" />
+        <option value="$PROJECT_DIR$/mapping_models/gp.py" />
+        <option value="$PROJECT_DIR$/compute_rep_sim_each_model.py" />
+        <option value="$PROJECT_DIR$/compute_rep_sim_only_bert.py" />
+        <option value="$PROJECT_DIR$/bert_com_sim_prz_.csv" />
+        <option value="$PROJECT_DIR$/compute_rep_sim_brain_regions.py" />
+        <option value="$PROJECT_DIR$/compute_rep_sim.py" />
+        <option value="$PROJECT_DIR$/util/misc.py" />
+        <option value="$PROJECT_DIR$/rsa/compute_rep_sim_bert_and_others.py" />
+        <option value="$PROJECT_DIR$/encode_stimuli_in_context.py" />
+        <option value="$PROJECT_DIR$/rsa/compute_rep_sim.py" />
+        <option value="$PROJECT_DIR$/gitignore" />
       </list>
     </option>
   </component>
@@ -258,11 +224,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="111" />
-    <option name="y" value="22" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="728" />
+    <option name="height" value="727" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -279,6 +244,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -287,41 +253,10 @@
               <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bridge" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
-              <item name="computational_model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
-              <item name="evaluation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
-              <item name="language_preprocessing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
-              <item name="mapping_models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
-              <item name="compute_rep_sim_bert.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="Bridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bridge" type="462c0819:PsiDirectoryNode" />
-              <item name="compute_rep_sim_brain_regions.py" type="8704e2dd:PyFileNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,13 +265,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rsa_results" />
+      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$/rsa" />
+      <recent name="$PROJECT_DIR$/results" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/../bert" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/../GoogleLM1b/google_lm" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -351,7 +289,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.encode_stimuli_in_context_bert">
+  <component name="RunManager" selected="Python.compute_rep_sim">
     <configuration name="compute_rep_sim" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -365,7 +303,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Bridge" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/compute_rep_sim.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rsa/compute_rep_sim.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -384,13 +322,13 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Bridge" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/compute_rep_sim_brain_regions.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rsa/compute_rep_sim_brain_regions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="encode_stimuli_in_context_bert" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="compute_rep_sim_only_bert" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -403,13 +341,13 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Bridge" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/encode_stimuli_in_context_bert.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rsa/compute_rep_sim_only_bert.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="repair_google_lm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="compute_rep_sim_with_whole_brain" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -422,45 +360,45 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Bridge" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/repair_google_lm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rsa/compute_rep_sim_with_whole_brain.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="text_encoder" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="encode_stimuli_in_context" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/computational_model" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Bridge" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/computational_model/text_encoder.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/encode_stimuli_in_context.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.compute_rep_sim" />
-      <item index="1" class="java.lang.String" itemvalue="Python.repair_google_lm" />
-      <item index="2" class="java.lang.String" itemvalue="Python.text_encoder" />
-      <item index="3" class="java.lang.String" itemvalue="Python.encode_stimuli_in_context_bert" />
-      <item index="4" class="java.lang.String" itemvalue="Python.compute_rep_sim_brain_regions" />
+      <item index="0" class="java.lang.String" itemvalue="Python.compute_rep_sim_only_bert" />
+      <item index="1" class="java.lang.String" itemvalue="Python.compute_rep_sim" />
+      <item index="2" class="java.lang.String" itemvalue="Python.compute_rep_sim_with_whole_brain" />
+      <item index="3" class="java.lang.String" itemvalue="Python.compute_rep_sim_brain_regions" />
+      <item index="4" class="java.lang.String" itemvalue="Python.encode_stimuli_in_context" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.encode_stimuli_in_context_bert" />
-        <item index="1" class="java.lang.String" itemvalue="Python.compute_rep_sim_brain_regions" />
-        <item index="2" class="java.lang.String" itemvalue="Python.text_encoder" />
-        <item index="3" class="java.lang.String" itemvalue="Python.compute_rep_sim" />
-        <item index="4" class="java.lang.String" itemvalue="Python.repair_google_lm" />
+        <item index="0" class="java.lang.String" itemvalue="Python.compute_rep_sim" />
+        <item index="1" class="java.lang.String" itemvalue="Python.encode_stimuli_in_context" />
+        <item index="2" class="java.lang.String" itemvalue="Python.compute_rep_sim_brain_regions" />
+        <item index="3" class="java.lang.String" itemvalue="Python.compute_rep_sim_with_whole_brain" />
+        <item index="4" class="java.lang.String" itemvalue="Python.compute_rep_sim_only_bert" />
       </list>
     </recent_temporary>
   </component>
@@ -490,18 +428,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="111" y="22" width="1280" height="728" extended-state="1" />
+    <frame x="0" y="23" width="1280" height="727" extended-state="0" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.503231" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295082" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29228243" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Review" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24071082" sideWeight="0.78484106" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27625203" sideWeight="0.78484106" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Pylint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19709209" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72455573" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.21515892" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -546,10 +486,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/read_dataset/scan_elements.py</url>
-          <line>51</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/computational_model/text_encoder.py</url>
           <line>89</line>
           <option name="timeStamp" value="1" />
@@ -560,13 +496,13 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/read_dataset/scan_elements.py</url>
+          <url>file://$PROJECT_DIR$/data_readers/scan_elements.py</url>
           <line>93</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/compute_rep_sim.py</url>
-          <line>230</line>
+          <url>file://$PROJECT_DIR$/rsa/compute_rep_sim.py</url>
+          <line>254</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -599,6 +535,16 @@
           <line>409</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rsa/compute_rep_sim_each_model.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rsa/compute_rep_sim_only_bert.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -607,7 +553,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -621,261 +567,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/klz_1.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="70" column="1261" lean-forward="false" selection-start-line="70" selection-start-column="1261" selection-end-line="70" selection-end-column="1261" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compute_rep_sim_with_whole_brain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1248">
-          <caret line="63" column="20" lean-forward="false" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="107" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whole_selected_prz_3.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="70" column="1379" lean-forward="false" selection-start-line="70" selection-start-column="1379" selection-end-line="70" selection-end-column="1379" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whole_selected_prz_2.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1047">
-          <caret line="70" column="1382" lean-forward="false" selection-start-line="70" selection-start-column="1382" selection-end-line="70" selection-end-column="1382" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whole_selected_prz_1.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="70" column="1377" lean-forward="false" selection-start-line="70" selection-start-column="1377" selection-end-line="70" selection-end-column="1377" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whole_selected_prz_0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/prz_0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-429">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selected_klz_0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selected_prz_3.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2560">
-          <caret line="190" column="3829" lean-forward="false" selection-start-line="190" selection-start-column="3829" selection-end-line="190" selection-end-column="3829" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selected_prz_2.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="190" column="3819" lean-forward="false" selection-start-line="190" selection-start-column="3819" selection-end-line="190" selection-end-column="3819" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selected_prz_1.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="190" column="3825" lean-forward="false" selection-start-line="190" selection-start-column="3825" selection-end-line="190" selection-end-column="3825" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/regions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_fast_experiments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="119" column="3" lean-forward="false" selection-start-line="119" selection-start-column="3" selection-end-line="119" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selected_prz_0.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="185" column="3715" lean-forward="false" selection-start-line="185" selection-start-column="3715" selection-end-line="185" selection-end-column="3715" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compute_results_from_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/voxel_preprocessing/select_voxels.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/cca.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1855">
-          <caret line="197" column="22" lean-forward="false" selection-start-line="197" selection-start-column="22" selection-end-line="197" selection-end-column="22" />
-          <folding>
-            <element signature="e#1330#1368#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/misc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_experiments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="117" column="21" lean-forward="true" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExplainBrain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_dataset/harrypotter_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compute_ccn_sim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1249">
-          <caret line="202" column="25" lean-forward="false" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_0-1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="176" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compute_rep_sim_models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
-          <caret line="69" column="27" lean-forward="false" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_dataset/scan_elements.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1459#1591#0" expanded="false" />
-            <element signature="e#1705#3398#0" expanded="false" />
-            <element signature="e#3507#5121#0" expanded="false" />
-            <element signature="e#5227#6666#0" expanded="false" />
-            <element signature="e#6754#7462#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../bert/modeling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///anaconda/lib/python3.6/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="331" column="0" lean-forward="false" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../bert/modeling_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repair_google_lm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="31" column="48" lean-forward="false" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../bert/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,9 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="352" column="0" lean-forward="true" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
-          <folding>
-            <element signature="e#670#708#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -902,115 +594,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ttdd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="14" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="159" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/all_elmo_on_my_computer">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_bert_encoder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compute_rep_sim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="216" column="7" lean-forward="false" selection-start-line="216" selection-start-column="7" selection-end-line="216" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compute_rep_sim_brain_regions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="240" column="32" lean-forward="false" selection-start-line="240" selection-start-column="12" selection-end-line="240" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/subject_4_region_sims">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="92" lean-forward="false" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/universal">
+    <entry file="file://$PROJECT_DIR$/rsa_results/universal">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elmo_lstm_2">
+    <entry file="file://$PROJECT_DIR$/rsa_results/google_lm_lstm_0">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elmo_lstm_1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google_lm_lstm_0">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glove">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google_lm_lstm_1">
+    <entry file="file://$PROJECT_DIR$/rsa_results/google_lm_lstm_1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,21 +632,337 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context_bert.py">
+    <entry file="file://$PROJECT_DIR$/rsa_results/glove">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-145">
-          <caret line="131" column="35" lean-forward="false" selection-start-line="131" selection-start-column="35" selection-end-line="131" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_rep_sim._computational_modelspy" />
+    <entry file="file://$PROJECT_DIR$/run_fast_experiments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-907">
+          <caret line="119" column="3" lean-forward="false" selection-start-line="119" selection-start-column="3" selection-end-line="119" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_results_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/com_sim_prz_0.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapping_models/gp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa/compute_rep_sim_bert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="244" column="5" lean-forward="true" selection-start-line="244" selection-start-column="5" selection-end-line="244" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compute_results_from_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa/compute_rep_sim_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="145" column="0" lean-forward="true" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa/compute_rep_sim_over_story.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1695">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_bert_encoder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/bert_model_sim_prz.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-214">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/com_sim_prz_6.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/bert_com_sim_prz_.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="14" selection-end-column="254" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa/compute_rep_sim_only_bert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="170" column="4" lean-forward="false" selection-start-line="170" selection-start-column="4" selection-end-line="170" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/all_elmo_on_my_computer">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa/compute_rep_sim_with_whole_brain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2895">
+          <caret line="193" column="19" lean-forward="false" selection-start-line="193" selection-start-column="19" selection-end-line="193" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa/compute_rep_sim_each_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" column="3" lean-forward="false" selection-start-line="87" selection-start-column="3" selection-end-line="87" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa/compute_rep_sim_brain_regions_bert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2475">
+          <caret line="165" column="46" lean-forward="false" selection-start-line="165" selection-start-column="46" selection-end-line="165" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa/compute_rep_sim_brain_regions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="117" column="8" lean-forward="false" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
           <folding>
-            <element signature="e#3702#3842#0" expanded="false" />
-            <element signature="e#4432#4562#0" expanded="false" />
+            <element signature="e#4881#8082#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compute_rep_sim_bert.py">
+    <entry file="file://$PROJECT_DIR$/data_readers/scan_elements.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="116" column="24" lean-forward="false" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
+        <state relative-caret-position="1320">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="e#1459#1591#0" expanded="false" />
+            <element signature="e#5227#6666#0" expanded="false" />
+            <element signature="e#6754#7462#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/results_glove_none_w0-0_onlypast_s-1_f-0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2341">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa_results/brain_sim.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-841">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa_results/bert_all">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa_results/bert_brain">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/elmo_exp_script">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3727">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/elmo_exp_script_alpha10">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="221" lean-forward="false" selection-start-line="18" selection-start-column="207" selection-end-line="18" selection-end-column="221" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context_bert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="64" column="38" lean-forward="false" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa/compute_rep_sim_bert_and_others.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="85" column="19" lean-forward="false" selection-start-line="85" selection-start-column="2" selection-end-line="85" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/elmo_sentence_w0-0_alpha10">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models_sim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa/compute_rep_sim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="108" column="20" lean-forward="false" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+          <folding>
+            <element signature="e#2250#2924#0" expanded="false" />
+            <element signature="e#5051#5690#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa_results/elmo_lstm_1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa_results/elmo_lstm_2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/glove_exp_script">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/encode_stimuli_in_context.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="28" column="56" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/misc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="91" column="32" lean-forward="false" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rsa_results/subject_4_region_sims">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="92" lean-forward="false" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/regions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1441">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,0 +1,396 @@
+1. initialize brain data reader ...
+2. initialize text encoder ...
+3. initialize mapper ...
+4. initialize Explainer...
+5. train and evaluate...
+Reading /Users/iSam/Codes/Data/harrypotter/subject_1.mat
+Reading /Users/iSam/Codes/Data/harrypotter/subject_1.mat
+Reading /Users/iSam/Codes/Data/harrypotter/subject_1.mat
+Reading /Users/iSam/Codes/Data/harrypotter/subject_1.mat
+{1: 11, 2: 11, 3: 11, 4: 11}
+{1: 337, 2: 349, 3: 276, 4: 377}
+Example Stimuli ([''], None)
+Encoding stimuli of block: 1
+Encoding stimuli of block: 2
+Encoding stimuli of block: 3
+Encoding stimuli of block: 4
+train blocks: [1, 2, 3]
+test blocks: [4]
+Training with train time delay of -8 and test time delay of -8
+(926, 37913)
+(926, 1024)
+(926, 37684)
+Fitting post training voxel selectors
+mean_EV : 0.7251752501726151
+(365, 37913)
+(365, 1024)
+mean_EV : -0.4038273537158966
+Saving the model:
+Training with train time delay of -8 and test time delay of -6
+(366, 37913)
+(366, 1024)
+mean_EV : -0.3976742652654648
+Training with train time delay of -8 and test time delay of -4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.41876257193088534
+Training with train time delay of -8 and test time delay of -2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4599695279598236
+Training with train time delay of -8 and test time delay of 0
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4915358270406723
+Training with train time delay of -8 and test time delay of 2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5175814883708953
+Training with train time delay of -8 and test time delay of 4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.547089725971222
+Training with train time delay of -8 and test time delay of 6
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5456978493928909
+Training with train time delay of -8 and test time delay of 8
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5367537100315094
+Training with train time delay of -6 and test time delay of -8
+(929, 37913)
+(929, 1024)
+(929, 37684)
+Fitting post training voxel selectors
+mean_EV : 0.7266985839605331
+(365, 37913)
+(365, 1024)
+mean_EV : -0.4081312087774277
+Saving the model:
+Training with train time delay of -6 and test time delay of -6
+(366, 37913)
+(366, 1024)
+mean_EV : -0.3995594956874847
+Training with train time delay of -6 and test time delay of -4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.42101397609710695
+Training with train time delay of -6 and test time delay of -2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.468749840259552
+Training with train time delay of -6 and test time delay of 0
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5072860701084136
+Training with train time delay of -6 and test time delay of 2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5205904097557068
+Training with train time delay of -6 and test time delay of 4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5533791273832321
+Training with train time delay of -6 and test time delay of 6
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5645508439540863
+Training with train time delay of -6 and test time delay of 8
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5559889663457871
+Training with train time delay of -4 and test time delay of -8
+(932, 37913)
+(932, 1024)
+(932, 37684)
+Fitting post training voxel selectors
+mean_EV : 0.726586492717266
+(365, 37913)
+(365, 1024)
+mean_EV : -0.39369664549827577
+Saving the model:
+Training with train time delay of -4 and test time delay of -6
+(366, 37913)
+(366, 1024)
+mean_EV : -0.37424896013736725
+Training with train time delay of -4 and test time delay of -4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.3962550361156464
+Training with train time delay of -4 and test time delay of -2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4431758254766464
+Training with train time delay of -4 and test time delay of 0
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4876421719789505
+Training with train time delay of -4 and test time delay of 2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5041054624319077
+Training with train time delay of -4 and test time delay of 4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5298269281387329
+Training with train time delay of -4 and test time delay of 6
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5545745413303376
+Training with train time delay of -4 and test time delay of 8
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5568275552988052
+Training with train time delay of -2 and test time delay of -8
+(932, 37913)
+(932, 1024)
+(932, 37684)
+Fitting post training voxel selectors
+mean_EV : 0.7207262895107269
+(365, 37913)
+(365, 1024)
+mean_EV : -0.41192798936367037
+Saving the model:
+Training with train time delay of -2 and test time delay of -6
+(366, 37913)
+(366, 1024)
+mean_EV : -0.4073704732656479
+Training with train time delay of -2 and test time delay of -4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4225656497478485
+Training with train time delay of -2 and test time delay of -2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.45163024866580964
+Training with train time delay of -2 and test time delay of 0
+(367, 37913)
+(367, 1024)
+mean_EV : -0.485961354970932
+Training with train time delay of -2 and test time delay of 2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4930358152389526
+Training with train time delay of -2 and test time delay of 4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5093919469118118
+Training with train time delay of -2 and test time delay of 6
+(367, 37913)
+(367, 1024)
+mean_EV : -0.514423672914505
+Training with train time delay of -2 and test time delay of 8
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5190853672027588
+Training with train time delay of 0 and test time delay of -8
+(932, 37913)
+(932, 1024)
+(932, 37684)
+Fitting post training voxel selectors
+mean_EV : 0.7205454707145691
+(365, 37913)
+(365, 1024)
+mean_EV : -0.4045408976078033
+Saving the model:
+Training with train time delay of 0 and test time delay of -6
+(366, 37913)
+(366, 1024)
+mean_EV : -0.420368527173996
+Training with train time delay of 0 and test time delay of -4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.44648430705070496
+Training with train time delay of 0 and test time delay of -2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.46890926933288574
+Training with train time delay of 0 and test time delay of 0
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5053667167425155
+Training with train time delay of 0 and test time delay of 2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5132575120925903
+Training with train time delay of 0 and test time delay of 4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5241288176774979
+Training with train time delay of 0 and test time delay of 6
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5254300020933151
+Training with train time delay of 0 and test time delay of 8
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5175606218576432
+Training with train time delay of 2 and test time delay of -8
+(932, 37913)
+(932, 1024)
+(932, 37684)
+Fitting post training voxel selectors
+mean_EV : 0.7227418335676193
+(365, 37913)
+(365, 1024)
+mean_EV : -0.4204507805109024
+Saving the model:
+Training with train time delay of 2 and test time delay of -6
+(366, 37913)
+(366, 1024)
+mean_EV : -0.4397679557800293
+Training with train time delay of 2 and test time delay of -4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.46312051844596863
+Training with train time delay of 2 and test time delay of -2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4766211284399033
+Training with train time delay of 2 and test time delay of 0
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4951063321828842
+Training with train time delay of 2 and test time delay of 2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5131683765649796
+Training with train time delay of 2 and test time delay of 4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5279900690317154
+Training with train time delay of 2 and test time delay of 6
+(367, 37913)
+(367, 1024)
+mean_EV : -0.53166444170475
+Training with train time delay of 2 and test time delay of 8
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5208863824605942
+Training with train time delay of 4 and test time delay of -8
+(932, 37913)
+(932, 1024)
+(932, 37684)
+Fitting post training voxel selectors
+mean_EV : 0.7233292950987816
+(365, 37913)
+(365, 1024)
+mean_EV : -0.44735606503486636
+Saving the model:
+Training with train time delay of 4 and test time delay of -6
+(366, 37913)
+(366, 1024)
+mean_EV : -0.46387892270088193
+Training with train time delay of 4 and test time delay of -4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4824886974096298
+Training with train time delay of 4 and test time delay of -2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4866197497844696
+Training with train time delay of 4 and test time delay of 0
+(367, 37913)
+(367, 1024)
+mean_EV : -0.49331249594688414
+Training with train time delay of 4 and test time delay of 2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.49547583544254303
+Training with train time delay of 4 and test time delay of 4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5054859390258789
+Training with train time delay of 4 and test time delay of 6
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5178690445423126
+Training with train time delay of 4 and test time delay of 8
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5184506180286408
+Training with train time delay of 6 and test time delay of -8
+(932, 37913)
+(932, 1024)
+(932, 37684)
+Fitting post training voxel selectors
+mean_EV : 0.7259589231610298
+(365, 37913)
+(365, 1024)
+mean_EV : -0.43319249534606935
+Saving the model:
+Training with train time delay of 6 and test time delay of -6
+(366, 37913)
+(366, 1024)
+mean_EV : -0.46101546347141265
+Training with train time delay of 6 and test time delay of -4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4844066014289856
+Training with train time delay of 6 and test time delay of -2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4917024520635605
+Training with train time delay of 6 and test time delay of 0
+(367, 37913)
+(367, 1024)
+mean_EV : -0.48616687560081484
+Training with train time delay of 6 and test time delay of 2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.48570578801631925
+Training with train time delay of 6 and test time delay of 4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4932203993797302
+Training with train time delay of 6 and test time delay of 6
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5134181305170059
+Training with train time delay of 6 and test time delay of 8
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5134831753969192
+Training with train time delay of 8 and test time delay of -8
+(932, 37913)
+(932, 1024)
+(932, 37684)
+Fitting post training voxel selectors
+mean_EV : 0.7283508068323136
+(365, 37913)
+(365, 1024)
+mean_EV : -0.4048200817108154
+Saving the model:
+Training with train time delay of 8 and test time delay of -6
+(366, 37913)
+(366, 1024)
+mean_EV : -0.4369531419277191
+Training with train time delay of 8 and test time delay of -4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4595657674074173
+Training with train time delay of 8 and test time delay of -2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.471107883810997
+Training with train time delay of 8 and test time delay of 0
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4810664632320404
+Training with train time delay of 8 and test time delay of 2
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4788162542581558
+Training with train time delay of 8 and test time delay of 4
+(367, 37913)
+(367, 1024)
+mean_EV : -0.4851868065595627
+Training with train time delay of 8 and test time delay of 6
+(367, 37913)
+(367, 1024)
+mean_EV : -0.5023153216838837
+Training with train time delay of 8 and test time delay of 8
+(367, 37913)
+(367, 1024)
+mean_EV : -0.49868529772758485

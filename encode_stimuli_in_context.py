@@ -7,7 +7,7 @@ import sys
 sys.path.append('~/Codes/GoogleLM1b/')
 
 from ExplainBrain import ExplainBrain
-from read_dataset.harrypotter_data import HarryPotterReader
+from data_readers.harrypotter_data import HarryPotterReader
 from computational_model.text_encoder import TfHubElmoEncoder, TfTokenEncoder, TfHubLargeUniversalEncoder, GloVeEncoder, GoogleLMEncoder
 from mapping_models.sk_mapper import SkMapper
 
@@ -26,13 +26,13 @@ tf.flags.DEFINE_boolean('cross_delay', False, 'try different train and test dela
 tf.flags.DEFINE_float('alpha', 1, 'alpha')
 tf.flags.DEFINE_string('embedding_dir', 'Data/word_embeddings/glove.6B/glove.6B.300d.txt', 'path to the file containing the embeddings')
 tf.flags.DEFINE_string('brain_data_dir', 'Data/harrypotter/', 'Brain Data Dir')
-tf.flags.DEFINE_string('root', '/Users/iSam/Codes/', 'general path root')
+tf.flags.DEFINE_string('root', '/Users/samiraabnar/Codes/', 'general path root')
 
-tf.flags.DEFINE_enum('text_encoder', 'universal_large',
+tf.flags.DEFINE_enum('text_encoder', 'tf_token',
                      ['glove','elmo', 'tf_token' ,'universal_large', 'google_lm'], 'which encoder to use')
 tf.flags.DEFINE_string('embedding_type', '', 'ELMO: word_emb, lstm_outputs1, lstm_outputs2, elmo ')
 tf.flags.DEFINE_string('context_mode', 'none', 'type of context (sentence, block, none)')
-tf.flags.DEFINE_integer('past_window', 3, 'window size to the past')
+tf.flags.DEFINE_integer('past_window', 0, 'window size to the past')
 tf.flags.DEFINE_integer('future_window', 0, 'window size to the future')
 tf.flags.DEFINE_boolean('only_past', True, 'window size to the future')
 

@@ -8,7 +8,7 @@ import numpy as np
 import os
 import pickle
 from ExplainBrain import ExplainBrain
-from read_dataset.harrypotter_data import HarryPotterReader
+from data_readers.harrypotter_data import HarryPotterReader
 from util.misc import get_dists, compute_dist_of_dists
 from util.plotting import plot
 from voxel_preprocessing.select_voxels import VarianceFeatureSelection

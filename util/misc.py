@@ -80,17 +80,21 @@ def compute_dist_of_dists(x, C, labels):
   keys = np.asarray(list(x.keys()))
   klz = np.zeros((len(keys), len(keys)))
   prz = np.zeros((len(keys), len(keys)))
+  mean_p_value = np.zeros((len(keys), len(keys)))
   for i in np.arange(len(keys)):
     for j in np.arange(len(keys)):
       klz[i][j] = np.sum(sp.stats.entropy(C[keys[i]], C[keys[j]], base=None))
       pz = []
+      p_values = []
       for a,b in zip(C[keys[i]], C[keys[j]]):
-        p, _ = sp.stats.pearsonr(a,b)
+        p, p_value = sp.stats.pearsonr(a,b)
         pz.append(p)
+        p_values.append(p_value)
 
       prz[i][j] = np.mean(pz)
+      mean_p_value[i][j] = np.mean(p_values)
 
-  return klz, prz, labels
+  return klz, prz, labels, mean_p_value
 
 def compute_dist_of_dists_over_time(x, C, labels):
   """

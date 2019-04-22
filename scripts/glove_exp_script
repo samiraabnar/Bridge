@@ -1,0 +1,154 @@
+#!/bin/bash
+
+# ./glove_exp_script /Users/samiraabnar/Codes/Data/harrypotter/ /Users/samiraabnar/Codes/GoogleLM1b/ 0 1
+
+root=$5
+
+subject_id=$4
+fold_id=$3
+
+echo subject_id:$subject_id
+echo $fold_id
+
+google_lm_path=$2
+export PYTHONPATH=$PYTHONPATH:$google_lm_path
+
+brain_data_dir=$1
+echo $brain_data_dir
+
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
+--cross_delay=True \
+--alpha=1 \
+--text_encoder=glove \
+--context_mode=none \
+--past_window=0 \
+--future_window=0 \
+--only_past=True \
+--brain_data_dir=$brain_data_dir \
+--root=$root \
+> results/results_glove_none_w0-0_onlypast_s-$subject_id"_f-"$fold_id
+
+###############
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
+--cross_delay=True \
+--alpha=1 \
+--text_encoder=glove \
+--context_mode=sentence \
+--past_window=0 \
+--future_window=0 \
+--only_past=True \
+--brain_data_dir=$brain_data_dir \
+--root=$root \
+> results/results_glove_sentence_w0-0_onlypast_s-$subject_id"_f-"$fold_id
+
+
+#########################
+
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
+--cross_delay=True \
+--alpha=1 \
+--text_encoder=glove \
+--context_mode=sentence \
+--past_window=1 \
+--future_window=0 \
+--only_past=True \
+--brain_data_dir=$brain_data_dir \
+--root=$root \
+> results/results_glove_sentence_w1-0_onlypast_s-$subject_id"_f-"$fold_id
+
+
+#########################
+
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
+--cross_delay=True \
+--alpha=1 \
+--text_encoder=glove \
+--context_mode=sentence \
+--past_window=2 \
+--future_window=0 \
+--only_past=True \
+--brain_data_dir=$brain_data_dir \
+--root=$root \
+> results/results_glove_sentence_w2-0_onlypast_s-$subject_id"_f-"$fold_id
+
+
+
+#########################
+
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
+--cross_delay=True \
+--alpha=1 \
+--text_encoder=glove \
+--context_mode=sentence \
+--past_window=3 \
+--future_window=0 \
+--only_past=True \
+--brain_data_dir=$brain_data_dir \
+--root=$root \
+> results/results_glove_sentence_w3-0_onlypast_s-$subject_id"_f-"$fold_id
+
+
+
+#########################
+
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
+--cross_delay=True \
+--alpha=1 \
+--text_encoder=glove \
+--context_mode=sentence \
+--past_window=4 \
+--future_window=0 \
+--only_past=True \
+--brain_data_dir=$brain_data_dir \
+--root=$root \
+> results/results_glove_sentence_w4-0_onlypast_s-$subject_id"_f-"$fold_id
+
+
+
+#########################
+
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
+--cross_delay=True \
+--alpha=1 \
+--text_encoder=glove \
+--context_mode=sentence \
+--past_window=5 \
+--future_window=0 \
+--only_past=True \
+--brain_data_dir=$brain_data_dir \
+--root=$root \
+> results/results_glove_sentence_w5-0_onlypast_s-$subject_id"_f-"$fold_id
+
+
+
+#########################
+
+python run_experiments.py --subject_id=$subject_id \
+--fold_id=$fold_id \
+--delays='-6,-4,-2,0' \
+--cross_delay=True \
+--alpha=1 \
+--text_encoder=glove \
+--context_mode=sentence \
+--past_window=6 \
+--future_window=0 \
+--only_past=True \
+--brain_data_dir=$brain_data_dir \
+--root=$root \
+> results/results_glove_sentence_w6-0_onlypast_s-$subject_id"_f-"$fold_id
+
+
