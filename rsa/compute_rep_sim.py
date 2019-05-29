@@ -22,11 +22,13 @@ tf.flags.DEFINE_integer('subject_id', 1, 'subject id')
 tf.flags.DEFINE_integer('fold_id', 0, 'fold id')
 tf.flags.DEFINE_list('delays',[-6,-4,-2,0] , 'delay list')
 tf.flags.DEFINE_boolean('cross_delay', False, 'try different train and test delays')
+tf.flags.DEFINE_list('blocks', [1,2,3,4], 'experiment/story blocks to consider')
+
 
 tf.flags.DEFINE_float('alpha', 1, 'alpha')
 tf.flags.DEFINE_string('embedding_dir', 'Data/word_embeddings/glove.6B/glove.6B.300d.txt', 'path to the file containing the embeddings')
 tf.flags.DEFINE_string('brain_data_dir', 'Data/harrypotter/', 'Brain Data Dir')
-tf.flags.DEFINE_string('root', '/Users/samiraabnar/Codes/', 'general path root')
+tf.flags.DEFINE_string('root', '/Users/iSam/Codes/', 'general path root')
 
 tf.flags.DEFINE_enum('text_encoder', 'glove',
                      ['glove','elmo', 'tf_token' ,'universal_large', 'google_lm'], 'which encoder to use')
@@ -100,7 +102,7 @@ if __name__ == '__main__':
   brain_data_reader = HarryPotterReader(data_dir=hparams.brain_data_dir)
 
   story_features = np.load('story_features.npy').item()
-  delay = 2
+  delay = 10
   blocks = [1,2,3,4]
   selected_steps = {}
   print(story_features.keys())
@@ -109,7 +111,7 @@ if __name__ == '__main__':
   voxel_to_regions = {}
   regions_to_voxels = {}
   brain_fs = {}
-  for subject in [1,2,3,4,5,6,7,8]:
+  for subject in [1,2,3,4,5,7]:
     voxel_to_regions[subject], regions_to_voxels[subject] = brain_data_reader.get_voxel_to_region_mapping(subject_id=subject)
     brain_fs[subject] = VarianceFeatureSelection()
 
@@ -135,7 +137,7 @@ if __name__ == '__main__':
   embeddings = {}
   labels = {}
 
-  encoder_types = ['bert','google_lm','elmo','universal_large', 'glove','tf_token'] #, 'google_lm','tf_token']
+  encoder_types = ['elmo','universal_large', 'glove','bert'] #, 'google_lm','tf_token']
   embedding_types = {
     'universal_large': ['none'],
     'google_lm': ['lstm_0', 'lstm_1'],
