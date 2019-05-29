@@ -22,6 +22,9 @@ python -m spacy download en_core_web_lg
 
 **To create story_features.npy you can run notebooks/HarrypotterDatasetStat.ipynb**
 
+
+## How to obtain contextualized representations from different models:
+python encode_stimuli_in_context.py
 ## How to run predictive modelling experiments:
 python run_experiment.py
 
