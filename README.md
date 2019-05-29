@@ -20,9 +20,6 @@ Path to the raw brain data, e.g.: '/Users/samiraabnar/Codes/Data/harrypotter/'
 Spacy model file for tokenization:
 python -m spacy download en_core_web_lg
 
-**To create story_features.npy you can run notebooks/HarrypotterDatasetStat.ipynb**
-
-
 ## How to obtain contextualized representations from different models:
 python encode_stimuli_in_context.py
 ## How to run predictive modelling experiments:
@@ -33,3 +30,6 @@ python rsa/compute_rep_sim.py
 
 ## Link to colab for plotting the results:
 https://colab.research.google.com/drive/1hO9ZV6gfO-WT-wGFwJZvHPQrLPHHuuhO#scrollTo=HeHmO4ZTL9O5&uniqifier=10
+
+
+**To create story_features.npy you can use the scripts in this colab notebook**
