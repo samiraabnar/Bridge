@@ -12,12 +12,15 @@ This repository includes codes for:
 * sklearn
 * spacy
 * https://github.com/samiraabnar/GoogleLM1b.git
+* https://github.com/google-research/bert
 
 ### files:
 Path to the raw brain data, e.g.: '/Users/samiraabnar/Codes/Data/harrypotter/'
 
 Spacy model file for tokenization:
 python -m spacy download en_core_web_lg
+
+**To create story_features.npy you can run notebooks/HarrypotterDatasetStat.ipynb**
 
 ## How to run predictive modelling experiments:
 python run_experiment.py
