@@ -1,71 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb1d9b89-d0e0-407d-852c-39dac1938e1a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/rsa/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_1" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_1" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_2" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_2" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_3" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_3" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_4" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_4" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_5" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_5" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_elmo_6" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_elmo_6" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_0-1" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_google-lm_0-1" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_2-3" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_google-lm_2-3" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_4-5" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_google-lm_4-5" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_google-lm_6-7" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_google-lm_6-7" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_0-3" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_tf_token_0-3" />
-      <change beforePath="$PROJECT_DIR$/Run_Lisa_save_embeddings_tf_token_4-7" afterPath="$PROJECT_DIR$/scripts/Run_Lisa_save_embeddings_tf_token_4-7" />
-      <change beforePath="$PROJECT_DIR$/all_elmo_on_my_computer" afterPath="$PROJECT_DIR$/scripts/all_elmo_on_my_computer" />
-      <change beforePath="$PROJECT_DIR$/all_glove_on_my_computer" afterPath="$PROJECT_DIR$/scripts/all_glove_on_my_computer" />
-      <change beforePath="$PROJECT_DIR$/all_universal_on_my_computer" afterPath="$PROJECT_DIR$/scripts/all_universal_on_my_computer" />
-      <change beforePath="$PROJECT_DIR$/brain_sim.txt" afterPath="$PROJECT_DIR$/rsa_results/brain_sim.txt" />
-      <change beforePath="$PROJECT_DIR$/compute_ccn_sim.py" afterPath="$PROJECT_DIR$/rsa/compute_ccn_sim.py" />
-      <change beforePath="$PROJECT_DIR$/compute_rep_sim._computational_modelspy" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/compute_rep_sim.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim.py" />
-      <change beforePath="$PROJECT_DIR$/compute_rep_sim_bert.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim_bert.py" />
-      <change beforePath="$PROJECT_DIR$/compute_rep_sim_brain_regions.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim_brain_regions.py" />
-      <change beforePath="$PROJECT_DIR$/compute_rep_sim_models.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim_models.py" />
-      <change beforePath="$PROJECT_DIR$/compute_rep_sim_over_story.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim_over_story.py" />
-      <change beforePath="$PROJECT_DIR$/compute_rep_sim_with_whole_brain.py" afterPath="$PROJECT_DIR$/rsa/compute_rep_sim_with_whole_brain.py" />
-      <change beforePath="$PROJECT_DIR$/elmo_exp_script" afterPath="$PROJECT_DIR$/scripts/elmo_exp_script" />
-      <change beforePath="$PROJECT_DIR$/elmo_exp_script_alpha10" afterPath="$PROJECT_DIR$/scripts/elmo_exp_script_alpha10" />
-      <change beforePath="$PROJECT_DIR$/elmo_lstm_1" afterPath="$PROJECT_DIR$/rsa_results/elmo_lstm_1" />
-      <change beforePath="$PROJECT_DIR$/elmo_lstm_1.nii" afterPath="$PROJECT_DIR$/rsa_results/elmo_lstm_1.nii" />
-      <change beforePath="$PROJECT_DIR$/elmo_lstm_2" afterPath="$PROJECT_DIR$/rsa_results/elmo_lstm_2" />
-      <change beforePath="$PROJECT_DIR$/elmo_lstm_2.nii" afterPath="$PROJECT_DIR$/rsa_results/elmo_lstm_2.nii" />
-      <change beforePath="$PROJECT_DIR$/elmo_sentence_w0-0_alpha10" afterPath="$PROJECT_DIR$/scripts/elmo_sentence_w0-0_alpha10" />
-      <change beforePath="$PROJECT_DIR$/encode_stimuli_in_context.py" afterPath="$PROJECT_DIR$/encode_stimuli_in_context.py" />
-      <change beforePath="$PROJECT_DIR$/encode_stimuli_in_context_bert.py" afterPath="$PROJECT_DIR$/encode_stimuli_in_context_bert.py" />
-      <change beforePath="$PROJECT_DIR$/gitignore" afterPath="$PROJECT_DIR$/gitignore" />
-      <change beforePath="$PROJECT_DIR$/glove" afterPath="$PROJECT_DIR$/rsa_results/glove" />
-      <change beforePath="$PROJECT_DIR$/glove.nii" afterPath="$PROJECT_DIR$/rsa_results/glove.nii" />
-      <change beforePath="$PROJECT_DIR$/glove_exp_script" afterPath="$PROJECT_DIR$/scripts/glove_exp_script" />
-      <change beforePath="$PROJECT_DIR$/google_lm_lstm_0" afterPath="$PROJECT_DIR$/rsa_results/google_lm_lstm_0" />
-      <change beforePath="$PROJECT_DIR$/google_lm_lstm_0.nii" afterPath="$PROJECT_DIR$/rsa_results/google_lm_lstm_0.nii" />
-      <change beforePath="$PROJECT_DIR$/google_lm_lstm_1" afterPath="$PROJECT_DIR$/rsa_results/google_lm_lstm_1" />
-      <change beforePath="$PROJECT_DIR$/google_lm_lstm_1.nii" afterPath="$PROJECT_DIR$/rsa_results/google_lm_lstm_1.nii" />
-      <change beforePath="$PROJECT_DIR$/notebooks/HarrypotterDatasetStat.ipynb" afterPath="$PROJECT_DIR$/notebooks/HarrypotterDatasetStat.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/LoadandEval.ipynb" afterPath="$PROJECT_DIR$/notebooks/LoadandEval.ipynb" />
-      <change beforePath="$PROJECT_DIR$/read_dataset/__init__.py" afterPath="$PROJECT_DIR$/data_readers/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/read_dataset/brain_data_reader.py" afterPath="$PROJECT_DIR$/data_readers/brain_data_reader.py" />
-      <change beforePath="$PROJECT_DIR$/read_dataset/harrypotter_data.py" afterPath="$PROJECT_DIR$/data_readers/harrypotter_data.py" />
-      <change beforePath="$PROJECT_DIR$/read_dataset/harrypotter_util.py" afterPath="$PROJECT_DIR$/data_readers/harrypotter_util.py" />
-      <change beforePath="$PROJECT_DIR$/read_dataset/scan_elements.py" afterPath="$PROJECT_DIR$/data_readers/scan_elements.py" />
-      <change beforePath="$PROJECT_DIR$/read_dataset/test_harrypotter_data.py" afterPath="$PROJECT_DIR$/data_readers/test_harrypotter_data.py" />
-      <change beforePath="$PROJECT_DIR$/repair_google_lm.py" afterPath="$PROJECT_DIR$/repair_google_lm.py" />
-      <change beforePath="$PROJECT_DIR$/run_experiments.py" afterPath="$PROJECT_DIR$/run_experiments.py" />
-      <change beforePath="$PROJECT_DIR$/run_fast_experiments.py" afterPath="$PROJECT_DIR$/run_fast_experiments.py" />
-      <change beforePath="$PROJECT_DIR$/run_scripts_on_all_folds" afterPath="$PROJECT_DIR$/scripts/run_scripts_on_all_folds" />
-      <change beforePath="$PROJECT_DIR$/save_brain_reps.py" afterPath="$PROJECT_DIR$/save_brain_reps.py" />
-      <change beforePath="$PROJECT_DIR$/subject_4_region_sims" afterPath="$PROJECT_DIR$/rsa_results/subject_4_region_sims" />
-      <change beforePath="$PROJECT_DIR$/tt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ttdd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/universal" afterPath="$PROJECT_DIR$/rsa_results/universal" />
-      <change beforePath="$PROJECT_DIR$/universal.nii" afterPath="$PROJECT_DIR$/rsa_results/universal.nii" />
-      <change beforePath="$PROJECT_DIR$/util/misc.py" afterPath="$PROJECT_DIR$/util/misc.py" />
-    </list>
+    <list default="true" id="eb1d9b89-d0e0-407d-852c-39dac1938e1a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
