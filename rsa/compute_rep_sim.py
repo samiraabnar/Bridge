@@ -20,7 +20,7 @@ FLAGS = tf.flags.FLAGS
 
 tf.flags.DEFINE_integer('subject_id', 1, 'subject id')
 tf.flags.DEFINE_list('delay', 0 , 'delay list')
-tf.flags.DEFINE_list('blocks', [1], 'experiment/story blocks to consider')
+tf.flags.DEFINE_list('blocks', [4], 'experiment/story blocks to consider')
 
 
 tf.flags.DEFINE_float('alpha', 1, 'alpha')
@@ -270,7 +270,7 @@ if __name__ == '__main__':
   "prz": prz,
   "labels_": labels_,
   "p_vals": p_vals}
-  np.save("rsa_results_all_brain_regions_"+str(delay)+"_"+selecting_feature, dic2save)
+  np.save('_'.join(list(map(str,FLAGS.blocks)))+"rsa_results_all_brain_regions_"+str(delay)+"_"+selecting_feature, dic2save)
 
   x, C = get_dists(brains + all_embeddings + randoms)
   klz, prz, labels_, p_vals = compute_dist_of_dists(x, C, brain_labels + all_labels + random_labels)
