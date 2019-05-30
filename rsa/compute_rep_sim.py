@@ -20,7 +20,7 @@ FLAGS = tf.flags.FLAGS
 
 tf.flags.DEFINE_integer('subject_id', 1, 'subject id')
 tf.flags.DEFINE_list('delay', 0 , 'delay list')
-tf.flags.DEFINE_list('blocks', [4], 'experiment/story blocks to consider')
+tf.flags.DEFINE_list('blocks', [2], 'experiment/story blocks to consider')
 
 
 tf.flags.DEFINE_float('alpha', 1, 'alpha')
@@ -105,7 +105,7 @@ if __name__ == '__main__':
   brain_data_reader = HarryPotterReader(data_dir=hparams.brain_data_dir)
 
   story_features = np.load('../story_features.npy').item()
-  delay = -1
+  delay = 5
   selected_steps = {}
   print(story_features.keys())
   selecting_feature = 'none' # none | end | ch | quote
