@@ -2,7 +2,12 @@
 Making a bridge between NLP models and Brain data
 
 This repository includes codes for:
-* Using internal states of a pretrained language model to predict brain activations
+* Comparing and evaluating representational spaces (e.g. internal states of language encoding models) using RSA and ReStA.
+* Using internal states of a pretrained language model to predict brain activations.
+
+
+## Publication:
+[Blackbox meets blackbox: Representational Similarity and Stability Analysis of Neural Language Models and Brains] (https://arxiv.org/abs/1906.01539)
 
 
 ## Requirements:
