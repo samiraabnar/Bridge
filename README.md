@@ -7,7 +7,7 @@ This repository includes codes for:
 
 
 ## Publication:
-[https://arxiv.org/abs/1906.01539](Blackbox meets blackbox: Representational Similarity and Stability Analysis of Neural Language Models and Brains)
+[Blackbox meets blackbox: Representational Similarity and Stability Analysis of Neural Language Models and Brains](https://arxiv.org/abs/1906.01539)
 
 
 ## Requirements:
