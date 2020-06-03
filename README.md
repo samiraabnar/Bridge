@@ -38,3 +38,18 @@ https://colab.research.google.com/drive/1hO9ZV6gfO-WT-wGFwJZvHPQrLPHHuuhO#scroll
 
 
 **To create story_features.npy you can use the scripts in this colab notebook**
+
+
+If you use our code, please consider citing our paper:
+```
+@inproceedings{abnar-etal-2019-blackbox,
+    title = "Blackbox Meets Blackbox: Representational Similarity {\&} Stability Analysis of Neural Language Models and Brains",
+    author = "Abnar, Samira  and
+      Beinborn, Lisa  and
+      Choenni, Rochelle  and
+      Zuidema, Willem",
+    booktitle = "Proceedings of the 2019 ACL Workshop BlackboxNLP: Analyzing and Interpreting Neural Networks for NLP",
+    year = "2019",
+    url = "https://www.aclweb.org/anthology/W19-4820",
+}
+```
