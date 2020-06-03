@@ -39,7 +39,7 @@ https://colab.research.google.com/drive/1hO9ZV6gfO-WT-wGFwJZvHPQrLPHHuuhO#scroll
 
 **To create story_features.npy you can use the scripts in this colab notebook**
 
-
+---
 If you use our code, please consider citing our paper:
 ```
 @inproceedings{abnar-etal-2019-blackbox,
